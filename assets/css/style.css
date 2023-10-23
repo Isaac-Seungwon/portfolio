@@ -1027,6 +1027,7 @@ section {
   text-transform: uppercase;
   color: #4A70B5;
   margin-bottom: 10px;
+  line-height: 1.2;
 }
 
 .resume .resume-item h5 {
