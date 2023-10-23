@@ -402,6 +402,25 @@ const updateWaveAnimation = () => {
 
 updateWaveAnimation();
 
+const isMobile = window.innerWidth <= 1024; // 모바일 화면 체크
+
+// 모바일 기기일 경우 애니메이션을 중지하고 위치를 고정
+if (isMobile) {
+  // 모바일 기기에서 필요한 처리
+  sun.style.top = '80%';
+  sun.style.left = '50%';
+
+  moon.style.top = '180%';
+  moon.style.left = '50%';
+
+  sun.style.transition = 'none'; // 애니메이션 중지
+  moon.style.transition = 'none';
+
+  // 모바일 기기에서 파동 효과 숨김
+  waveSun.style.display = 'none';
+  waveMoon.style.display = 'none';
+}
+
 
 /**
  * 나이 계산
@@ -543,34 +562,14 @@ const words = [
 ];
 
 // 워드 클라우드
-/*
-function getSizeBasedOnViewport() {
-  const width = window.innerWidth;
-  const height = window.innerHeight;
-  const viewportSize = Math.min(width, height);
+const originalWordSizes = {};
 
-  // 최소 및 최대 글자 크기
-  const minSize = 30;
-  const maxSize = 60;
-
-  // 브라우저 크기에 따라 글자 크기 계산
-  const size = (viewportSize / 1500) * (maxSize - minSize) + minSize;
-  return size;
-}
-*/
 function initializeWordCloud() {
-  createWordCloud(words);
-}
-initializeWordCloud();
-
-function createWordCloud(words) {
   const svgContainer = d3.select("#word-cloud-container");
 
-  // 현재 브라우저 창의 너비와 높이 가져오기
+  // 브라우저 창 너비, 높이
   const width = window.innerWidth - 100;
   const height = window.innerHeight - 400;
-
-  // console.log(width + ',' + height);
 
   // 요소 초기화
   svgContainer.selectAll("*").remove();
@@ -585,6 +584,13 @@ function createWordCloud(words) {
     .style("transform", "translate(-50%, -60%)")
     .append("g")
     .attr("transform", `translate(${width / 2},${height / 2})`);
+
+  // 각 단어의 원래 크기를 저장
+  if (Object.keys(originalWordSizes).length === 0) {
+    words.forEach(word => {
+      originalWordSizes[word.text] = word.size;
+    });
+  }
 
   const colorByTag = {
     "언어": "#f0cf65",
@@ -602,7 +608,12 @@ function createWordCloud(words) {
     .padding(5)
     .rotate(function () { return ~~(Math.random() * 2); })
     .font("'SBAggroB', Impact")
-    .fontSize(function (d) { return d.size; })
+    .fontSize(function (d) {
+      const originalSize = originalWordSizes[d.text];
+      const newSize = (originalSize / 50) * (width / 20);
+      const maxSize = originalSize;
+      return Math.max(Math.min(newSize, maxSize), 25); // 최소 폰트 크기 25, 최대 폰트 크기 기존 크기
+    })
     .on("end", draw);
 
   layout.start();
@@ -615,11 +626,6 @@ function createWordCloud(words) {
       .append("text")
       .attr("class", "word-cloud-text")
       .style("font-size", function (d) { return d.size + "px"; })
-      /*
-      .style("font-size", function (d) {
-        return getSizeBasedOnViewport(d.size) + "px";
-      })
-      */
       .style("font-family", "'SBAggroB', 'Impact'")
       .style("fill", "transparent")
       .style("stroke", "white")
@@ -667,4 +673,6 @@ function createWordCloud(words) {
   });
 }
 
+// 초기 워드 클라우드 생성
+initializeWordCloud();
 window.addEventListener("resize", initializeWordCloud);
