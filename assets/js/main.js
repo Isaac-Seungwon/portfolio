@@ -306,8 +306,10 @@ const twinklestar = () => {
   });
 };
 
+/*
+ * 해와 달 생성
+*/
 let minus = 250;
-
 const sun = document.querySelector('.sun');
 const moon = document.querySelector('.moon');
 const content = document.querySelector('.content');
@@ -334,12 +336,6 @@ const updateWavePosition = () => {
   waveMoon.style.top = `${moonPosition.top - 360}px`;
   waveMoon.style.left = `${moonPosition.left - 360}px`;
 };
-
-// 해 클릭 이벤트
-// sun.addEventListener('click', () => showAlert(''));
-// function showAlert(celestialBody) {
-//   alert('Sun.');
-// }
 
 // 페이지 스크롤 시 애니메이션 업데이트
 const updateWaveAnimation = () => {
@@ -402,26 +398,6 @@ const updateWaveAnimation = () => {
 
 updateWaveAnimation();
 
-const isMobile = window.innerWidth <= 1024; // 모바일 화면 체크
-
-// 모바일 기기일 경우 애니메이션을 중지하고 위치를 고정
-if (isMobile) {
-  // 모바일 기기에서 필요한 처리
-  sun.style.top = '80%';
-  sun.style.left = '50%';
-
-  moon.style.top = '180%';
-  moon.style.left = '50%';
-
-  sun.style.transition = 'none'; // 애니메이션 중지
-  moon.style.transition = 'none';
-
-  // 모바일 기기에서 파동 효과 숨김
-  waveSun.style.display = 'none';
-  waveMoon.style.display = 'none';
-}
-
-
 /**
  * 나이 계산
  */
@@ -435,9 +411,7 @@ function calculateAge() {
   return age;
 }
 
-/**
- * 나이 표시
- */
+// 나이 표시
 const ageElement = document.getElementById('age');
 if (ageElement) {
   const age = calculateAge();
@@ -520,7 +494,9 @@ function handleScroll() {
 window.addEventListener('scroll', handleScroll);
 handleScroll();
 
-// 링크 말풍선
+/*
+ * 링크 말풍선
+*/
 function showTooltip(event, tooltipId) {
   const tooltip = document.getElementById(tooltipId);
   tooltip.style.display = 'block';
@@ -533,7 +509,9 @@ function hideTooltip(tooltipId) {
   tooltip.style.display = 'none';
 }
 
-// 워드 클라우드 데이터
+/*
+ * 워드 클라우드
+*/
 const words = [
   { text: "Java", size: 60, color: "white", opacity: 1, tags: ["언어", "Java"] },
   { text: "MySQL", size: 45, color: "white", opacity: 1, tags: ["데이터베이스", "MySQL"] },
@@ -561,35 +539,39 @@ const words = [
   { text: "AWS", size: 55, color: "#d7816a", opacity: 1, tags: ["클라우드", "AWS"] }
 ];
 
-function debounce(func, wait) {
-  let timeout;
-  return function () {
-    const context = this;
-    const args = arguments;
-    clearTimeout(timeout);
-    timeout = setTimeout(function () {
-      func.apply(context, args);
-    }, wait);
-  };
-}
+const colorByTag = {
+  "언어": "#f0cf65",
+  "데이터베이스": "#bd4f6c",
+  "도구": "#93b5c6",
+  "프레임워크": "#d7816a",
+  "라이브러리": "#ddedaa",
+  "통계 소프트웨어": "#dee2e6",
+  "클라우드": "#af8b60" // a68661
+};
 
-function changeWordCloud() {
-
-}
-
-// 스크롤 이벤트를 디바운스하여 300ms마다 changeWordCloud 함수를 호출합니다.
-const debouncedChangeWordCloud = debounce(changeWordCloud, 300);
-
-// 스크롤 이벤트 리스너를 등록합니다.
-window.addEventListener('scroll', debouncedChangeWordCloud);
-
-// 워드 클라우드
+// 워드 클라우드 원본 색상 객체
 const originalWordSizes = {};
 
+let initializeSet = 0;
 function initializeWordCloud() {
-  const svgContainer = d3.select("#word-cloud-container");
+  // 각 단어의 원래 크기를 저장
+  if (Object.keys(originalWordSizes).length === 0) {
+    words.forEach(word => {
+      originalWordSizes[word.text] = word.size;
+    });
+  }
+  initializeSet = 1;
+};
 
+// 초기 워드 클라우드 생성
+if (initializeSet == 0) {
+  initializeWordCloud();
+  resizeWordCloud();
+}
+
+function resizeWordCloud() {
   // 브라우저 창 너비, 높이
+  const svgContainer = d3.select("#word-cloud-container");
   const width = window.innerWidth - 100;
   const height = window.innerHeight - 400;
 
@@ -607,23 +589,6 @@ function initializeWordCloud() {
     .append("g")
     .attr("transform", `translate(${width / 2},${height / 2})`);
 
-  // 각 단어의 원래 크기를 저장
-  if (Object.keys(originalWordSizes).length === 0) {
-    words.forEach(word => {
-      originalWordSizes[word.text] = word.size;
-    });
-  }
-
-  const colorByTag = {
-    "언어": "#f0cf65",
-    "데이터베이스": "#bd4f6c",
-    "도구": "#93b5c6",
-    "프레임워크": "#d7816a",
-    "라이브러리": "#ddedaa",
-    "통계 소프트웨어": "#dee2e6",
-    "클라우드": "#af8b60" // a68661
-  };
-
   const layout = d3.layout.cloud()
     .size([width, height])
     .words(words)
@@ -634,7 +599,7 @@ function initializeWordCloud() {
       const originalSize = originalWordSizes[d.text];
       const newSize = (originalSize / 50) * (width / 20);
       const maxSize = originalSize;
-      return Math.max(Math.min(newSize, maxSize), 30); // 최소 폰트 크기 25, 최대 폰트 크기 기존 크기
+      return Math.max(Math.min(newSize, maxSize), 30); // 최소 폰트 크기 30, 최대 폰트 크기 기존 크기
     })
     .on("end", draw);
 
@@ -695,6 +660,4 @@ function initializeWordCloud() {
   });
 }
 
-// 초기 워드 클라우드 생성
-initializeWordCloud();
-window.addEventListener("resize", initializeWordCloud);
+window.addEventListener("resize", resizeWordCloud);
