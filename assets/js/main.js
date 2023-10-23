@@ -561,6 +561,28 @@ const words = [
   { text: "AWS", size: 55, color: "#d7816a", opacity: 1, tags: ["클라우드", "AWS"] }
 ];
 
+function debounce(func, wait) {
+  let timeout;
+  return function () {
+    const context = this;
+    const args = arguments;
+    clearTimeout(timeout);
+    timeout = setTimeout(function () {
+      func.apply(context, args);
+    }, wait);
+  };
+}
+
+function changeWordCloud() {
+
+}
+
+// 스크롤 이벤트를 디바운스하여 300ms마다 changeWordCloud 함수를 호출합니다.
+const debouncedChangeWordCloud = debounce(changeWordCloud, 300);
+
+// 스크롤 이벤트 리스너를 등록합니다.
+window.addEventListener('scroll', debouncedChangeWordCloud);
+
 // 워드 클라우드
 const originalWordSizes = {};
 
@@ -612,7 +634,7 @@ function initializeWordCloud() {
       const originalSize = originalWordSizes[d.text];
       const newSize = (originalSize / 50) * (width / 20);
       const maxSize = originalSize;
-      return Math.max(Math.min(newSize, maxSize), 25); // 최소 폰트 크기 25, 최대 폰트 크기 기존 크기
+      return Math.max(Math.min(newSize, maxSize), 30); // 최소 폰트 크기 25, 최대 폰트 크기 기존 크기
     })
     .on("end", draw);
 
