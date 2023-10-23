@@ -1443,6 +1443,11 @@ li:hover .arrow_box {
   border: 2px solid #4A70B5;
 }
 
+@media (max-width: 576px) {
+  .portfolio .col-lg-4.portfolio-item {
+    pointer-events: none;
+  }
+}
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/

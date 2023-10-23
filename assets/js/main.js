@@ -263,8 +263,19 @@ document.addEventListener('DOMContentLoaded', function () {
   const portfolioItems = document.querySelectorAll('.portfolio .col-lg-4.portfolio-item');
 
   portfolioItems.forEach((item) => {
-    item.addEventListener('click', function () {
+    item.addEventListener('click', function (event) {
+      // 이벤트 버블링을 중지하고 item 클릭 이벤트 실행
+      event.stopPropagation();
       window.location.href = 'portfolio-details.html';
+    });
+
+    // bx-plus 아이콘 클릭 이벤트
+    const plusIcons = item.querySelectorAll('.portfolio-info .preview-link');
+    plusIcons.forEach((icon) => {
+      icon.addEventListener('click', function (event) {
+        // 이벤트 버블링을 중지하고 bx-plus 아이콘 클릭 이벤트 실행
+        event.stopPropagation();
+      });
     });
   });
 });
