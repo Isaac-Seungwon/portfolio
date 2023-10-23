@@ -1445,9 +1445,14 @@ li:hover .arrow_box {
 
 @media (max-width: 576px) {
   .portfolio .col-lg-4.portfolio-item {
-    pointer-events: none;
+    cursor: default;
+  }
+
+  .portfolio .col-lg-4.portfolio-item:hover {
+    border: 2px solid transparent;
   }
 }
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
