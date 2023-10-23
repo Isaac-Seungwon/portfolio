@@ -552,20 +552,14 @@ const colorByTag = {
 // 워드 클라우드 원본 색상 객체
 const originalWordSizes = {};
 
-let initializeSet = 0;
-function initializeWordCloud() {
-  // 각 단어의 원래 크기를 저장
-  if (Object.keys(originalWordSizes).length === 0) {
-    words.forEach(word => {
-      originalWordSizes[word.text] = word.size;
-    });
-  }
-  initializeSet = 1;
-};
-
 // 초기 워드 클라우드 생성
-if (initializeSet == 0) {
-  initializeWordCloud();
+if (Object.keys(originalWordSizes).length === 0) {
+
+  // 각 단어의 원래 크기를 저장
+  words.forEach(word => {
+    originalWordSizes[word.text] = word.size;
+  });
+
   resizeWordCloud();
 }
 
@@ -573,7 +567,7 @@ function resizeWordCloud() {
   // 브라우저 창 너비, 높이
   const svgContainer = d3.select("#word-cloud-container");
   const width = window.innerWidth - 100;
-  const height = window.innerHeight - 400;
+  const height = window.innerHeight - 250;
 
   // 요소 초기화
   svgContainer.selectAll("*").remove();
@@ -597,7 +591,7 @@ function resizeWordCloud() {
     .font("'SBAggroB', Impact")
     .fontSize(function (d) {
       const originalSize = originalWordSizes[d.text];
-      const newSize = (originalSize / 50) * (width / 20);
+      const newSize = (originalSize / 60) * (width / 20);
       const maxSize = originalSize;
       return Math.max(Math.min(newSize, maxSize), 30); // 최소 폰트 크기 30, 최대 폰트 크기 기존 크기
     })
