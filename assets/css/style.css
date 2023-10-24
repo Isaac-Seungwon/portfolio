@@ -872,7 +872,8 @@ section {
 # About Me
 --------------------------------------------------------------*/
 .section-title span:first-child, h2 {
-  font-family: 'SBAggroB';
+  /* font-family: 'SBAggroB'; */
+  font-family: "Raleway", sans-serif;
   font-size: 50px;
 }
 
