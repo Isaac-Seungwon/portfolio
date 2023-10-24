@@ -669,3 +669,13 @@ function resizeWordCloud() {
 }
 
 window.addEventListener("resize", resizeWordCloud);
+
+/*
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  // 모바일 기기
+  console.log("현재 기기: 모바일");
+} else {
+  // 데스크탑 기기
+  console.log("현재 기기: 데스크탑");
+}
+*/
