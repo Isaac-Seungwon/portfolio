@@ -550,7 +550,9 @@ const words = [
   { text: "MyBatis", size: 45, color: "white", opacity: 1, tags: ["프레임워크", "MyBatis"] },
   { text: "jQuery", size: 45, color: "white", opacity: 1, tags: ["라이브러리", "jQuery"] },
   { text: "SPSS", size: 40, color: "white", opacity: 1, tags: ["통계 소프트웨어", "SPSS"] },
-  { text: "AWS", size: 55, color: "#d7816a", opacity: 1, tags: ["클라우드", "AWS"] }
+  { text: "AWS", size: 55, color: "white", opacity: 1, tags: ["클라우드", "AWS"] },
+  { text: "jSoup", size: 40, color: "white", opacity: 1, tags: ["라이브러리", "jSoup"] },
+  { text: "Selenium", size: 40, color: "white", opacity: 1, tags: ["프레임워크", "Selenium"] }
 ];
 
 const colorByTag = {
@@ -668,14 +670,12 @@ function resizeWordCloud() {
   });
 }
 
-window.addEventListener("resize", resizeWordCloud);
 
-/*
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
   // 모바일 기기
-  console.log("현재 기기: 모바일");
+  //console.log("현재 기기: 모바일");
 } else {
   // 데스크탑 기기
-  console.log("현재 기기: 데스크탑");
+  //console.log("현재 기기: 데스크탑");
+  window.addEventListener("resize", resizeWordCloud);
 }
-*/
