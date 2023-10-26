@@ -537,8 +537,8 @@ const words = [
   { text: "VS Code", size: 50, color: "white", opacity: 1, tags: ["도구", "VSCode"] },
   { text: "Git", size: 55, color: "white", opacity: 1, tags: ["도구", "Git"] },
   { text: "Photoshop", size: 50, color: "white", opacity: 1, tags: ["도구", "Photoshop"] },
-  { text: "Illustrator", size: 50, color: "white", opacity: 1, tags: ["도구", "Illustrator"] },
-  { text: "Premiere Pro", size: 50, color: "white", opacity: 1, tags: ["도구", "Premiere Pro"] },
+  { text: "Illustrator", size: 45, color: "white", opacity: 1, tags: ["도구", "Illustrator"] },
+  { text: "Premiere Pro", size: 45, color: "white", opacity: 1, tags: ["도구", "Premiere Pro"] },
   { text: "JSP", size: 50, color: "white", opacity: 1, tags: ["언어", "JSP"] },
   { text: "Servlet", size: 45, color: "white", opacity: 1, tags: ["언어", "Servlet"] },
   { text: "JDBC", size: 45, color: "white", opacity: 1, tags: ["데이터베이스", "JDBC"] },
@@ -552,7 +552,8 @@ const words = [
   { text: "SPSS", size: 40, color: "white", opacity: 1, tags: ["통계 소프트웨어", "SPSS"] },
   { text: "AWS", size: 55, color: "white", opacity: 1, tags: ["클라우드", "AWS"] },
   { text: "jSoup", size: 40, color: "white", opacity: 1, tags: ["라이브러리", "jSoup"] },
-  { text: "Selenium", size: 40, color: "white", opacity: 1, tags: ["프레임워크", "Selenium"] }
+  { text: "Selenium", size: 40, color: "white", opacity: 1, tags: ["프레임워크", "Selenium"] },
+  { text: "SDL", size: 45, color: "white", opacity: 1, tags: ["라이브러리", "SDL"] }
 ];
 
 const colorByTag = {
