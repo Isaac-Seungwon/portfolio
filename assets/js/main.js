@@ -597,6 +597,7 @@ function resizeWordCloud() {
     .style("left", "50%")
     .style("top", "50%")
     .style("transform", "translate(-50%, -60%)")
+    .attr("text-anchor", "middle")
     .append("g")
     .attr("transform", `translate(${width / 2},${height / 2})`);
 
@@ -670,7 +671,6 @@ function resizeWordCloud() {
     isOriginalColors = !isOriginalColors;
   });
 }
-
 
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
   // 모바일 기기
