@@ -265,22 +265,29 @@ document.addEventListener('DOMContentLoaded', function () {
   portfolioItems.forEach((item) => {
     if (window.innerWidth >= 576) {
       item.addEventListener('click', function (event) {
-        // 이벤트 버블링을 중지하고 item 클릭 이벤트 실행
-        event.stopPropagation();
-        window.location.href = 'portfolio-details.html';
+        // 기본 링크 동작을 방지합니다.
+        event.preventDefault();
+
+        // 클릭한 포트폴리오 아이템에서 포트폴리오 번호를 추출합니다.
+        const portfolioNumber = item.getAttribute('data-portfolio-number');
+
+        // 포트폴리오 번호를 사용하여 적절한 포트폴리오 상세 페이지 URL을 생성합니다.
+        const portfolioDetailURL = `portfolio-details${portfolioNumber}.html`;
+
+        // 생성된 URL로 이동합니다.
+        window.location.href = portfolioDetailURL;
       });
     }
 
-    // bx-plus 아이콘 클릭 이벤트
+    // bx-plus 아이콘 클릭 이벤트 리스너를 추가합니다. 필요한 경우 중단되는 이벤트를 방지합니다.
     const plusIcons = item.querySelectorAll('.portfolio-info .preview-link');
     plusIcons.forEach((icon) => {
       icon.addEventListener('click', function (event) {
-        // 이벤트 버블링을 중지하고 bx-plus 아이콘 클릭 이벤트 실행
+        // 필요한 경우 이벤트의 상위로 버블링을 막습니다.
         event.stopPropagation();
       });
     });
   });
-  
 });
 
 /*
