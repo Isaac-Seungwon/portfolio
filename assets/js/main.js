@@ -262,7 +262,6 @@
 
 })()
 
-
 // portfolio detail
 document.addEventListener('DOMContentLoaded', function () {
   const portfolioItems = document.querySelectorAll('.portfolio .col-lg-4.portfolio-item');
@@ -294,6 +293,24 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  // 모바일 기기
+  //console.log("현재 기기: 모바일");
+
+  var prevButton = document.querySelector('.swiper-button-prev');
+  var nextButton = document.querySelector('.swiper-button-next');
+
+  if (prevButton && nextButton) {
+    prevButton.style.display = 'none';
+    nextButton.style.display = 'none';
+  }
+
+} else {
+  // 데스크탑 기기
+  //console.log("현재 기기: 데스크탑");
+  window.addEventListener("resize", resizeWordCloud);
+}
 
 /*
  * 별 생성
@@ -682,13 +699,4 @@ function resizeWordCloud() {
     });
     isOriginalColors = !isOriginalColors;
   });
-}
-
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-  // 모바일 기기
-  //console.log("현재 기기: 모바일");
-} else {
-  // 데스크탑 기기
-  //console.log("현재 기기: 데스크탑");
-  window.addEventListener("resize", resizeWordCloud);
 }

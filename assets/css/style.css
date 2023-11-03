@@ -1562,6 +1562,40 @@ li:hover .arrow_box {
   margin-right: 5px;
 }
 
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #4A70B5;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  opacity: 1;
+}
+
+.swiper-button-prev:hover {
+  left: 15px;
+}
+
+.swiper-button-next:hover {
+  right: 15px;
+}
+
+.swiper-button-prev {
+  left: 20px;
+}
+
+.swiper-button-next {
+  right: 20px;
+}
+
 /*--------------------------------------------------------------
 # Pricing
 --------------------------------------------------------------*/
