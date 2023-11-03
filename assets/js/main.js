@@ -241,13 +241,17 @@
     speed: 400,
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: 7000,
       disableOnInteraction: false
     },
     pagination: {
       el: '.swiper-pagination',
       type: 'bullets',
       clickable: true
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
     }
   });
 
@@ -258,6 +262,7 @@
 
 })()
 
+
 // portfolio detail
 document.addEventListener('DOMContentLoaded', function () {
   const portfolioItems = document.querySelectorAll('.portfolio .col-lg-4.portfolio-item');
@@ -265,25 +270,25 @@ document.addEventListener('DOMContentLoaded', function () {
   portfolioItems.forEach((item) => {
     if (window.innerWidth >= 576) {
       item.addEventListener('click', function (event) {
-        // 기본 링크 동작을 방지합니다.
+        // 기본 링크 동작 방지
         event.preventDefault();
 
-        // 클릭한 포트폴리오 아이템에서 포트폴리오 번호를 추출합니다.
+        // 클릭한 포트폴리오 아이템에서 포트폴리오 번호 추출
         const portfolioNumber = item.getAttribute('data-portfolio-number');
 
-        // 포트폴리오 번호를 사용하여 적절한 포트폴리오 상세 페이지 URL을 생성합니다.
+        // 포트폴리오 번호를 사용하여 포트폴리오 상세 페이지 URL 생성
         const portfolioDetailURL = `portfolio-details${portfolioNumber}.html`;
 
-        // 생성된 URL로 이동합니다.
+        // URL로 이동
         window.location.href = portfolioDetailURL;
       });
     }
 
-    // bx-plus 아이콘 클릭 이벤트 리스너를 추가합니다. 필요한 경우 중단되는 이벤트를 방지합니다.
+    // bx-plus 아이콘 클릭 이벤트 리스너를 추가
     const plusIcons = item.querySelectorAll('.portfolio-info .preview-link');
     plusIcons.forEach((icon) => {
       icon.addEventListener('click', function (event) {
-        // 필요한 경우 이벤트의 상위로 버블링을 막습니다.
+        // 상위로 버블링 방지
         event.stopPropagation();
       });
     });
