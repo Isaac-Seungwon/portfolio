@@ -599,17 +599,6 @@ const colorByTag = {
 // 워드 클라우드 원본 색상 객체
 const originalWordSizes = {};
 
-// 초기 워드 클라우드 생성
-if (Object.keys(originalWordSizes).length === 0) {
-
-  // 각 단어의 원래 크기를 저장
-  words.forEach(word => {
-    originalWordSizes[word.text] = word.size;
-  });
-
-  resizeWordCloud();
-}
-
 function resizeWordCloud() {
   // 브라우저 창 너비, 높이
   const svgContainer = d3.select("#word-cloud-container");
@@ -700,4 +689,15 @@ function resizeWordCloud() {
     });
     isOriginalColors = !isOriginalColors;
   });
+}
+
+// 초기 워드 클라우드 생성
+if (Object.keys(originalWordSizes).length === 0) {
+
+  // 각 단어의 원래 크기를 저장
+  words.forEach(word => {
+    originalWordSizes[word.text] = word.size;
+  });
+
+  resizeWordCloud();
 }
