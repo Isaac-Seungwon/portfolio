@@ -699,5 +699,5 @@ if (Object.keys(originalWordSizes).length === 0) {
     originalWordSizes[word.text] = word.size;
   });
 
-  resizeWordCloud();
+  setTimeout(resizeWordCloud, 300);
 }

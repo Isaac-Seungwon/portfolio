@@ -184,6 +184,53 @@ h6 {
   opacity: 1;
 }
 
+/* 달 텍스트 스타일 */
+.moon-text {
+  width: 300px;
+  left: -130%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  color: white;
+  position: absolute;
+  top: 80px;
+  pointer-events: none; /* 호버 효과 비활성화 */
+  cursor: default;
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeOutText {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* 달 호버 효과 */
+.moon:hover .moon-text {
+  opacity: 1;
+  animation: fadeInText 0.6s ease-in-out forwards;
+}
+
+/* 달이 호버되지 않은 경우 */
+.moon:not(:hover) .moon-text {
+  opacity: 0;
+  animation: fadeOutText 0.3s ease-in-out forwards;
+}
+
 .content {
   padding: 20px;
   margin-top: 200px;
@@ -972,9 +1019,25 @@ section {
   color: #82909c;
 }
 
+.image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 125%; /* 500px / 400px * 100% = 125% */
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+  
 .about .image {
   background: url("../img/me.jpg") center center no-repeat;
-  background-size: cover;
+  background-size: contain;
   min-height: 400px;
 }
 
@@ -1050,6 +1113,7 @@ section {
   display: inline-block;
   font-weight: 600;
   margin-bottom: 10px;
+  border-radius: 2px;
 }
 
 .resume .resume-item ul {

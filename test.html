@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    html,
+    body,
+    main {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background-color: white;
+    }
+
+    #carousel {
+      position: relative;
+      height: 600px;
+      top: 50%;
+      transform: translateY(-50%);
+      overflow: hidden;
+    }
+
+    #carousel div {
+      position: absolute;
+      transition: transform 400ms, left 400ms, opacity 400ms, z-index 0s;
+      opacity: 1;
+    }
+
+    #carousel div img {
+      width: 800px;
+      transition: width 400ms;
+      -webkit-user-drag: none;
+      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+      border-radius: 10px;
+    }
+
+    #carousel div.hideLeft {
+      left: 0%;
+      opacity: 0;
+      transform: translateY(50%) translateX(-50%);
+    }
+
+    #carousel div.hideLeft img {
+      width: 200px;
+    }
+
+    #carousel div.hideRight {
+      left: 100%;
+      opacity: 0;
+      transform: translateY(50%) translateX(-50%);
+    }
+
+    #carousel div.hideRight img {
+      width: 200px;
+    }
+
+    #carousel div.prev {
+      z-index: 5;
+      left: 20%;
+      transform: translateY(160px) translateX(-50%);
+    }
+
+    #carousel img:hover {
+      cursor: pointer;
+    }
+
+    #carousel div.prev img {
+      width: 300px;
+    }
+
+    #carousel div.prevLeftSecond {
+      z-index: 4;
+      left: 15%;
+      transform: translateY(50%) translateX(-50%);
+      opacity: 0; /* 0.7 */
+    }
+
+    #carousel div.prevLeftSecond img {
+      width: 200px;
+    }
+
+    #carousel div.selected {
+      z-index: 10;
+      left: 50%;
+      transform: translateY(0px) translateX(-50%);
+    }
+
+    #carousel div.next {
+      z-index: 5;
+      left: 80%;
+      transform: translateY(160px) translateX(-50%);
+    }
+
+    #carousel div.next img {
+      width: 300px;
+    }
+
+    #carousel div.nextRightSecond {
+      z-index: 4;
+      left: 85%;
+      transform: translateY(50%) translateX(-50%);
+      opacity: 0; /* 0.7 */
+    }
+
+    #carousel div.nextRightSecond img {
+      width: 200px;
+    }
+
+    /*previous or next buttons css*/
+
+    .buttons {
+      position: fixed;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 100px;
+    }
+
+    .button-82-pushable {
+      position: relative;
+      border: none;
+      background: transparent;
+      padding: 0;
+      cursor: pointer;
+      outline-offset: 4px;
+      transition: filter 250ms;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+    }
+
+    .button-82-shadow {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      background: hsl(0deg 0% 0% / 0.25);
+      will-change: transform;
+      transform: translateY(2px);
+      transition:
+        transform 600ms cubic-bezier(.3, .7, .4, 1);
+    }
+
+    .button-82-edge {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      background: linear-gradient(to left,
+          hsl(340deg 100% 16%) 0%,
+          hsl(340deg 100% 32%) 8%,
+          hsl(340deg 100% 32%) 92%,
+          hsl(340deg 100% 16%) 100%);
+    }
+
+    .button-82-front {
+      display: block;
+      position: relative;
+      padding: 12px 27px;
+      border-radius: 12px;
+      font-size: 1.1rem;
+      color: white;
+      background: hsl(345deg 100% 47%);
+      will-change: transform;
+      transform: translateY(-4px);
+      transition:
+        transform 600ms cubic-bezier(.3, .7, .4, 1);
+    }
+
+    @media (min-width: 768px) {
+      .button-82-front {
+        font-size: 1.25rem;
+        padding: 12px 42px;
+      }
+    }
+
+    .button-82-pushable:hover {
+      filter: brightness(110%);
+      -webkit-filter: brightness(110%);
+    }
+
+    .button-82-pushable:hover .button-82-front {
+      transform: translateY(-6px);
+      transition:
+        transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    }
+
+    .button-82-pushable:active .button-82-front {
+      transform: translateY(-2px);
+      transition: transform 34ms;
+    }
+
+    .button-82-pushable:hover .button-82-shadow {
+      transform: translateY(4px);
+      transition:
+        transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+    }
+
+    .button-82-pushable:active .button-82-shadow {
+      transform: translateY(1px);
+      transition: transform 34ms;
+    }
+  </style>
+
+</head>
+
+<body>
+  <main>
+
+    <div id="carousel" class="carousel">
+
+      <div id='item_1' class="hideLeft">
+        <img src="https://cdn.pixabay.com/photo/2017/08/15/08/23/stars-2643089__340.jpg">
+      </div>
+
+      <div id='item_2' class="prevLeftSecond">
+        <img src="https://cdn.pixabay.com/photo/2012/11/28/11/28/rocket-launch-67723__340.jpg">
+      </div>
+
+      <div id='item_3' class="prev">
+        <img src="https://cdn.pixabay.com/photo/2018/08/15/13/10/galaxy-3608029_960_720.jpg">
+      </div>
+
+      <div id='item_4' class="selected">
+        <img src="https://cdn.pixabay.com/photo/2020/06/17/09/28/wormhole-5308810__340.jpg">
+      </div>
+
+      <div id='item_5' class="next">
+        <img src="https://cdn.pixabay.com/photo/2016/11/18/22/58/stars-1837306__340.jpg">
+      </div>
+      
+      <div id='item_6' class="nextRightSecond">
+        <img src="https://cdn.pixabay.com/photo/2017/02/09/09/11/starry-sky-2051448__340.jpg">
+      </div>
+
+  <!-- 
+      <div id='item_7' class="hideRight">
+        <img src="https://cdn.pixabay.com/photo/2011/12/15/11/37/galaxy-11188__340.jpg">
+      </div>
+
+      <div id='item_8' class="hideRight">
+        <img src="https://cdn.pixabay.com/photo/2011/12/15/11/32/pismis-24-11186__340.jpg">
+      </div>
+    -->
+
+    </div>
+
+    <div class="buttons">
+      <button class="button-82-pushable" role="button" id="prev"><span class="button-82-shadow"></span><span
+          class="button-82-edge"></span><span class="button-82-front text">Previous</span></button>
+
+
+      <button class="button-82-pushable" role="button" id="next"><span class="button-82-shadow"></span><span
+          class="button-82-edge"></span><span class="button-82-front text">Next</span></button>
+    </div>
+  </main>
+
+  <script>
+    const $ = str => document.querySelector(str);
+    const $$ = str => document.querySelectorAll(str);
+
+    (function () {
+      if (!window.app) {
+        window.app = {};
+      }
+      app.carousel = {
+        removeClass: function (el, classname = '') {
+          if (el) {
+            if (classname === '') {
+              el.className = '';
+            } else {
+              el.classList.remove(classname);
+            }
+            return el;
+          }
+          return;
+        },
+        reorder: function () {
+          let childcnt = $("#carousel").children.length;
+          let childs = $("#carousel").children;
+
+          for (let j = 0; j < childcnt; j++) {
+            childs[j].dataset.pos = j;
+          }
+        },
+        move: function (el) {
+          // Clear the existing interval to reset the automatic sliding count
+          clearInterval(app.carousel.state.intervalId);
+
+          let selected = el;
+
+          if (typeof el === "string") {
+            console.log(`got string: ${el}`);
+            selected = (el == "next") ? $(".selected").nextElementSibling : $(".selected").previousElementSibling;
+            console.dir(selected);
+          }
+
+          let curpos = parseInt(app.selected.dataset.pos);
+          let tgtpos = parseInt(selected.dataset.pos);
+
+          let cnt = curpos - tgtpos;
+          let dir = (cnt < 0) ? -1 : 1;
+          let shift = Math.abs(cnt);
+
+          for (let i = 0; i < shift; i++) {
+            let el = (dir == -1) ? $("#carousel").firstElementChild : $("#carousel").lastElementChild;
+
+            if (dir == -1) {
+              el.dataset.pos = $("#carousel").children.length;
+              $('#carousel').append(el);
+            } else {
+              el.dataset.pos = 0;
+              $('#carousel').prepend(el);
+            }
+
+            app.carousel.reorder();
+          }
+
+          app.selected = selected;
+          let next = selected.nextElementSibling;
+          var prev = selected.previousElementSibling;
+          var prevSecond = prev ? prev.previousElementSibling : selected.parentElement.lastElementChild;
+          var nextSecond = next ? next.nextElementSibling : selected.parentElement.firstElementChild;
+
+          selected.className = '';
+          selected.classList.add("selected");
+
+          app.carousel.removeClass(prev).classList.add('prev');
+          app.carousel.removeClass(next).classList.add('next');
+
+          app.carousel.removeClass(nextSecond).classList.add("nextRightSecond");
+          app.carousel.removeClass(prevSecond).classList.add("prevLeftSecond");
+
+          app.carousel.nextAll(nextSecond).forEach(item => { item.className = ''; item.classList.add('hideRight') });
+          app.carousel.prevAll(prevSecond).forEach(item => { item.className = ''; item.classList.add('hideLeft') });
+
+          // Restart the automatic sliding after manually navigating
+          app.carousel.startAutoSlide();
+        },
+        nextAll: function (el) {
+          let els = [];
+
+          if (el) {
+            while (el = el.nextElementSibling) { els.push(el); }
+          }
+
+          return els;
+
+        },
+        prevAll: function (el) {
+          let els = [];
+
+          if (el) {
+            while (el = el.previousElementSibling) { els.push(el); }
+          }
+
+
+          return els;
+        },
+        keypress: function (e) {
+          switch (e.which) {
+            case 37: // left
+              app.carousel.move('prev');
+              break;
+
+            case 39: // right
+              app.carousel.move('next');
+              break;
+
+            default:
+              return;
+          }
+          e.preventDefault();
+          return false;
+        },
+        select: function (e) {
+          console.log(`select: ${e}`);
+          let tgt = e.target;
+          while (!tgt.parentElement.classList.contains('carousel')) {
+            tgt = tgt.parentElement;
+          }
+
+          app.carousel.move(tgt);
+
+        },
+        previous: function (e) {
+          app.carousel.move('prev');
+        },
+        next: function (e) {
+          app.carousel.move('next');
+        },
+        doDown: function (e) {
+          console.log(`down: ${e.x}`);
+          app.carousel.state.downX = e.x;
+        },
+        doUp: function (e) {
+          console.log(`up: ${e.x}`);
+          let direction = 0,
+            velocity = 0;
+
+          if (app.carousel.state.downX) {
+            direction = (app.carousel.state.downX > e.x) ? -1 : 1;
+            velocity = app.carousel.state.downX - e.x;
+
+            if (Math.abs(app.carousel.state.downX - e.x) < 10) {
+              app.carousel.select(e);
+              return false;
+            }
+            if (direction === -1) {
+              app.carousel.move('next');
+            } else {
+              app.carousel.move('prev');
+            }
+            app.carousel.state.downX = 0;
+          }
+        },
+        init: function () {
+          document.addEventListener("keydown", app.carousel.keypress);
+          // $('#carousel').addEventListener("click", app.carousel.select, true);
+          $("#carousel").addEventListener("mousedown", app.carousel.doDown);
+          $("#carousel").addEventListener("touchstart", app.carousel.doDown);
+          $("#carousel").addEventListener("mouseup", app.carousel.doUp);
+          $("#carousel").addEventListener("touchend", app.carousel.doup);
+
+          app.carousel.reorder();
+          $('#prev').addEventListener("click", app.carousel.previous);
+          $('#next').addEventListener("click", app.carousel.next);
+          app.selected = $(".selected");
+
+        },
+        state: {}
+
+      }
+      app.carousel.init();
+    })();
+
+  </script>
+
+  <script>
+    (function () {
+      app.carousel.state.intervalId = null;
+
+      app.carousel.autoSlide = function () {
+        app.carousel.move('next');
+      };
+
+      app.carousel.startAutoSlide = function () {
+        app.carousel.state.intervalId = setInterval(app.carousel.autoSlide, 5000);
+      };
+
+      app.carousel.stopAutoSlide = function () {
+        clearInterval(app.carousel.state.intervalId);
+      };
+
+      app.carousel.doDown = function (e) {
+        app.carousel.stopAutoSlide();
+      };
+
+      app.carousel.doUp = function (e) {
+        app.carousel.startAutoSlide();
+      };
+
+      app.carousel.startAutoSlide();
+    })();
+  </script>
+
+</body>
+
+</html>
