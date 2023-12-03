@@ -77,14 +77,26 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
-language {
-  font-weight: 600;
-  color: #FF6961;
-  background: #f2f2f2;
+high {
+  font-weight: 580;
+  color: #ff2e2e;
+  background: #eef0f2;
   padding: 0px 8px;
   border-radius: 2px;
   display: inline-block;
 }
+
+/* 
+high {
+  font-weight: 550;
+  color: #fffee9;
+  background: #011936;
+  padding: 0px 7px 2px;
+  border-radius: 2px;
+  align-items: center;
+  display: inline-block;
+}
+*/
 
 /*--------------------------------------------------------------
 # Web Font
