@@ -77,6 +77,15 @@ h6 {
   font-family: "Raleway", sans-serif;
 }
 
+language {
+  font-weight: 600;
+  color: #FF6961;
+  background: #f2f2f2;
+  padding: 0px 8px;
+  border-radius: 2px;
+  display: inline-block;
+}
+
 /*--------------------------------------------------------------
 # Web Font
 --------------------------------------------------------------*/
@@ -1604,9 +1613,17 @@ li:hover .arrow_box {
 }
 
 .portfolio-details-content h2 #sub-title {
-  color: #4A70B5;
+  color: #5186e7;
   font-size: 29px;
   letter-spacing: 1px;
+  /* text-decoration: underline; */
+}
+
+.material-symbols-outlined {
+  opacity: .9;
+  vertical-align: top;
+  padding-top: 10px;
+  padding-right: 5px;
 }
 
 .portfolio-info ul li strong {
@@ -1768,6 +1785,99 @@ li:hover .arrow_box {
   padding: 1px 0 3px 0;
   background: #4A70B5;
   color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Departments
+--------------------------------------------------------------*/
+.departments .nav-tabs {
+  border: 0;
+}
+
+.departments .nav-link {
+  border: 0;
+  padding: 20px;
+  color: #555555;
+  border-radius: 0;
+  border-left: 5px solid #fff;
+  cursor: pointer;
+}
+
+.departments .nav-link h4 {
+  font-size: 18px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.departments .nav-link p {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.departments .nav-link:hover h4 {
+  color: #5186e7;
+}
+
+.departments .nav-link.active {
+  background: #eff2f6;
+  border-color: #5186e7;
+}
+
+.departments .nav-link.active h4 {
+  color: #5186e7;
+}
+
+.departments .tab-pane.active {
+  animation: slide-down 0.5s ease-out;
+}
+
+.departments .tab-pane img {
+  float: left;
+  /* max-width: 300px; */
+  padding: 0 15px 15px 0;
+}
+
+@media (max-width: 768px) {
+  .departments .tab-pane img {
+    float: none;
+    padding: 0 0 15px 0;
+    max-width: 100%;
+  }
+}
+
+.departments .tab-pane h3 {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #4275D4;
+}
+
+.departments .tab-pane p {
+  color: #444444;
+}
+
+.departments .tab-pane p:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes slide-down {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#code {
+  border: 1px solid #CCC;
+  padding: 5px;
+}
+
+#code * {
+  font-family: d2coding;
+  background-color: transparent;
 }
 
 /*--------------------------------------------------------------

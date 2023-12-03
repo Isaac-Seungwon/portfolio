@@ -13,9 +13,8 @@
   <link href="assets/img/isaac-blog.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -23,6 +22,11 @@
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- highlight -->
+  <link href="assets/highlight/styles/github.min.css" rel="stylesheet">
+	<script src="assets/highlight/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -80,13 +84,13 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>시설 안전 관리 시스템 <span id="sub-title">[Safe Lock]</span></h2>
+          <h2><span class="material-symbols-outlined">arrow_circle_right</span>시설 안전 관리 시스템 <span id="sub-title">[Safe Lock]</span></h2>
           <ol>
             <li><a href="index.html#space">Home</a></li>
             <li><a href="index.html#portfolio">Portfolio</a></li>
             <li>Portfolio Details</li>
           </ol>
-        </div>
+        </di>
 
       </div>
     </section><!-- Breadcrumbs Section -->
@@ -182,7 +186,6 @@
             </div>
           </div>
 
-
           <div class="col-lg-4">
             <div class="portfolio-info">
               <h3>Project information</h3>
@@ -221,8 +224,122 @@
       </div>
 
     </section><!-- End Portfolio Details Section -->
+    
+    <!-- ======= Departments Section ======= -->
+    <section id="departments" class="departments">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <!-- <h2>상세보기</h2> -->
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <ul class="nav nav-tabs flex-column">
+
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+                  <h4>기능1</h4>
+                  <p>기능1 요약</p>
+                </a>
+              </li>
+
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+                  <h4>기능2</h4>
+                  <p>기능2 요약</p>
+                </a>
+              </li>
+
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+                  <h4>기능3</h4>
+                  <p>기능3 요약</p>
+                </a>
+              </li>
+
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+                  <h4>기능4</h4>
+                  <p>기능4 요약</p>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="tab-content">
+
+              <div class="tab-pane active show" id="tab-1">
+                <h3>기능1</h3>
+                <p>기능1 설명</p>
+                <pre id="code"><code class="language-java"><c:out>public class Main {
+    public static void main(String[] args) {
+        System. out.println("Hello World" );
+    }
+}</c:out></code></pre>
+                <img src="assets/img/portfolio/portfolio-1/특별실관리_시간표_팝업창.png" alt="" class="img-fluid">
+              </div>
+
+              <div class="tab-pane" id="tab-2">
+                <h3>기능2</h3>
+                <p>기능2 설명</p>
+                <pre id="code"><code class="language-java"><c:out>public class Main {
+    public static void main(String[] args) {
+        System. out.println("Hello World" );
+    }
+}</c:out></code></pre>
+                <img src="assets/img/portfolio/portfolio-1/특별실관리_시간표_팝업창.png" alt="" class="img-fluid">
+              </div>
+
+              <div class="tab-pane" id="tab-3">
+                <h3>기능3</h3>
+                <p>기능3 설명</p>
+                <pre id="code"><code class="language-java"><c:out>public class Main {
+    public static void main(String[] args) {
+        System. out.println("Hello World" );
+    }
+}</c:out></code></pre>
+                <img src="assets/img/portfolio/portfolio-1/특별실관리_시간표_팝업창.png" alt="" class="img-fluid">
+              </div>
+
+              <div class="tab-pane" id="tab-4">
+                <h3>기능4</h3>
+                <p>기능4 설명</p>
+                <pre id="code"><code class="language-java"><c:out>public class Main {
+    public static void main(String[] args) {
+        System. out.println("Hello World" );
+    }
+}</c:out></code></pre>
+                <img src="assets/img/portfolio/portfolio-1/특별실관리_시간표_팝업창.png" alt="" class="img-fluid">
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Departments Section -->
 
   </main><!-- End #main -->
+
+              <!--
+              <div class="tab-pane active show" id="tab-1">
+                <h3>기능1</h3>
+                <p>2 Qui laudantium consequatur laborum sit qui ad sapiente dila parde sonata raqer a videna mareta paulona marka</p>
+                <pre id="code"><code class="language-html">&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;meta charset="utf-8" /&gt;
+    &lt;title&gt;My test page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;img src="images/firefox-icon.png" alt="My test image" /&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+            -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
