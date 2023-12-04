@@ -79,12 +79,23 @@ h6 {
 
 high {
   font-weight: 580;
-  color: #ff2e2e;
+  color: #ff4949;
   background: #eef0f2;
   padding: 0px 8px;
   border-radius: 2px;
+}
+
+.breadcrumbs high:first-of-type {
+  margin-left: 30px !important;
+  margin-top: 10px !important;
   display: inline-block;
 }
+
+.portfolio-info high:first-of-type {
+  margin-top: 20px !important;
+  display: inline-block;
+}
+
 
 /*
 high {
