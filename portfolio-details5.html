@@ -13,9 +13,8 @@
   <link href="assets/img/isaac-blog.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Satisfy"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -24,16 +23,18 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <!-- highlight -->
+  <!-- <link href="assets/highlight/styles/github.min.css" rel="stylesheet"> -->
+  <link href="assets/highlight/styles/github-dark.css" rel="stylesheet">
+	<script src="assets/highlight/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+
+  <!-- fontawesome -->
+  <script src="https://kit.fontawesome.com/a92e13dcf8.js" crossorigin="anonymous"></script>
+  
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: Laura
-  * Updated: Sep 18 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/laura-free-creative-bootstrap-theme/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -45,27 +46,9 @@
       <ul>
         <li><a class="nav-link scrollto" href="index.html#space">Home</a></li>
         <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
-        <!-- <li><a class="nav-link scrollto" href="#pricing">Skills</a></li> -->
         <li><a class="nav-link scrollto" href="index.html#resume">Resume</a></li>
         <li><a class="nav-link scrollto" href="index.html#services">Archiving</a></li>
         <li><a class="nav-link scrollto active" href="index.html#portfolio">Portfolio</a></li>
-        <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li><a href="#">Drop Down 1</a></li>
-            <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-              <ul>
-                <li><a href="#">Deep Drop Down 1</a></li>
-                <li><a href="#">Deep Drop Down 2</a></li>
-                <li><a href="#">Deep Drop Down 3</a></li>
-                <li><a href="#">Deep Drop Down 4</a></li>
-                <li><a href="#">Deep Drop Down 5</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Drop Down 2</a></li>
-            <li><a href="#">Drop Down 3</a></li>
-            <li><a href="#">Drop Down 4</a></li>
-          </ul>
-        </li> -->
         <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
@@ -80,7 +63,7 @@
       <div class="container">
 
         <div class="d-flex justify-content-between align-items-center">
-          <h2>중고 거래 플랫폼 <span id="sub-title">[Daitso]</span></h2>
+          <h2><span class="material-symbols-outlined">fiber_manual_record</span>중고 거래 플랫폼 <span id="sub-title">[Daitso]</span></h2>
           <ol>
             <li><a href="index.html#space">Home</a></li>
             <li><a href="index.html#portfolio">Portfolio</a></li>
@@ -155,49 +138,45 @@
                 </div>
               </div>
 
-                <div class="swiper-button-prev">
-                  <i class="fas fa-chevron-left"></i>
-                </div>
-                <div class="swiper-button-next">
-                  <i class="fas fa-chevron-right"></i>
-                </div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
 
               <div class="swiper-pagination"></div>
             </div>
           </div>
 
-
           <div class="col-lg-4">
             <div class="portfolio-info">
-              <h3>Project information</h3>
+              <h3>프로젝트 개요</h3>
               <ul>
                 <li>
                   <strong>주요기능</strong>
                   <div class="text-column">
-                    법관이 중대한 심신상의 장해로 직무를 수행할 수 없을 때에는 법률이 정하는 바에 의하여 퇴직하게 할 수 있다
+                    내용 작성
                   </div>
                 </li>
                 <li>
                   <strong>활동내용</strong>
                   <div class="text-column">
-                    법관이 중대한 심신상의 장해로 직무를 수행할 수 없을 때에는 법률이 정하는 바에 의하여 퇴직하게 할 수 있다
+                    내용 작성
                   </div>
                 </li>
-                <li><strong>카테고리</strong> 윈도우 프로그램</li>
-                <li><strong>기간</strong> 0000.00.00 ~ 0000.00.00</li>
-                <li><strong>GitHub</strong> github.com/link</li>
-                <!-- <li><strong>✔ URL</strong>: <a href="#">www.example.com</a></li> -->
+                <table class="detail-table">
+                  <tr>
+                    <th><li><strong>카테고리</strong></li></th>
+                    <td>내용 작성</td>
+                  </tr>
+                  <tr>
+                    <th><li><strong>기간</strong></li></th>
+                    <td>0000.00.00 ~ 0000.00.00</td>
+                  </tr>
+                  <tr>
+                    <th><li><strong>GitHub</strong></li></th>
+                    <td><a href="" target="_blank">github.com/link</a></li></td>
+                  </tr>
+                </table>
               </ul>
             </div>
-            <!-- <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia.
-                Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia
-                accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt
-                eius.
-              </p>
-            </div> -->
           </div>
 
         </div>
@@ -205,6 +184,105 @@
       </div>
 
     </section><!-- End Portfolio Details Section -->
+    
+    <!--
+    <p><i class="fa-solid fa-lemon"></i> <b>기술명</b>: 요약<br>상세내용</p>
+    <p><i class="fa-regular fa-lemon"></i> 작업내용</p>
+    <p><i class="fa-solid fa-lightbulb"></i> <b>파이프라인</b> <br><p></p><br>
+    -->
+
+    <!-- ======= Departments Section ======= -->
+    <section id="departments" class="departments">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 mb-5 mb-lg-0">
+            <ul class="nav nav-tabs flex-column">
+
+              <div class="portfolio-info-title">
+                <h2>프로젝트 상세</h2>
+              </div>
+
+              <li class="nav-item">
+                <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
+                  <h4>기능1</h4>
+                  <p>기능1 요약</p>
+                </a>
+              </li>
+
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
+                  <h4>기능2</h4>
+                  <p>기능2 요약</p>
+                </a>
+              </li>
+
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+                  <h4>기능3</h4>
+                  <p>기능3 요약</p>
+                </a>
+              </li>
+
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+                  <h4>기능4</h4>
+                  <p>기능4 요약</p>
+                </a>
+              </li>
+
+            </ul>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="tab-content">
+
+              <div class="tab-pane active show" id="tab-1">
+                <h3>기능1</h3>
+                <pre id="code"><code class="language-java"><c:out>public class Main {
+    public static void main(String[] args) {
+        System. out.println("Hello World" );
+    }
+}</c:out></code></pre>
+                <p>기능1 설명</p>
+              </div>
+
+              <div class="tab-pane" id="tab-2">
+                <h3>기능2</h3>
+                <pre id="code"><code class="language-java"><c:out>public class Main {
+    public static void main(String[] args) {
+        System. out.println("Hello World" );
+    }
+}</c:out></code></pre>
+                <p>기능2 설명</p>
+              </div>
+
+              <div class="tab-pane" id="tab-3">
+                <h3>기능3</h3>
+                <pre id="code"><code class="language-java"><c:out>public class Main {
+    public static void main(String[] args) {
+        System. out.println("Hello World" );
+    }
+}</c:out></code></pre>
+                <p>기능3 설명</p>
+              </div>
+
+              <div class="tab-pane" id="tab-4">
+                <h3>기능4</h3>
+                <pre id="code"><code class="language-java"><c:out>public class Main {
+    public static void main(String[] args) {
+        System. out.println("Hello World" );
+    }
+}</c:out></code></pre>
+                <p>기능4 설명</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Departments Section -->
 
   </main><!-- End #main -->
 
@@ -212,22 +290,10 @@
   <footer id="footer">
     <div class="container">
       <h3>Seungwon Lee</h3>
-      <!-- <p>개발자 포트폴리오</p> -->
-      <!-- <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div> -->
       <div class="copyright">
         &copy; Copyright <strong><span>Laura</span></strong>. All Rights Reserved
       </div>
       <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/laura-free-creative-bootstrap-theme/ -->
         Design Reference <a href="https://bootstrapmade.com/">BootstrapMade</a>
       </div>
     </div>

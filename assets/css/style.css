@@ -1950,6 +1950,15 @@ li:hover .arrow_box {
   text-align: center;
 }
 
+.fa-lemon {
+  color: #555;
+}
+
+.fa-lightbulb:before {
+  color: cornflowerblue;
+  /* text-shadow: 0 0 10px #e5e9ed, 0 0 20px #eaecee, 0 0 30px #eaebed; */
+}
+
 /*--------------------------------------------------------------
 # Contact Me
 --------------------------------------------------------------*/
