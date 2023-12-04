@@ -1892,12 +1892,36 @@ li:hover .arrow_box {
 #code {
   border: 1px solid #CCC;
   padding: 5px;
+  border-radius: 5px;
 }
 
 #code * {
   font-family: d2coding;
   background-color: transparent;
 }
+
+/* 
+#code {
+  border: 1px solid #4d4d4d;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: 'Monaco', monospace;
+  background-color: #282c34;
+  overflow-x: auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease;
+}
+
+#code:hover {
+  background-color: #333842;
+}
+
+#code * {
+  font-family: 'D2Coding', monospace;
+  background-color: transparent;
+  color: inherit;
+} */
+
 
 /*--------------------------------------------------------------
 # Contact Me
