@@ -86,7 +86,7 @@ high {
   display: inline-block;
 }
 
-/* 
+/*
 high {
   font-weight: 550;
   color: #fffee9;
@@ -97,6 +97,13 @@ high {
   display: inline-block;
 }
 */
+
+term {
+  font-style: italic;
+  font-size: 16px;
+  color: #777;
+  margin-left: 5px;
+}
 
 /*--------------------------------------------------------------
 # Web Font
