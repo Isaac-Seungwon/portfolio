@@ -79,23 +79,33 @@ h6 {
 
 high {
   font-weight: 580;
-  color: #ff4949;
+  color: #f05e5e;
   background: #eef0f2;
   padding: 0px 8px;
   border-radius: 2px;
 }
 
-.breadcrumbs high:first-of-type {
-  margin-left: 30px !important;
-  margin-top: 10px !important;
-  display: inline-block;
+@media (min-width: 300px) and (max-width: 1024px) {
+  .breadcrumbs high:first-of-type {
+    margin-left: 0px !important;
+    margin-top: 10px !important;
+    display: inline-block;
+  }
 }
 
-.portfolio-info high:first-of-type {
-  margin-top: 20px !important;
-  display: inline-block;
+/* 랩탑 화면 (화면 너비 1025px - 1600px) */
+@media (min-width: 769px) and (max-width: 1600px) {
+  .breadcrumbs high:first-of-type {
+    margin-left: 30px !important;
+    margin-top: 10px !important;
+    display: inline-block;
+  }
+  
+  .portfolio-info high:first-of-type {
+    margin-top: 20px !important;
+    display: inline-block;
+  }
 }
-
 
 /*
 high {
@@ -1650,12 +1660,28 @@ li:hover .arrow_box {
   /* text-decoration: underline; */
 }
 
-.material-symbols-outlined {
-  opacity: .9;
-  vertical-align: top;
-  padding-top: 10px;
-  padding-right: 5px;
+@media (min-width: 300px) and (max-width: 1024px) {
+  .material-symbols-outlined {
+    opacity: .9;
+    vertical-align: middle;
+    padding-right: 5px;
+  }
+
+  .portfolio-details-content h2 {
+    margin-top: 20px;
+  }
 }
+
+/* 랩탑 화면 (화면 너비 1025px - 1600px) */
+@media (min-width: 769px) and (max-width: 1600px) {
+  .material-symbols-outlined {
+    opacity: .9;
+    vertical-align: top;
+    padding-top: 10px;
+    padding-right: 5px;
+  }
+}
+
 
 .portfolio-info ul li strong {
   display: inline-block;
