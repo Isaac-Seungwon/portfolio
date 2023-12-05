@@ -203,7 +203,7 @@
 --C01-01. 강의 스케줄 조회
 --특정 교사의 강의 스케줄을 출력
 SELECT
-	t.teacherName AS 교사이름,
+    t.teacherName AS 교사이름,
     c.courseName AS 과정명,
     CASE
       WHEN sysdate < cd.courseStartDate THEN '강의예정'
