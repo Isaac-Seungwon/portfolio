@@ -329,9 +329,9 @@ ORDER BY o.courseName, i.interviewerName;
 
 --과정기간(끝 년월일)이 현재일 이후면서 '강의 종료'로 전환되지 않는 과정 조회
 SELECT
-	t.teacherName AS 교사이름,
+    t.teacherName AS 교사이름,
     c.courseName AS 과정명,
-	l.progress AS 강의진행여부,
+    l.progress AS 강의진행여부,
     TO_CHAR(cd.courseStartDate, 'YYYY-MM-DD') AS "과정기간(시작 년월일)",
     TO_CHAR(cd.courseEndDate, 'YYYY-MM-DD') AS "과정기간(끝 년월일)",
     cd.lectureRoomNum AS 강의실,
