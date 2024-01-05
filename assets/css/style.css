@@ -101,10 +101,12 @@ high {
     display: inline-block;
   }
   
+  /*
   .portfolio-info high:first-of-type {
     margin-top: 20px !important;
     display: inline-block;
   }
+  */
 }
 
 /*
@@ -1383,7 +1385,7 @@ li:hover .arrow_box {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #4A70B5;
+  background-color: #7292cd;
   transform: scaleX(0);  /* Initial state: not visible */
   transform-origin: bottom right;
   transition: transform 0.3s ease;
@@ -1550,13 +1552,13 @@ li:hover .arrow_box {
   cursor: pointer;
   display: inline-block;
   margin: 0 10px 10px 10px;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 600;
   line-height: 1;
-  padding: 7px 19px;
+  padding: 7px 18px 11px 17px;
   text-transform: uppercase;
   color: #444444;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.2s ease-in-out;
   border: 2px solid #f4f4f4;
   border-radius: 2px;
 }
@@ -1601,7 +1603,7 @@ li:hover .arrow_box {
 }
 
 .portfolio .portfolio-item .portfolio-info h4 {
-  font-size: 18px;
+  font-size: 20px;
   color: #333;
   font-weight: 600;
   color: #333;
@@ -1610,21 +1612,28 @@ li:hover .arrow_box {
 
 .portfolio .portfolio-item .portfolio-info p {
   color: #333;
-  margin-top: 10px;
-  /* margin: 5px; */
+  margin: 10px 0 10px 0;
   font-size: 18px;
+}
+
+.fa-expand {
+  font-size: 22px;
+}
+
+.fa-up-right-from-square {
+  font-size: 21px;
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link,
 .portfolio .portfolio-item .portfolio-info .details-link {
   display: inline-flex;
   font-size: 24px;
-  color: #333;
+  color: #dcdcdc;
   transition: 0.3s;
 }
 
 .portfolio .portfolio-item .portfolio-info .details-link {
-  margin-left: 5px;
+  margin-left: 17px;
 }
 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover,
@@ -1633,13 +1642,19 @@ li:hover .arrow_box {
   color: #4284FF;
 }
 
+.portfolio-button {
+  margin-top: -10px;
+}
+
+/* 
 .portfolio .portfolio-item .portfolio-info .preview-link:hover {
-  rotate: 90deg;
+  rotate: 30deg;
 }
 
 .portfolio .portfolio-item .portfolio-info .details-link:hover {
-  rotate: 180deg;
+  rotate: 30deg;
 }
+*/
 
 .portfolio .portfolio-item .portfolio-info .details-link {
   right: 10px;
@@ -1663,11 +1678,11 @@ li:hover .arrow_box {
   display: block;
   content: '';
   width: 98%;
-  height: 2px;
+  height: 1px;
   text-align: center;
-  margin-left: 5px;
+  margin: 15px 0px 10px 0px;
   opacity: 0.3;
-  background-color: #eaeaea;
+  background-color: #d1d0d0; /* e5e5e5 */
 }
 
 .portfolio .col-lg-4 {
@@ -1985,7 +2000,7 @@ li:hover .arrow_box {
   padding: 20px;
   color: #555555;
   border-radius: 0;
-  border-left: 5px solid #fff;
+  border-left: 5px solid #f4f4f4;
   cursor: pointer;
 }
 
@@ -2092,6 +2107,7 @@ li:hover .arrow_box {
   border-collapse: separate;
   border-spacing: 0 20px;
   width: 100%;
+  text-align: left;
 }
 
 .activity {
@@ -2321,11 +2337,12 @@ li:hover .arrow_box {
   right: 0;
   top: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgb(23 23 23);
 }
 
 #footer .container {
   position: relative;
+  margin-bottom: 20px !important;
 }
 
 #footer h3:first-child {
@@ -2380,4 +2397,8 @@ li:hover .arrow_box {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.5);
   margin-bottom: -10px;
+}
+
+#footer > div > div:nth-child(2) {
+  font-weight: 600;
 }
