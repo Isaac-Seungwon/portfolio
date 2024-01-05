@@ -1723,6 +1723,10 @@ li:hover .arrow_box {
   }
 }
 
+div.portfolio-info > div > table > tbody > tr:nth-child(1) > th {
+  width: 25%;
+}
+
 /*--------------------------------------------------------------
 # Portfolio Details
 --------------------------------------------------------------*/
