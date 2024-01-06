@@ -79,7 +79,7 @@ h6 {
 
 high {
   font-weight: 580;
-  color: #f05e5e;
+  color: #ef6262; /* #f05e5e */
   background: #eef0f2;
   padding: 0px 8px;
   border-radius: 2px;
@@ -1591,6 +1591,13 @@ li:hover .arrow_box {
   transition: all 0.5s ease-in-out;
 }
 
+.portfolio .portfolio-item .portfolio-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
 .portfolio .portfolio-item .portfolio-info {
   background: rgba(252, 252, 252, 0);
   transition: all ease-in-out 0.1s;
@@ -2320,6 +2327,41 @@ div.portfolio-info > div > table > tbody > tr:nth-child(1) > th {
     line-height: 1;
     color: #4A70B5;
 }
+
+/* 
+.col-md-6 {
+  position: relative;
+}
+
+.col-md-6 .info-box {
+  transition: transform 0.5s ease-in-out;
+}
+
+.col-md-6:hover .info-box {
+  transform: rotateX(180deg);
+}
+
+.col-md-6 .info-box:before {
+  content: "연락주세요";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateX(0deg);
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.col-md-6:hover .info-box:before {
+  opacity: 1;
+  transform: rotateX(180deg);
+}
+*/
 
 /*--------------------------------------------------------------
 # Footer

@@ -557,7 +557,7 @@ function hideTooltip(tooltipId) {
 */
 const words = [
   { text: "Java", size: 60, color: "white", opacity: 1, tags: ["언어", "Java"] },
-  { text: "MySQL", size: 45, color: "white", opacity: 1, tags: ["데이터베이스", "MySQL"] },
+  { text: "SQL", size: 55, color: "white", opacity: 1, tags: ["데이터베이스", "SQL"] },
   { text: "R", size: 50, color: "white", opacity: 1, tags: ["언어", "R"] },
   { text: "C", size: 50, color: "white", opacity: 1, tags: ["언어", "C"] },
   { text: "C++", size: 50, color: "white", opacity: 1, tags: ["언어", "C++"] },
@@ -568,14 +568,14 @@ const words = [
   { text: "Git", size: 55, color: "white", opacity: 1, tags: ["도구", "Git"] },
   { text: "Photoshop", size: 45, color: "white", opacity: 1, tags: ["도구", "Photoshop"] },
   { text: "Illustrator", size: 40, color: "white", opacity: 1, tags: ["도구", "Illustrator"] },
-  { text: "Premiere Pro", size: 45, color: "white", opacity: 1, tags: ["도구", "Premiere Pro"] },
+  { text: "Premiere Pro", size: 40, color: "white", opacity: 1, tags: ["도구", "Premiere Pro"] },
   { text: "JSP", size: 50, color: "white", opacity: 1, tags: ["언어", "JSP"] },
   { text: "Servlet", size: 45, color: "white", opacity: 1, tags: ["언어", "Servlet"] },
   { text: "JDBC", size: 45, color: "white", opacity: 1, tags: ["데이터베이스", "JDBC"] },
   { text: "Python", size: 40, color: "white", opacity: 1, tags: ["언어", "Python"] },
   { text: "HTML", size: 50, color: "white", opacity: 1, tags: ["언어", "HTML"] },
   { text: "CSS", size: 45, color: "white", opacity: 1, tags: ["언어", "CSS"] },
-  { text: "JavaScript", size: 45, color: "white", opacity: 1, tags: ["언어", "JavaScript"] },
+  { text: "JavaScript", size: 50, color: "white", opacity: 1, tags: ["언어", "JavaScript"] },
   { text: "Spring", size: 50, color: "white", opacity: 1, tags: ["프레임워크", "Spring"] },
   { text: "MyBatis", size: 45, color: "white", opacity: 1, tags: ["프레임워크", "MyBatis"] },
   { text: "jQuery", size: 45, color: "white", opacity: 1, tags: ["라이브러리", "jQuery"] },
@@ -583,7 +583,9 @@ const words = [
   { text: "AWS", size: 55, color: "white", opacity: 1, tags: ["클라우드", "AWS"] },
   { text: "jSoup", size: 40, color: "white", opacity: 1, tags: ["라이브러리", "jSoup"] },
   { text: "Selenium", size: 40, color: "white", opacity: 1, tags: ["프레임워크", "Selenium"] },
-  { text: "SDL", size: 45, color: "white", opacity: 1, tags: ["라이브러리", "SDL"] }
+  { text: "SDL", size: 40, color: "white", opacity: 1, tags: ["라이브러리", "SDL"] },
+  { text: "STS", size: 50, color: "white", opacity: 1, tags: ["도구", "STS"] },
+  { text: "Elasticsearch", size: 40, color: "white", opacity: 1, tags: ["라이브러리", "Elasticsearch"] }
 ];
 
 const colorByTag = {
