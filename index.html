@@ -689,7 +689,7 @@
                   </tr>
                   <tr>
                     <th><li><strong>Back-End</strong></li></th>
-                    <td><high>Java</high> <high>JSP</high> <high>Spring STS-3</high> <high>Apache Tomcat</high> <high>MyBatis</high> <high>HikariCP</high></td>
+                    <td><high>Java</high> <high>JSP</high> <high>Apache Tomcat</high> <high>MyBatis</high> <high>HikariCP</high></td>
                   </tr>
                   <tr>
                     <th><li><strong>Database</strong></li></th>
@@ -701,11 +701,11 @@
                   </tr>
                   <tr>
                     <th><li><strong>도구</strong></li></th>
-                    <td><high>Eclipse</high> <high>SQL Developer</high> <high>DBeaver</high> <high>Git</high> <high>eXERD</high> <high>Draw.io</high> <high>Sourcetree</high> <high>Google Drive</high></td>
+                    <td><high>STS-3</high> <high>SQL Developer</high> <high>DBeaver</high> <high>Git</high> <high>eXERD</high> <high>Draw.io</high> <high>Sourcetree</high> <high>Google Drive</high></td>
                   </tr>
                   <tr>
                     <th><li><strong>기술</strong></li></th>
-                    <td><high>Spring MVC Pattern</high> <high>Elasticsearch</high> <high>Socket</high> <high>RegEx</high> <high>AJAX</high> <high>Spring Security</high> <high>Restful API</high> <high>Kakao 지도 API</high> <high>Daum 주소 API</high></td>
+                    <td><high>Spring MVC Pattern</high> <high>Elasticsearch</high> <high>Socket</high> <high>RegEx</high> <high>Ajax</high> <high>Spring Security</high> <high>Restful API</high> <high>Kakao 지도 API</high> <high>Daum 주소 API</high></td>
                   </tr>
                   <tr>
                     <th><li><strong>기간</strong></li></th>
@@ -740,7 +740,7 @@
                   </tr>
                   <tr>
                     <th><li><strong>기술</strong></li></th>
-                    <td><high>ANSI/SQL</high> <high>PL/SQL</high></td>
+                    <td><high>ANSI-SQL</high> <high>PL-SQL</high></td>
                   </tr>
                   <tr>
                     <th><li><strong>기간</strong></li></th>
@@ -805,8 +805,16 @@
                     <td>Servlet/JSP 프로젝트</td>
                   </tr>
                   <tr>
-                    <th><li><strong>언어</strong></li></th>
-                    <td><high>Java</high> <high>Oracle Database 11g</high> <high>HTML</high> <high>CSS</high> <high>JavaScript</high></td>
+                    <th><li><strong>Front-End</strong></li></th>
+                    <td><high>HTML</high> <high>CSS</high> <high>JavaScript</high> <high>jQuery</high></td>
+                  </tr>
+                  <tr>
+                    <th><li><strong>Back-End</strong></li></th>
+                    <td><high>Java</high> <high>JSP</high> <high>Apache Tomcat</high>
+                  </tr>
+                  <tr>
+                    <th><li><strong>Database</strong></li></th>
+                    <td><high>Oracle Database 11g</high></td>
                   </tr>
                   <tr>
                     <th><li><strong>도구</strong></li></th>
@@ -814,7 +822,7 @@
                   </tr>
                   <tr>
                     <th><li><strong>기술</strong></li></th>
-                    <td><high>Servlet</high> <high>JSP</high> <high>Kakao 지도 API</high> <high>Daum 주소 API</high></td>
+                    <td><high>Servlet</high> <high>JSP</high> <high>Ajax</high> <high>Kakao 지도 API</high> <high>Daum 주소 API</high></td>
                   </tr>
                   <tr>
                     <th><li><strong>기간</strong></li></th>
@@ -938,7 +946,7 @@
                   </tr>
                   <tr>
                     <th><li><strong>기술</strong></li></th>
-                    <td></td>
+                    <td>File I/O</td>
                   </tr>
                   <tr>
                     <th><li><strong>기간</strong></li></th>
@@ -1073,9 +1081,14 @@
               <a href="portfolio-details1.html" class="details-link" title="More Details"><i class="fa-solid fa-up-right-from-square"></i></a>
             </div>
           </div>
+          
 
         </div>
 
+        <div id="pdf-document" onclick="window.open('', '_blank')">
+          <i class="fa-solid fa-file-pdf"></i>&nbsp;PDF 문서로 보기
+        </div>
+        
       </div>
     </section><!-- End My Portfolio Section -->
 
@@ -1194,19 +1207,21 @@
                 </div>
               </div> -->
               <div class="col-md-6">
-                <div class="info-box mt-4">
+                <div class="info-box mt-4" onmousemove="showTooltip(event, 'tooltip99')" onmouseout="hideTooltip('tooltip99')">
                   <div class="icon email"><i class="bx bx-envelope"></i></div>
                   <h3>이메일</h3>
                   <p>zhzkdkrak@naver.com</p>
                 </div>
+                <div class="arrow_box" id="tooltip99">꽤나 큰 진동이 느껴진다.. 아무래도 연락을 해야겠다.</div>
               </div>
               <div class="col-md-6">
-                <div class="info-box mt-4">
+                <div class="info-box mt-4" onmousemove="showTooltip(event, 'tooltip100')" onmouseout="hideTooltip('tooltip100')">
                   <div class="icon phone"><i class="bx bx-phone-call"></i></div>
                   <h3>연락처</h3>
                   <p>010-5213-0157</p>
                 </div>
               </div>
+              <div class="arrow_box" id="tooltip100">이 떨림 오랜만에 보는 간절함이다.. 연락을 해야겠다.</div>
             </div>
 
           </div>
@@ -1248,13 +1263,6 @@
     <div class="container">
       <h3>Seungwon Lee</h3>
       <div style="color: #CCC;">Developer Portfolio</div><br>
-      <!-- <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-      </div> -->
       <div class="copyright">
         &copy; Copyright <strong><span>Laura</span></strong>. All Rights Reserved
       </div>

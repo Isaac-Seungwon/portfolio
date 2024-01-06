@@ -2363,6 +2363,44 @@ div.portfolio-info > div > table > tbody > tr:nth-child(1) > th {
 }
 */
 
+.contact .info-box:hover {
+  animation: shake 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70%, 90% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60%, 80% {
+    transform: translateX(15px);
+  }
+}
+.contact .info-box {
+  position: relative;
+}
+
+.contact .info-box .tooltip {
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #4A70B5;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.contact .info-box:hover .tooltip {
+  display: block;
+  opacity: 1;
+}
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
@@ -2447,4 +2485,23 @@ div.portfolio-info > div > table > tbody > tr:nth-child(1) > th {
 
 #footer > div > div:nth-child(2) {
   font-weight: 600;
+}
+
+#pdf-document {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 350px;
+  height: 52px;
+  font-size: 1.4rem;
+  text-align: center;
+  background: linear-gradient(45deg, #4A70B5, #5186e7);
+  color: #fff;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.3);
+  border-radius: 5px;
+  cursor: pointer;
+  border: 0;
+  line-height: 50px; 
+  margin: 0 auto;
 }
