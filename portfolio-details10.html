@@ -234,10 +234,10 @@ SELECT
     t.teacherName AS 교사이름,
     c.courseName AS 과정명,
     CASE
-      WHEN sysdate < cd.courseStartDate THEN '강의예정'
-      WHEN sysdate BETWEEN cd.courseStartDate AND cd.courseEndDate THEN '강의중'
-      WHEN sysdate > cd.courseEndDate THEN '강의종료'
-	END AS "강의진행여부",
+        WHEN sysdate < cd.courseStartDate THEN '강의예정'
+        WHEN sysdate BETWEEN cd.courseStartDate AND cd.courseEndDate THEN '강의중'
+        WHEN sysdate > cd.courseEndDate THEN '강의종료'
+    END AS "강의진행여부",
     TO_CHAR(cd.courseStartDate, 'YYYY-MM-DD') AS "과정기간(시작 년월일)",
     TO_CHAR(cd.courseEndDate, 'YYYY-MM-DD') AS "과정기간(끝 년월일)",
     cd.lectureRoomNum AS 강의실,
@@ -266,14 +266,60 @@ FROM tblLectureSchedule l
 												ON t.teacherNum = al.teacherNum
 													LEFT OUTER JOIN tblTextBook tb
 														ON s.subjectNum = tb.subjectNum
-															WHERE t.teacherNum = 1 --체제투
-																ORDER BY 
-																    CASE
-																        WHEN sysdate BETWEEN cd.courseStartDate AND cd.courseEndDate THEN 1
-																        WHEN sysdate < cd.courseStartDate THEN 2
-																        WHEN sysdate > cd.courseEndDate THEN 3
-																    END,
-																    cd.courseStartDate ASC;
+WHERE t.teacherNum = 1 --체제투
+ORDER BY 
+    CASE
+        WHEN sysdate BETWEEN cd.courseStartDate AND cd.courseEndDate THEN 1
+        WHEN sysdate < cd.courseStartDate THEN 2
+        WHEN sysdate > cd.courseEndDate THEN 3
+    END,
+    cd.courseStartDate ASC;
+
+--SELECT
+--    t.teacherName AS 교사이름,
+--    s.subjectNum AS 과목번호,
+--    c.courseName AS 과정명,
+--    CASE
+--        WHEN sysdate < cd.courseStartDate THEN '강의 예정'
+--        WHEN sysdate BETWEEN cd.courseStartDate AND cd.courseEndDate THEN '강의중'
+--        WHEN sysdate > cd.courseEndDate THEN '강의 종료'
+--    END AS "강의진행여부",
+--    TO_CHAR(cd.courseStartDate, 'YYYY-MM-DD') AS "과정기간(시작 년월일)",
+--    TO_CHAR(cd.courseEndDate, 'YYYY-MM-DD') AS "과정기간(끝 년월일)",
+--    cd.lectureRoomNum AS 강의실,
+--    s.subjectName AS 과목명,
+--    TO_CHAR(sd.subjectStartDate, 'YYYY-MM-DD') AS "과목기간(시작 년월일)",
+--    TO_CHAR(sd.subjectEndDate, 'YYYY-MM-DD') AS "과목기간(끝 년월일)",
+--    tb.textBookName AS 교재명,
+--    (
+--    SELECT
+--    	COUNT(*)
+--    FROM tblStudent u
+--    	WHERE u.courseDetailNum = cd.courseDetailNum
+--    ) AS "교육생 등록 인원"
+--FROM tblLectureSchedule l
+--	INNER JOIN tblSubjectDetail sd
+--		ON l.subjectDetailNum = sd.subjectDetailNum
+--			INNER JOIN tblCourseDetail cd
+--				ON cd.courseDetailNum = sd.courseDetailNum
+--					INNER JOIN tblCourse c
+--						ON cd.courseNum = c.courseNum
+--							INNER JOIN tblSubject s
+--								ON s.subjectNum = sd.subjectNum
+--									INNER JOIN tblAvailableLecture al
+--										ON al.subjectNum = s.subjectNum
+--											INNER JOIN tblTeacher t
+--												ON t.teacherNum = al.teacherNum
+--													LEFT OUTER JOIN tblTextBook tb
+--														ON s.subjectNum = tb.subjectNum
+--															WHERE t.teacherNum = <교사번호>
+--ORDER BY 
+--    CASE
+--        WHEN sysdate BETWEEN cd.courseStartDate AND cd.courseEndDate THEN 1
+--        WHEN sysdate < cd.courseStartDate THEN 2
+--        WHEN sysdate > cd.courseEndDate THEN 3
+--    END,
+--    cd.courseStartDate ASC;
 
 --교육중인 과정에 등록된 교육생의 정보 출력
 SELECT DISTINCT
@@ -342,8 +388,8 @@ FROM tblLectureSchedule l
 												ON t.teacherNum = al.teacherNum
 													LEFT OUTER JOIN tblTextBook tb
 														ON s.subjectNum = tb.subjectNum
-															WHERE cd.courseEndDate <= sysdate AND l.progress <> '강의종료'
-																ORDER BY cd.courseStartDate ASC;</c:out></code></pre><br>
+WHERE cd.courseEndDate <= sysdate AND l.progress <> '강의종료'
+ORDER BY cd.courseStartDate ASC;</c:out></code></pre><br>
                 
                 <h3>교육생 수급내역 (tblStudentSupply)</h3>
                 <pre id="code"><code class="language-sql"><c:out>--교육생 수급내역 (tblStudentSupply)
@@ -398,8 +444,9 @@ FROM tblAssignmentSubmit sb
 										ON c.courseNum = cd.courseNum
 											INNER JOIN vwStudent v
 												ON v.studentNum = sb.studentNum
-													WHERE cd.courseDetailNum = 1 --프로젝트기반 프론트엔드 웹,앱 SW발자 양성 과정
-														ORDER BY s.subjectName ASC;
+WHERE cd.courseDetailNum = 1 --프로젝트기반 프론트엔드 웹,앱 SW발자 양성 과정
+ORDER BY s.subjectName ASC;
+
 --SELECT
 --	c.courseName AS 과정명,
 --	s.subjectName AS 과목명,
@@ -420,8 +467,8 @@ FROM tblAssignmentSubmit sb
 --										ON c.courseNum = cd.courseNum
 --											INNER JOIN vwStudent v
 --												ON v.studentNum = sb.studentNum
---													WHERE cd.courseDetailNum = <과정상세번호>
---														ORDER BY s.subjectName ASC;
+--WHERE cd.courseDetailNum = <과정상세번호>
+--ORDER BY s.subjectName ASC;
 
 --수정
 UPDATE tblAssignment
@@ -440,9 +487,9 @@ DELETE FROM tblAssignment WHERE assignmentNum = 1;
 --D06-01. 과제 제출 및 조회
 --입력
 INSERT INTO tblAssignmentSubmit (AssignmentSubmitNum, AssignmentNum, studentNum, assignmentExplain)
-			VALUES (seqAssignmentSubmit.nextVal, 660, 27, CSS과제3 풀이);
+    VALUES (seqAssignmentSubmit.nextVal, 660, 27, CSS과제3 풀이);
 --INSERT INTO tblAssignmentSubmit (assignmentSubmitNum, assignmentNum, studentNum, assignmentExplain)
---			VALUES (seqAssignmentSubmit.nextVal, <과제번호>, <교육생번호>, <과제풀이>);
+--    VALUES (seqAssignmentSubmit.nextVal, <과제번호>, <교육생번호>, <과제풀이>);
 
 --출력
 --본인을 포함한 같은 과정을 수강중인 학생들의 과제 명단 출력
@@ -1093,8 +1140,8 @@ FROM tblStudent s
 CREATE OR REPLACE VIEW vwLectureSchedule
 AS
 SELECT
-	t.teacherNum,
-	t.teacherName,
+    t.teacherNum,
+    t.teacherName,
     s.subjectNum,
     c.courseName,
     CASE
@@ -1187,7 +1234,7 @@ SELECT * FROM vwStudentCourseStatus;</c:out></code></pre><br>
 CREATE OR REPLACE VIEW vwStudentSupply
 AS
 SELECT
-	o.courseNum,
+	  o.courseNum,
     o.courseName,
     i.interviewerName,
     i.interviewerTel,
