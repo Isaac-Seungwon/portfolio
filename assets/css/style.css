@@ -2506,10 +2506,15 @@ div.portfolio-info > div > table > tbody > tr:nth-child(1) > th {
   text-align: center;
   background: linear-gradient(45deg, #4A70B5, #5186e7);
   color: #fff;
-  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.3);
   border-radius: 5px;
+  box-shadow:  0px 0px 10px rgba(0, 0, 0, 0.20);
   cursor: pointer;
   border: 0;
   line-height: 50px; 
   margin: 0 auto;
+  transition: all 0.4s;
+}
+
+#pdf-document:hover {
+  box-shadow: 0 3px 20px 0 rgba(68, 88, 144, 0.25);
 }
