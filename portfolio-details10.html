@@ -275,52 +275,6 @@ FROM tblLectureSchedule l
 																    END,
 																    cd.courseStartDate ASC;
 
---SELECT
---	t.teacherName AS 교사이름,
---    s.subjectNum AS 과목번호,
---    c.courseName AS 과정명,
---    CASE
---      WHEN sysdate < cd.courseStartDate THEN '강의 예정'
---      WHEN sysdate BETWEEN cd.courseStartDate AND cd.courseEndDate THEN '강의중'
---      WHEN sysdate > cd.courseEndDate THEN '강의 종료'
---	END AS "강의진행여부",
---    TO_CHAR(cd.courseStartDate, 'YYYY-MM-DD') AS "과정기간(시작 년월일)",
---    TO_CHAR(cd.courseEndDate, 'YYYY-MM-DD') AS "과정기간(끝 년월일)",
---    cd.lectureRoomNum AS 강의실,
---    s.subjectName AS 과목명,
---    TO_CHAR(sd.subjectStartDate, 'YYYY-MM-DD') AS "과목기간(시작 년월일)",
---    TO_CHAR(sd.subjectEndDate, 'YYYY-MM-DD') AS "과목기간(끝 년월일)",
---    tb.textBookName AS 교재명,
---    (
---    SELECT
---    	COUNT(*)
---    FROM tblStudent u
---    	WHERE u.courseDetailNum = cd.courseDetailNum
---    ) AS "교육생 등록 인원"
---FROM tblLectureSchedule l
---	INNER JOIN tblSubjectDetail sd
---		ON l.subjectDetailNum = sd.subjectDetailNum
---			INNER JOIN tblCourseDetail cd
---				ON cd.courseDetailNum = sd.courseDetailNum
---					INNER JOIN tblCourse c
---						ON cd.courseNum = c.courseNum
---							INNER JOIN tblSubject s
---								ON s.subjectNum = sd.subjectNum
---									INNER JOIN tblAvailableLecture al
---										ON al.subjectNum = s.subjectNum
---											INNER JOIN tblTeacher t
---												ON t.teacherNum = al.teacherNum
---													LEFT OUTER JOIN tblTextBook tb
---														ON s.subjectNum = tb.subjectNum
---															WHERE t.teacherNum = <교사번호>
---																ORDER BY 
---																    CASE
---																        WHEN sysdate BETWEEN cd.courseStartDate AND cd.courseEndDate THEN 1
---																        WHEN sysdate < cd.courseStartDate THEN 2
---																        WHEN sysdate > cd.courseEndDate THEN 3
---																    END,
---																    cd.courseStartDate ASC;
-
 --교육중인 과정에 등록된 교육생의 정보 출력
 SELECT DISTINCT
 	o.courseName AS 과정명,
