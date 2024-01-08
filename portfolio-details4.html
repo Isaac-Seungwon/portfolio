@@ -70,7 +70,7 @@
             <li>Portfolio Details</li>
           </ol>
         </div>
-        <high>R</high>을 활용한 빅데이터 분석 프로젝트
+        <high>R</high>언어와 <high>RSelenium</high>를 활용한 빅데이터 분석 프로젝트입니다.
       </div>
     </section><!-- Breadcrumbs Section -->
 
@@ -189,13 +189,13 @@
               <h3>프로젝트 개요</h3>
               <ul>
                 <li>
-                  <strong>구현목표</strong>
+                  <strong>구현 목표</strong>
                   <div class="text-column">
-                    RSelenium 기술로 시편을 스크래핑하고, 텍스트 마이닝을 진행했습니다. 이를 통해 데이터 수집 및 분석 기법을 익히고, 다방면의 분석을 통해 연구 주제에 대한 이해도를 높였습니다.
+                    RSelenium 기술로 시편을 스크래핑하고, 텍스트 마이닝을 진행한다. 이를 통해 데이터 수집 및 분석 기법을 익히고, 다방면의 분석을 통해 연구 주제에 대해 이해도를 높일 수 있도록 한다.
                   </div>
                 </li>
                 <li>
-                  <strong>활동내용</strong>
+                  <strong>활동 내용</strong>
                   <div class="text-column">
                     <ul class="activity">
                       <li>1. 웹 스크래핑: RSelenium을 활용하여 Word Project 사이트에서 데이터 스크래핑</li>
@@ -208,12 +208,12 @@
                 </li>
                 <table class="detail-table">
                   <tr>
-                    <th><li><strong>카테고리</strong></li></th>
-                    <td>텍스트 마이닝 분석</td>
+                    <th><li><strong>Category</strong></li></th>
+                    <td>텍스트 마이닝</td>
                   </tr>
                   <tr>
-                    <th><li><strong>기간</strong></li></th>
-                    <td>2023.05.17 ~ 2023.06.21</td>
+                    <th><li><strong>Period</strong></li></th>
+                    <td>2023.05.17.~2023.06.21.</td>
                   </tr>
                   <tr>
                     <th><li><strong>GitHub</strong></li></th>
@@ -325,10 +325,10 @@
             <div class="tab-content">
 
               <div class="tab-pane active show" id="tab-1">
-                <h3>library 설정</h3>
+                <h3>library 설정</h3>            
                 <pre id="code"><code class="language-r"><c:out># === library 설정 === #
 
-# 스크래핑 (스크래핑)
+# 크롤링 (스크래핑)
 library(rvest)
 library(readr)
 library(stringr)
@@ -361,6 +361,40 @@ library(tm)
 library(stm)
 library(furrr)
 library(ggthemes)</c:out></code></pre>
+
+<p><i class="fa-solid fa-lemon"></i> <b>크롤링 (스크래핑)</b></p>
+<p><i class="fa-regular fa-lemon"></i> <b>rvest</b>: 웹 페이지 스크래핑을 위한 패키지입니다. HTML 페이지에서 데이터를 추출하고, 원하는 정보를 가져오는 데 사용합니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>readr</b>: 데이터 파일 읽기 및 로드를 위한 패키지이며, tidyverse 패키지 중 하나입니다. csv, tsv, fwf 등의 격자형의 데이터 파일을 쉽고 편하게 읽기 위해 만들어졌습니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>stringr</b>: 문자열 처리 및 조작을 위한 패키지입니다. 문자열을 쉽게 처리할 수 있도록 설계 함수 세트를 제공하므로 텍스트 데이터에서 패턴을 찾고 조작하는 데 사용합니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>dplyr</b>: 데이터 처리에 특화된 패키지입니다. 데이터프레임에서 간편하게 데이터를 조작할 수 있습니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>ggplot2</b>: 데이터 시각화를 위한 패키지입니다. 다양한 그래프와 차트를 생성하고 데이터를 시각적으로 표현하는 데 사용합니다.</p><br>
+
+<p><i class="fa-solid fa-lemon"></i> <b>형태소 분석</b></p>
+<p><i class="fa-regular fa-lemon"></i> <b>useNIADic</b>: 한국어 단어사전 사용을 위한 함수입니다. 한국어 텍스트에서 단어를 추출하거나 사전을 참조하는 데 사용합니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>KoNLP</b>: 한국어 형태소 분석을 위한 패키지입니다. 한국어 텍스트를 형태소 단위로 분석하고 다양한 텍스트 마이닝 작업에 사용합니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>multilinguer</b>: 다국어 처리 및 다양한 언어 지원을 위한 패키지입니다. 여러 언어로 작성된 텍스트 데이터를 다룰 때 유용하게 사용합니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>tidyverse</b>: 데이터 가공 및 시각화를 위한 종합 패키지입니다. dplyr, ggplot2 등을 포함하며 효율적인 데이터 처리와 시각화를 지원합니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>tidytext</b>: 텍스트 데이터를 다루기 위한 tidyverse 스타일의 패키지입니다. 텍스트 분석 및 텍스트 마이닝 작업을 수행할 때 유용하게 사용합니다.</p><br>
+
+<p><i class="fa-solid fa-lemon"></i> <b>동시발생빈도</b></p>
+<p><i class="fa-regular fa-lemon"></i> <b>igraph</b>: 그래프 이론을 다루기 위한 패키지입니다. 복잡한 네트워크 구조를 분석하고 시각화하는 데 사용합니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>widyr</b>: 데이터 프레임에서 동시발생 빈도를 계산하기 위한 패키지입니다. tidyverse 스타일의 데이터 가공을 지원합니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>tidygraph</b>: tidyverse와 함께 사용되는 그래프 패키지입니다. 데이터 프레임을 이용한 그래프 분석이 가능합니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>ggraph</b>: 그래프 시각화를 위한 패키지입니다. tidygraph와 함께 사용하여 그래프를 예쁘게 그릴 수 있습니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>viridis</b>: 시각화에서 사용할 수 있는 색상 팔레트를 제공하는 패키지입니다. 그래프나 워드클라우드 등에서 색상을 효과적으로 사용할 수 있습니다.</p><br>
+
+<p><i class="fa-solid fa-lemon"></i> <b>워드클라우드</b></p>
+<p><i class="fa-regular fa-lemon"></i> <b>wordcloud</b>: 워드클라우드 생성을 위한 패키지입니다. 텍스트 데이터에서 빈도가 높은 단어를 시각적으로 표현합니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>wordcloud2</b>: 인터랙티브 워드클라우드를 생성하기 위한 패키지입니다. 웹 기반에서 상호작용 가능한 워드클라우드를 만들 수 있습니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>ggwordcloud</b>: ggplot2를 이용한 워드클라우드 생성을 지원하는 패키지입니다. ggplot2의 기능을 활용하여 다양한 스타일의 워드클라우드를 만들 수 있습니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>showtext</b>: 폰트 설정을 관리하는 패키지입니다. 워드클라우드나 그래프의 폰트의 설정에 사용합니다.</p><br>
+
+<p><i class="fa-solid fa-lemon"></i> <b>토픽 분석</b></p>
+<p><i class="fa-regular fa-lemon"></i> <b>quanteda</b>: 텍스트 마이닝을 위한 종합적인 패키지입니다. 다양한 텍스트 분석 작업을 지원합니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>tm</b>: 텍스트 마이닝을 위한 기본 패키지입니다. 텍스트 전처리 및 기본적인 분석을 수행할 수 있습니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>stm</b>: 구조적 토픽 모델링을 위한 패키지입니다. 텍스트 데이터의 토픽을 추출하고 관계를 분석하는 데 사용합니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>furrr</b>: 병렬 처리를 지원하는 패키지입니다. 대용량 텍스트 데이터를 효율적으로 처리할 때 사용합니다.</p>
+<p><i class="fa-regular fa-lemon"></i> <b>ggthemes</b>: ggplot2 테마 설정을 지원하는 패키지입니다. 그래프의 스타일, 테마를 설정할 수 있습니다.</p>
               </div>
 
               <div class="tab-pane" id="tab-2">
@@ -368,8 +402,6 @@ library(ggthemes)</c:out></code></pre>
                 <p><i class="fa-solid fa-lightbulb"></i> <b>웹 크롤링 & 웹 스크래핑</b><br>
                   웹 크롤링과 웹 스크래핑은 모두 데이터를 웹 상의 수집한다는 점은 같지만, 스크래핑은 모든 페이지에 대한 데이터를 추출하고, 스크래핑은 특정 웹 사이트나 페이지에서 필요한 데이터를 추출한다는 점에서 차이가 있습니다.<br>엄밀히 하면, 웹 크롤링과 웹 스크래핑은 이러한 점에서 목적과 프로세스의 차이가 있습니다. 그러나 실제로는 두 용어가 종종 혼용되곤 합니다.
                 </p>
-                <p><i class="fa-solid fa-lemon"></i> <b>cat() 함수</b>: 출력 결과를 콘솔에 텍스트 형식으로 표시하는 데 사용되는 R의 내장 함수입니다.<br>cat() 함수는 스크래핑 결과를 페이지별로 출력하는 역할을 합니다.</p>
-                <p><i class="fa-solid fa-lemon"></i> <b>paste() 함수</b>: 함수는 여러 개의 문자열을 하나로 결합할 때 사용되는 함수입니다.<br>주어진 문자열을 연결하여 새로운 문자열을 생성합니다. 주로 콘솔 출력이나 파일에 내용을 작성할 때 사용합니다.<br>"=== Page X ===" 형식의 페이지 헤더를 생성한 후, 이를 cat() 함수를 통해 콘솔에 출력합니다. 그 다음, df[df$page == page, "verse"]를 사용하여 해당 페이지에 대한 구절 데이터를 선택하고, 다시 cat() 함수를 사용하여 구절 데이터를 콘솔에 출력합니다.</p>
 
                 <pre id="code"><code class="language-r"># === 성경 스크래핑 === #
 
@@ -416,7 +448,10 @@ unique_pages <- unique(df$page)
 for (page in unique_pages) {
   cat(paste0("=== Page ", page, " ===\n"))
   cat(df[df$page == page, "verse"], "\n\n")
-}<c:out></c:out></code></pre><br>
+}<c:out></c:out></code></pre>
+<p><i class="fa-solid fa-lemon"></i> <b>cat() 함수</b>: 출력 결과를 콘솔에 텍스트 형식으로 표시하는 데 사용되는 R의 내장 함수입니다.<br>cat() 함수는 스크래핑 결과를 페이지별로 출력하는 역할을 합니다.</p>
+                <p><i class="fa-solid fa-lemon"></i> <b>paste() 함수</b>: 함수는 여러 개의 문자열을 하나로 결합할 때 사용되는 함수입니다.<br>주어진 문자열을 연결하여 새로운 문자열을 생성합니다. 주로 콘솔 출력이나 파일에 내용을 작성할 때 사용합니다.<br>"=== Page X ===" 형식의 페이지 헤더를 생성한 후, 이를 cat() 함수를 통해 콘솔에 출력합니다. 그 다음, df[df$page == page, "verse"]를 사용하여 해당 페이지에 대한 구절 데이터를 선택하고, 다시 cat() 함수를 사용하여 구절 데이터를 콘솔에 출력합니다.</p>
+                <br>
                 
                 <h3>창세기 스크래핑</h3>
                 <pre id="code"><code class="language-r">## 창세기
@@ -1592,7 +1627,7 @@ word_count %>%
   scale_size_area(max_size = 30) +
   theme_minimal() +
   theme(panel.background = element_rect(fill = "white"))</c:out></code></pre>
-# word_count에서 가장 많이 등장하는 단어 상위 50개를 무작위로 선택하고, 그 개수에 맞게 임의의 색상을 생성한다. 이 작업은 후속 시각화 작업이나 데이터 표현을 위해 각 단어에 임의의 색상을 부여하기 위한 것이다.
+  <p><i class="fa-regular fa-lemon"></i> word_count에서 가장 많이 등장하는 단어 상위 50개를 무작위로 선택하고, 그 개수에 맞게 임의의 색상을 생성한다. 이 작업은 후속 시각화 작업이나 데이터 표현을 위해 각 단어에 임의의 색상을 부여하기 위한 것이다.
               </div>
 
               <div class="tab-pane" id="tab-7">
@@ -2447,9 +2482,8 @@ senti_word_counts %>%
   </footer>
   <!-- End Footer -->
   
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
+  <a class="back-to-top d-flex align-items-center justify-content-center" onclick="window.open('https://drive.google.com/file/d/1nUq1220iw-NEFN4Jc5XeWRpEZdYg3g5M/view?usp=sharing', '_blank')"><i class="fa-solid fa-file-pdf"></i></a>
+  
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>

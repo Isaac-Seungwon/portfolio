@@ -108,7 +108,7 @@
         backtotop.classList.remove('active')
       }
     }
-    window.addEventListener('load', toggleBacktotop)
+    // window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
 
@@ -184,7 +184,7 @@
     speed: 300,
     loop: true,
     autoplay: {
-      delay: 5000,
+      delay: 10000,
       disableOnInteraction: false
     },
     slidesPerView: 'auto',

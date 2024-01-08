@@ -70,7 +70,7 @@
             <li>Portfolio Details</li>
           </ol>
         </div>
-        <high>Spring</high>을 활용하여 웹 사이트를 개발하고 <high>AWS</high>로 배포한 프로젝트입니다.
+        <high>Spring</high>을 활용하여 웹 사이트를 개발하고 <high>AWS</high>로 배포한 프로젝트 입니다.
       </div>
     </section><!-- Breadcrumbs Section -->
 
@@ -319,7 +319,17 @@
               <h3>프로젝트 개요</h3>
               <ul>
                 <li>
-                  <strong>구현목표</strong>
+                  <strong>기획 배경</strong>
+                  <div class="text-column">
+                    <ul class="activity">
+                      <li>1. 맞춤형 추천 서비스의 편의를 제공하여 즐거운 놀이공원 체험을 할 수 있도록 한다.</li>
+                      <li>2. 어트랙션 예약 서비스를 도입하여 사용자의 어트랙션 예약 대기 시간을 최소화한다.</li>
+                      <li>3. 기프트샵 상품 구매 서비스를 온라인으로 제공하여, 놀이공원에 방문하지 않아도 원하는 상품을 구매할 수 있도록 한다.</li>
+                    </ul>
+                  </div>
+                </li>
+                <li>
+                  <strong>구현 목표</strong>
                   <div class="text-column">
                     <ul class="activity">
                       <li>1. 회원 기능과 관리자 기능을 별개의 페이지로 분리하고, 적절한 태그 및 모달을 활용하여 정보를 제공한다.</li>
@@ -329,20 +339,14 @@
                     </ul>
                   </div>
                 </li>
-                <li>
-                  <strong>활동내용</strong>
-                  <div class="text-column">
-                    <ul class="activity">
-                      <li>1. </li>
-                      <li>2. </li>
-                      <li>3. </li>
-                    </ul>
-                  </div>
-                </li>
                 <table class="detail-table">
                   <tr>
-                    <th><li><strong>카테고리</strong></li></th>
+                    <th><li><strong>Category</strong></li></th>
                     <td>Spring 프로젝트</td>
+                  </tr>
+                  <tr>
+                    <th><li><strong>Period</strong></li></th>
+                    <td>2023.12.18.~2023.12.27.</td>
                   </tr>
                   <tr>
                     <th><li><strong>GitHub</strong></li></th>
@@ -505,30 +509,30 @@
 
                 <div class="col-lg-4">
                   <div class="portfolio-info">
-                    <h3>기능 구현</h3>
+                    <h3>기능 상세</h3>
                     <ul>
                       <li>
                         <strong>DD 월드컵</strong>
                         <div class="text-column">
-                          내용 작성 내용 작성 내용 작성 내용 작성 내용 작성 내용 작성
+                          어트랙션 월드컵, 코스 월드컵을 진행하여 사용자에게 추천해주고, 관리자 페이지를 통해 어트랙션과 코스를 관리합니다.
                         </div>
                       </li>
                       <li>
                         <strong>MBTI 추천</strong>
                         <div class="text-column">
-                          내용 작성 내용 작성 내용 작성 내용 작성 내용 작성 내용 작성
+                          사용자의 MBTI 선택을 통해 어트랙션과 코스를 추천하고, 관리자 페이지를 통해 MBTI CRUD를 관리합니다.
                         </div>
                       </li>
                       <li>
                         <strong style="width: 100%">Spring Security</strong>
                         <div class="text-column">
-                          내용 작성 내용 작성 내용 작성 내용 작성 내용 작성 내용 작성
+                          로그인 인증 및 인가를 통해 로그인한 사용자가 회원 또는 관리자인지 구분합니다.
                         </div>
                       </li>
                       <li>
-                        <strong style="width: 100%">Socket 채팅</strong>
+                        <strong style="width: 100%">Socket (채팅)</strong>
                         <div class="text-column">
-                          내용 작성 내용 작성 내용 작성 내용 작성 내용 작성 내용 작성
+                          Web socket을 Open Chat에 적용하여 실시간으로 양방향 통신을 가능하게 합니다.
                         </div>
                       </li>
                     </ul>
@@ -562,29 +566,85 @@
 
               <li class="nav-item">
                 <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
-                  <h4>기능1</h4>
-                  <p>기능1 요약</p>
+                  <h4>어트랙션 월드컵 Controller</h4>
+                  <p>AdminWorldCupAttractionController, UserWorldCupAttractionController</p>
                 </a>
               </li>
 
               <li class="nav-item mt-2">
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-                  <h4>기능2</h4>
-                  <p>기능2 요약</p>
+                  <h4>어트랙션 월드컵 Domain</h4>
+                  <p>WorldCupAttractionDTO, WorldCupAttractionWinDTO, WorldCupAttractionFinalWinDTO, WorldCupAttractionRankDTO</p>
                 </a>
               </li>
 
               <li class="nav-item mt-2">
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
-                  <h4>기능3</h4>
-                  <p>기능3 요약</p>
+                  <h4>어트랙션 월드컵 Mapper</h4>
+                  <p>WorldCupAttractionMapper, WorldCupAttractionMapper.xml</p>
                 </a>
               </li>
 
               <li class="nav-item mt-2">
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-                  <h4>기능4</h4>
-                  <p>기능4 요약</p>
+                  <h4>어트랙션 월드컵 Repository</h4>
+                  <p>WorldCupAttractionDAO, WorldCupAttractionDAOImpl</p>
+                </a>
+              </li>
+
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-5">
+                  <h4>어트랙션 월드컵 Service</h4>
+                  <p>WorldCupAttractionService, WorldCupAttractionServiceImpl</p>
+                </a>
+              </li>
+
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-6">
+                  <h4>어트랙션 월드컵 JSP</h4>
+                  <p>user.test.worldcup.attraction.view.jsp, admin.test.worldcup.attraction.view.jsp</p>
+                </a>
+              </li>
+
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-7">
+                  <h4>Socket 채팅 Controller</h4>
+                  <p>ChatController</p>
+                </a>
+              </li>
+
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-8">
+                  <h4>채팅 Domain</h4>
+                  <p>Message</p>
+                </a>
+              </li>
+
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-9">
+                  <h4>채팅 Server</h4>
+                  <p>ChatServer</p>
+                </a>
+              </li>
+
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-10">
+                  <h4>채팅 JSP</h4>
+                  <p>user.chat.chat.jsp</p>
+                </a>
+              </li>
+
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-11">
+                  <h4>Spring Security</h4>
+                  <p>HikariCPTest, JDBCTest</p>
+                </a>
+              </li>
+
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-12">
+                  <h4>느낀점 및 개선사항</h4>
+                  <p>프로젝트 측면, 개인적인 측면, 코드에 대한 피드백, 코드 충돌 문제</p>
                 </a>
               </li>
 
@@ -595,40 +655,2460 @@
             <div class="tab-content">
 
               <div class="tab-pane active show" id="tab-1">
-                <h3>기능1</h3>
-                <img src="assets/img/portfolio/portfolio-11/game stage.png" alt="game stage" class="img-fluid">
+                <h3>AdminWorldCupAttractionController</h3>
+                <pre id="code"><code class="language-java"><c:out>package com.project.dd.test.worldcup.attraction.controller;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.project.dd.test.worldcup.attraction.service.WorldCupAttractionService;
+
+/**
+ * 관리자가 월드컵 어트랙션 정보를 관리하는 컨트롤러 입니다.
+ * 
+ * 1. 월드컵 어트랙션 목록 조회 및 페이징 기능
+ * 2. 월드컵 어트랙션 테스트 진행 여부 업데이트 기능
+ * 
+ * @author 이승원
+ */
+@Controller
+@RequestMapping("/admin/test/worldcup/attraction")
+public class AdminWorldCupAttractionController {
+
+	@Autowired
+	private WorldCupAttractionService awcService;
+
+	/**
+        * 월드컵 어트랙션 목록을 조회하여 페이징된 결과를 화면에 전달합니다.
+        * 
+        * @param word  검색어
+        * @param page  현재 페이지 번호
+        * @param model 화면에 전달할 데이터를 담는 모델 객체
+        * @return 월드컵 어트랙션 목록 조회 화면
+        */
+	@GetMapping(value = "/view.do")
+	public String view(String word, @RequestParam(defaultValue = "1") int page, Model model) {
+
+		String solting = "admin";
+		String searchStatus = (word == null || word.equals("")) ? "n" : "y";
+
+		// 페이징 정보를 담은 Map 생성
+		Map<String, String> map = awcService.paging(solting, searchStatus, word, page);
+
+		// 화면에 전달할 데이터 설정
+		model.addAttribute("currentPage", page);
+		model.addAttribute("map", map);
+		model.addAttribute("listAttraction", awcService.getAllAttraction(map));
+		model.addAttribute("awcFinalWinTotalCount", awcService.getAWCFinalWinTotalCount());
+
+		return "admin/test/worldcup/attraction/view";
+	}
+
+	/**
+        * 선택한 월드컵 어트랙션의 테스트 진행 여부를 업데이트합니다.
+        * 
+        * @param attractionSeq 선택한 어트랙션의 일련번호
+        * @param isTest        업데이트할 테스트 진행 여부
+        * @param model         화면에 전달할 데이터를 담는 모델 객체
+        * @return              월드컵 어트랙션 목록 조회 화면으로 리다이렉트
+        */
+	@PostMapping(value = "/view.do")
+	public String updateAttractionStatus(@RequestParam String attractionSeq, @RequestParam String isTest, Model model) {
+	    //System.out.println("seq:" + attractionSeq + " check:" + isTest);
+	    
+		// 선택한 어트랙션의 테스트 진행 여부 업데이트
+	    Map<String, String> map = new HashMap<>();
+	    map.put("isTest", isTest);
+	    map.put("attractionSeq", attractionSeq);
+	    awcService.updateAttractionStatus(map);
+	    
+	    // 월드컵 어트랙션 목록 조회 화면으로 리다이렉트
+	    return "redirect:/admin/test/worldcup/attraction/view.do"; 
+	}
+
+}
+</c:out></code></pre>
+                <p></p><br>
+
+                <h3>UserWorldCupAttractionController</h3>
+                <pre id="code"><code class="language-java"><c:out>package com.project.dd.test.worldcup.attraction.controller;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.project.dd.activity.attraction.domain.AttractionDTO;
+import com.project.dd.test.worldcup.attraction.service.WorldCupAttractionService;
+
+/**
+ * 사용자가 참여하는 월드컵 어트랙션 테스트를 관리하는 컨트롤러 입니다.
+ * 
+ * 1. 월드컵 어트랙션 목록 조회 화면 및 테스트 진행
+ * 2. 월드컵 어트랙션 초기화
+ * 3. 테스트 결과 업데이트
+ * 4. 최종 우승 어트랙션 업데이트
+ * 
+ * @author 이승원
+ */
+@Controller
+@RequestMapping("/user/test/worldcup/attraction")
+public class UserWorldCupAttractionController {
+
+	@Autowired
+	private WorldCupAttractionService awcService;
+
+	/**
+        * 월드컵 어트랙션 목록 조회 화면을 표시하고 테스트를 진행합니다.
+        * 
+        * @param model   화면에 전달할 데이터를 담는 모델 객체
+        * @param session 현재 세션 객체
+        * @return        월드컵 어트랙션 목록 조회 화면
+        */
+	@GetMapping(value = "/view.do")
+	public String view(Model model, HttpSession session) {
+
+		// 어트랙션 리스트 가져오기
+		List<AttractionDTO> attractionList = awcService.getAttractionList();
+
+		// 선택하지 않은 어트랙션 리스트 생성
+		List<AttractionDTO> remainingAttractions = new ArrayList<>(attractionList);
+
+		// 선택하지 않은 어트랙션 중에서 랜덤으로 두 개 선택
+		List<AttractionDTO> selectedTwoAttractions = awcService.getRandomTwoAttractions(remainingAttractions);
+
+		model.addAttribute("selectedTwoAttractions", selectedTwoAttractions);
+		model.addAttribute("testCount", awcService.getTestCount());
+		
+		return "user/test/worldcup/attraction/view";
+	}
+
+	/**
+        * 세션을 초기화하고 월드컵 어트랙션 목록 조회 화면으로 리다이렉트합니다.
+        * 
+        * @param model   화면에 전달할 데이터를 담는 모델 객체
+        * @param session 현재 세션 객체
+        * @return        월드컵 어트랙션 목록 조회 화면으로 리다이렉트
+        */
+	@GetMapping(value = "/initialization.do")
+	public String initialization(Model model, HttpSession session) {
+		// 세션 초기화
+		List<String> selectedAttractions = new ArrayList<>();
+		session.setAttribute("selectedAttractions", selectedAttractions);
+
+		return "redirect:/user/test/worldcup/attraction/view.do";
+	}
+
+	/**
+        * 사용자의 월드컵 어트랙션 테스트 결과를 업데이트하고 새로운 어트랙션을 선택합니다.
+        * 
+        * @param winAttractionSeq  이긴 어트랙션의 일련번호
+        * @param lostAttractionSeq 진 어트랙션의 일련번호
+        * @param model             화면에 전달할 데이터를 담는 모델 객체
+        * @param session           현재 세션 객체
+        * @return                  업데이트된 테스트 결과와 선택 가능한 어트랙션 목록을 응답
+        */
+	@PostMapping("/view.do")
+	public ResponseEntity<Map<String, Object>> attractionSelection(@RequestParam String winAttractionSeq,
+			@RequestParam String lostAttractionSeq, Model model, HttpSession session) {
+
+		// 테스트 결과 업데이트
+		awcService.updateAWCMatchCount(winAttractionSeq);
+		awcService.updateAWCWinCount(winAttractionSeq);
+		awcService.updateAWCMatchCount(lostAttractionSeq);
+
+		// 세션에서 선택한 어트랙션 리스트 가져오기
+		@SuppressWarnings("unchecked") // 제네릭 경고 무시
+		List<String> selectedAttractions = (ArrayList<String>) session.getAttribute("selectedAttractions");
+
+		// 선택한 어트랙션이 중복되지 않았을 경우 추가
+		if (!selectedAttractions.contains(lostAttractionSeq)) {
+			selectedAttractions.add(lostAttractionSeq);
+			session.setAttribute("selectedAttractions", selectedAttractions);
+		}
+
+		// 새로운 어트랙션 선택
+		List<AttractionDTO> remainingAttractions = awcService.getRemainingAttractions(selectedAttractions);
+		List<AttractionDTO> selectedTwoAttractions = awcService.getRandomTwoAttractions(remainingAttractions);
+
+		// 응답 데이터 설정
+		Map<String, Object> responseData = new HashMap<>();
+		responseData.put("selectedTwoAttractions", selectedTwoAttractions);
+		responseData.put("remainingAttractions", remainingAttractions);
+
+		// HTTP status OK와 함께 JSON 형식 응답
+		return new ResponseEntity<>(responseData, HttpStatus.OK);
+
+	}
+
+	/**
+        * 최종 우승 어트랙션을 업데이트합니다.
+        * 
+        * @param finalWinAttractionSeq 최종 우승 어트랙션의 일련번호
+        * @return                       업데이트 완료 메시지와 함께 HTTP status OK 응답
+        */
+	@PostMapping("/final.do")
+	public ResponseEntity<String> finalUpdate(@RequestParam String finalWinAttractionSeq) {
+		// 최종 우승 어트랙션 업데이트
+		awcService.updateAWCFinalWinCount(finalWinAttractionSeq);
+
+		// HTTP status OK 응답
+		return new ResponseEntity<>("Final Win update completed", HttpStatus.OK);
+	}
+
+}
+</c:out></code></pre>
+                <p></p>
               </div>
 
               <div class="tab-pane" id="tab-2">
-                <h3>기능2</h3>
-                <pre id="code"><code class="language-java"><c:out>public class Main {
-    public static void main(String[] args) {
-        System. out.println("Hello World" );
-    }
-}</c:out></code></pre>
-                <p>기능2 설명</p>
+                <h3>WorldCupAttractionDTO</h3>
+                <pre id="code"><code class="language-java"><c:out>package com.project.dd.test.worldcup.attraction.domain;
+
+import lombok.Data;
+
+@Data
+public class WorldCupAttractionDTO {
+
+	// tblAWC
+	private String awc_seq; // 어트랙션월드컵번호
+	private String is_test; // 테스트채택
+	private String attraction_seq; // 어트랙션번호
+
+}
+</c:out></code></pre>
+                <p></p><br>
+                
+                <h3>WorldCupAttractionWinDTO</h3>
+                <pre id="code"><code class="language-java"><c:out>package com.project.dd.test.worldcup.attraction.domain;
+
+import lombok.Data;
+
+@Data
+public class WorldCupAttractionWinDTO {
+
+	// tblAWCWin
+	private String awc_win_seq; // 어트랙션월드컵승리번호
+	private String awc_match_count; // 어트랙션월드컵대결횟수
+	private String awc_win_count; // 어트랙션월드컵승리횟수
+	private String attraction_seq; // 어트랙션번호
+	
+}
+</c:out></code></pre>
+                <p></p><br>
+                
+                <h3>WorldCupAttractionFinalWinDTO</h3>
+                <pre id="code"><code class="language-java"><c:out>package com.project.dd.test.worldcup.attraction.domain;
+
+import lombok.Data;
+
+@Data
+public class WorldCupAttractionFinalWinDTO {
+
+	// tblAWCFinalWin
+	private String awc_final_win_seq; // 어트랙션월드컵최종승리번호
+	private String awc_final_win_count; // 어트랙션월드컵최종승리횟수
+	private String attraction_seq; // 어트랙션번호
+	
+}
+</c:out></code></pre>
+                <p></p><br>
+                
+                <h3>WorldCupAttractionRankDTO</h3>
+                <pre id="code"><code class="language-java"><c:out>package com.project.dd.test.worldcup.attraction.domain;
+
+import lombok.Data;
+
+@Data
+public class WorldCupAttractionRankDTO {
+
+	private String attraction_seq; // 어트랙션번호
+	private String name; // 어트랙션명
+	private String info; // 어트랙션설명
+	private String img; // 어트랙션이미지
+	private String match_count; // 어트랙션월드컵대결횟수
+	private String win_count; // 어트랙션월드컵승리횟수
+	private String final_win_count; //어트랙션월드컵최종승리횟수
+	private String win_rate; // 승률 (어트랙션월드컵승리횟수 / 어트랙션월드컵승리횟수)
+	private String win_rate_per; // 승률 (100%)
+	private String final_win_rate; // 최종승률 (어트랙션월드컵최종승리횟수 / 전체 테스트 횟수)
+	private String final_win_rate_per;  // 최종승률 (100%)
+	private String rnum; // 글번호
+	
+}
+</c:out></code></pre>
+                <p></p>
+
               </div>
 
               <div class="tab-pane" id="tab-3">
-                <h3>기능3</h3>
-                <pre id="code"><code class="language-java"><c:out>public class Main {
-    public static void main(String[] args) {
-        System. out.println("Hello World" );
-    }
-}</c:out></code></pre>
-                <p>기능3 설명</p>
+                <h3>WorldCupAttractionMapper</h3>
+                <pre id="code"><code class="language-java"><c:out>package com.project.dd.test.worldcup.attraction.mapper;
+
+import java.util.List;
+import java.util.Map;
+
+import com.project.dd.activity.attraction.domain.AttractionDTO;
+
+public interface WorldCupAttractionMapper {
+
+	int getTotalCount();
+
+	int getTestCount();
+	
+	List<AttractionDTO> getAllAttraction(Map<String, String> map);
+
+	List<AttractionDTO> getAttractionList();
+	
+	void updateAttractionStatus(Map<String, String> map);
+
+	int getAWCFinalWinTotalCount();
+
+	int addAWC(AttractionDTO dto);
+
+	int addAWCWin(AttractionDTO dto);
+
+	int addAWCFinalWin(AttractionDTO dto);
+	
+	void updateAWCMatchCount(String attractionSeq);
+
+	void updateAWCWinCount(String attractionSeq);
+
+	void updateAWCFinalWinCount(String attractionSeq);
+
+	List<AttractionDTO> getAttractionNameList();
+
+	List<AttractionDTO> getTopThreeAttraction();
+
+}
+</c:out></code></pre>
+                <p></p><br>
+
+                <h3>WorldCupAttractionMapper.xml</h3>
+                <pre id="code"><code class="language-sql"><c:out>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+
+&lt;!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"&gt;
+
+&lt;mapper namespace="com.project.dd.test.worldcup.attraction.mapper.WorldCupAttractionMapper"&gt;
+
+	&lt;!-- 총 어트랙션 데이터 개수 조회 쿼리 --&gt;
+	&lt;select id="getTotalCount" resultType="int"&gt;
+		select count(*) from tblAWC awc
+		join vwAttractionList al on awc.attraction_seq = al.attraction_seq
+		join tblAWCWin w on w.attraction_seq = al.attraction_seq
+		join tblAWCFinalWin fw on fw.attraction_seq = al.attraction_seq
+		&lt;if test="solting == 'admin' and searchStatus == 'y'.toString()"&gt;
+		where name like '%' || #{word} || '%' or info like '%' || #{word} || '%' or restriction like '%' || #{word} || '%'
+		&lt;/if&gt;
+	&lt;/select&gt;
+   
+	&lt;!-- 어트랙션 월드컵이 'Y'인 개수 조회 쿼리 --&gt;
+	&lt;select id="getTestCount" resultType="int"&gt;
+		select count(*) from tblAWC awc
+		join vwAttractionList al on awc.attraction_seq = al.attraction_seq
+		join tblAWCWin w on w.attraction_seq = al.attraction_seq
+		join tblAWCFinalWin fw on fw.attraction_seq = al.attraction_seq
+		where awc.is_test = 'Y'
+	&lt;/select&gt;
+   
+	&lt;!-- 어트랙션 리스트 조회 쿼리 --&gt;
+	&lt;select id="getAllAttraction" parameterType="map" resultType="com.project.dd.activity.attraction.domain.AttractionDTO"&gt;
+	    SELECT * FROM (
+		    SELECT n.*, ROWNUM AS rnum FROM (
+		        SELECT al.*,
+		               awc.is_test,
+		               w.awc_match_count,
+		               w.awc_win_count,
+		               fw.awc_final_win_count
+		        FROM tblAWC awc
+		        JOIN vwAttractionList al ON awc.attraction_seq = al.attraction_seq
+		        JOIN tblAWCWin w ON w.attraction_seq = al.attraction_seq
+		        JOIN tblAWCFinalWin fw ON fw.attraction_seq = al.attraction_seq
+		        order by al.attraction_seq desc) n
+			&lt;if test="solting == 'admin' and searchStatus == 'y'.toString()"&gt;
+			where name like '%' || #{word} || '%' or info like '%' || #{word} || '%' or restriction like '%' || #{word} || '%'
+			&lt;/if&gt;
+		) where rnum between #{startIndex} and #{endIndex}
+	&lt;/select&gt;
+	
+	&lt;!-- 모든 어트랙션 데이터 목록 조회 쿼리 --&gt;
+	&lt;select id="getAttractionList" resultType="com.project.dd.activity.attraction.domain.AttractionDTO"&gt;
+		select
+			al.*,
+			awc.is_test,
+			w.awc_match_count,
+			w.awc_win_count,
+			fw.awc_final_win_count
+		from vwAttractionList al
+		join tblAWC awc on awc.attraction_seq = al.attraction_seq
+		join tblAWCWin w on w.attraction_seq = al.attraction_seq
+		join tblAWCFinalWin fw on fw.attraction_seq = al.attraction_seq
+		where awc.is_test = 'Y'
+	&lt;/select&gt;
+	
+	&lt;!-- 어트랙션 테스트 채택 업데이트 쿼리 --&gt;
+	&lt;update id="updateAttractionStatus" parameterType="map"&gt;
+	    update tblAWC
+	    set is_test = #{isTest}
+	    where attraction_seq = #{attractionSeq}
+	&lt;/update&gt;
+	
+	&lt;!-- 어트랙션 월드컵 실행 횟수(최종 우승 횟수 총합) 조회 쿼리 --&gt;
+	&lt;select id="getAWCFinalWinTotalCount" resultType="int"&gt;
+		select sum(awc_final_win_count) as total_awc_final_win_count from tblAWCFinalWin
+	&lt;/select&gt;
+	
+	&lt;!-- 어트랙션 월드컵 추가 쿼리 --&gt;
+	&lt;insert id="addAWC" parameterType="com.project.dd.activity.attraction.domain.AttractionDTO"&gt;
+		insert into tblAWC (awc_seq, is_test, attraction_seq)
+		values (seqtblAWC.NEXTVAL, 'Y', #{attraction_seq})
+	&lt;/insert&gt;
+	
+	&lt;!-- 어트랙션 월드컵 승리 추가 쿼리 --&gt;
+	&lt;insert id="addAWCWin" parameterType="com.project.dd.activity.attraction.domain.AttractionDTO"&gt;
+		insert into tblAWCWin (awc_win_seq, awc_match_count, awc_win_count, attraction_seq)
+		values (seqtblAWCWin.NEXTVAL, 0, 0, #{attraction_seq})
+	&lt;/insert&gt;
+	
+	&lt;!-- 어트랙션 월드컵 최종 우승 추가 쿼리 --&gt;
+	&lt;insert id="addAWCFinalWin" parameterType="com.project.dd.activity.attraction.domain.AttractionDTO"&gt;
+		insert into tblAWCFinalWin (awc_final_win_seq, awc_final_win_count, attraction_seq)
+		values (seqtblAWCFinalWin.NEXTVAL, 0, #{attraction_seq})
+	&lt;/insert&gt;
+	
+	&lt;!-- 어트랙션 경기 횟수 업데이트 쿼리 --&gt;
+	&lt;update id="updateAWCMatchCount" parameterType="String"&gt;
+	    update
+			tblAWCWin
+		set awc_match_count = awc_match_count + 1
+		where attraction_seq = #{attractionSeq}
+	&lt;/update&gt;
+	
+	&lt;!-- 어트랙션 승리 횟수 업데이트 쿼리 --&gt;
+	&lt;update id="updateAWCWinCount" parameterType="String"&gt;
+	    update
+			tblAWCWin
+		set awc_win_count = awc_win_count + 1
+		where attraction_seq = #{attractionSeq}
+	&lt;/update&gt;
+	
+	&lt;!-- 어트랙션 최종 우승 횟수 업데이트 쿼리 --&gt;
+	&lt;update id="updateAWCFinalWinCount" parameterType="String"&gt;
+	    update
+			tblAWCFinalWin
+		set awc_final_win_count = awc_final_win_count + 1
+		where attraction_seq = #{attractionSeq}
+	&lt;/update&gt;
+	
+	&lt;!-- 어트랙션명 목록 조회 쿼리 --&gt;
+	&lt;select id="getAttractionNameList" resultType="com.project.dd.activity.attraction.domain.AttractionDTO"&gt;
+		select attraction_seq, name from tblAttraction order by attraction_seq
+	&lt;/select&gt;
+	
+	&lt;!-- 상위 3개 어트랙션 조회 쿼리 --&gt;
+	&lt;select id="getTopThreeAttraction" resultType="com.project.dd.activity.attraction.domain.AttractionDTO"&gt;
+		select
+		    t.*,
+		    to_char(t.win_rate * 100, '999.99') as win_rate_per,
+		    to_char(t.final_win_rate * 100, '999.99') as final_win_rate_per
+		from (
+			select
+		        al.attraction_seq,
+		        al.name,
+		        al.info,
+		        al.img,
+		        w.awc_match_count as match_count,
+		        w.awc_win_count as win_count,
+		        fw.awc_final_win_count as final_win_count,
+		        case
+				    when w.awc_match_count = 0 then 0
+				    else (w.awc_win_count / w.awc_match_count)
+				end as win_rate,
+				case
+				    when total_final_win_count = 0 then 0
+				    else (fw.awc_final_win_count / total_final_win_count)
+				end as final_win_rate,
+		        rownum as rnum
+		    from vwAttractionList al
+		        join tblAWC awc on awc.attraction_seq = al.attraction_seq
+		        join tblAWCWin w on w.attraction_seq = al.attraction_seq
+		        join tblAWCFinalWin fw on fw.attraction_seq = al.attraction_seq
+		        cross join (
+		            select SUM(awc_final_win_count) as total_final_win_count
+		            from tblAWCFinalWin
+		        )
+		    where awc.is_test = 'Y'
+		    order by win_rate desc, final_win_rate desc
+		) t
+		where t.rnum &lt;= 3
+	&lt;/select&gt;
+	
+&lt;/mapper&gt;</c:out></code></pre>
+                <p></p>
               </div>
 
               <div class="tab-pane" id="tab-4">
-                <h3>기능4</h3>
-                <pre id="code"><code class="language-java"><c:out>public class Main {
-    public static void main(String[] args) {
-        System. out.println("Hello World" );
-    }
+                <h3>WorldCupAttractionDAO</h3>
+                <pre id="code"><code class="language-java"><c:out>package com.project.dd.test.worldcup.attraction.repository;
+
+import java.util.List;
+import java.util.Map;
+
+import com.project.dd.activity.attraction.domain.AttractionDTO;
+
+public interface WorldCupAttractionDAO {
+
+	int getTotalCount();
+
+	int getTestCount();
+
+	List<AttractionDTO> getAllAttraction(Map<String, String> map);
+
+	List<AttractionDTO> getAttractionList();
+
+	void updateAttractionStatus(Map<String, String> map);
+
+	int getAWCFinalWinTotalCount();
+
+	int addAWC(AttractionDTO dto);
+
+	int addAWCWin(AttractionDTO dto);
+
+	int addAWCFinalWin(AttractionDTO dto);
+
+	void updateAWCMatchCount(String attractionSeq);
+
+	void updateAWCWinCount(String attractionSeq);
+
+	void updateAWCFinalWinCount(String attractionSeq);
+
+	List<AttractionDTO> getAttractionNameList();
+
+	List<AttractionDTO> getTopThreeAttraction();
+
+}
+</c:out></code></pre>
+                <p></p><br>
+                
+                <h3>WorldCupAttractionDAOImpl</h3>
+                <pre id="code"><code class="language-java"><c:out>package com.project.dd.test.worldcup.attraction.repository;
+
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Repository;
+
+import com.project.dd.activity.attraction.domain.AttractionDTO;
+import com.project.dd.test.worldcup.attraction.mapper.WorldCupAttractionMapper;
+
+@Repository
+@Primary
+public class WorldCupAttractionDAOImpl implements WorldCupAttractionDAO {
+
+	@Autowired
+	private WorldCupAttractionMapper mapper;
+
+	@Override
+	public int getTotalCount() {
+		return mapper.getTotalCount();
+	}
+	
+	@Override
+	public int getTestCount() {
+		return mapper.getTestCount();
+	}
+	
+	@Override
+	public List<AttractionDTO> getAllAttraction(Map<String, String> map) {
+		return mapper.getAllAttraction(map);
+	}
+	
+	@Override
+	public List<AttractionDTO> getAttractionList() {
+		return mapper.getAttractionList();
+	}
+
+	@Override
+	public void updateAttractionStatus(Map<String, String> map) {
+		mapper.updateAttractionStatus(map);
+	}
+	
+	@Override
+	public int getAWCFinalWinTotalCount() {
+		return mapper.getAWCFinalWinTotalCount();
+	}
+
+	@Override
+	public int addAWC(AttractionDTO dto) {
+		return mapper.addAWC(dto);
+	}
+	
+	@Override
+	public int addAWCWin(AttractionDTO dto) {
+		return mapper.addAWCWin(dto);
+	}
+	
+	@Override
+	public int addAWCFinalWin(AttractionDTO dto) {
+		return mapper.addAWCFinalWin(dto);
+	}
+
+	@Override
+	public void updateAWCMatchCount(String attractionSeq) {
+		mapper.updateAWCMatchCount(attractionSeq);
+	}
+	
+	@Override
+	public void updateAWCWinCount(String attractionSeq) {
+		mapper.updateAWCWinCount(attractionSeq);
+	}
+	
+	@Override
+	public void updateAWCFinalWinCount(String attractionSeq) {
+		mapper.updateAWCFinalWinCount(attractionSeq);
+	}
+	
+	@Override
+	public List<AttractionDTO> getAttractionNameList() {
+		return mapper.getAttractionNameList();
+	}
+	
+	@Override
+	public List<AttractionDTO> getTopThreeAttraction() {
+		return mapper.getTopThreeAttraction();
+	}
+	
 }</c:out></code></pre>
-                <p>기능4 설명</p>
+                <p></p>
+              </div>
+
+              <div class="tab-pane" id="tab-5">
+                <h3>WorldCupAttractionService</h3>
+                <pre id="code"><code class="language-java"><c:out>package com.project.dd.test.worldcup.attraction.service;
+
+import java.util.List;
+import java.util.Map;
+
+import com.project.dd.activity.attraction.domain.AttractionDTO;
+
+public interface WorldCupAttractionService {
+
+	int getTotalCount();
+	
+	int getTestCount();
+	
+	Map<String, String> paging(String solting, String searchStatus, String word, int page);
+	
+	List<AttractionDTO> getAllAttraction(Map<String, String> map);
+
+	List<AttractionDTO> getAttractionList();
+	
+	void updateAttractionStatus(Map<String, String> map);
+	
+	int getAWCFinalWinTotalCount();
+	
+	List<AttractionDTO> getRandomTwoAttractions(List<AttractionDTO> remainingAttractions);
+
+	List<AttractionDTO> getRemainingAttractions(List<String> selectedAttractions);
+
+	int addAWC(AttractionDTO dto, String seq);
+	
+	int addAWCWin(AttractionDTO dto, String seq);
+	
+	int addAWCFinalWin(AttractionDTO dto, String seq);
+	
+	void updateAWCMatchCount(String attractionSeq);
+
+	void updateAWCWinCount(String attractionSeq);
+
+	void updateAWCFinalWinCount(String attractionSeq);
+
+	List<AttractionDTO> getAttractionNameList();
+
+	List<AttractionDTO> getTopThreeAttraction();
+
+}
+</c:out></code></pre>
+                <p></p><br>
+
+                <h3>WorldCupAttractionServiceImpl</h3>
+                <pre id="code"><code class="language-java"><c:out>package com.project.dd.test.worldcup.attraction.service;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Random;
+import java.util.stream.Collectors;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Service;
+
+import com.project.dd.activity.attraction.domain.AttractionDTO;
+import com.project.dd.test.worldcup.attraction.repository.WorldCupAttractionDAO;
+
+/**
+ * 월드컵 어트랙션과 관련된 비즈니스 로직을 처리하는 서비스 클래스 입니다.
+ * 
+ * 1. 어트랙션의 총 개수 조회
+ * 2. 어트랙션 테스트 개수 조회
+ * 3. 어트랙션 리스트 조회 (페이징 포함)
+ * 4. 어트랙션의 테스트 상태 업데이트
+ * 5. 월드컵 최종 우승 어트랙션의 총 개수 조회
+ * 6. 남은 어트랙션 중에서 랜덤으로 두 개 선택
+ * 7. 어트랙션 추가 및 관련 통계 업데이트
+ * 8. 어트랙션 경기 횟수 업데이트
+ * 9. 어트랙션 승리 횟수 업데이트
+ * 10. 어트랙션 최종 우승 횟수 업데이트
+ * 11. 어트랙션명 목록 조회
+ * 12. 상위 3개 어트랙션 조회
+ * 
+ * @author 이승원
+ */
+@Service
+@Primary
+public class WorldCupAttractionServiceImpl implements WorldCupAttractionService {
+
+	@Autowired
+	private WorldCupAttractionDAO dao;
+
+	/**
+        * 어트랙션의 총 개수를 조회합니다.
+        *
+        * @return 어트랙션의 총 개수
+        */
+	@Override
+	public int getTotalCount() {
+		return dao.getTotalCount();
+	}
+
+	/**
+        * 어트랙션 테스트 개수를 조회합니다.
+        *
+        * @return 어트랙션 테스트 개수
+        */
+	@Override
+	public int getTestCount() {
+		return dao.getTestCount();
+	}
+
+	/**
+        * 어트랙션의 페이징 처리를 위한 맵을 생성합니다.
+        *
+        * @param solting       정렬 기준
+        * @param searchStatus  검색 상태
+        * @param word          검색어
+        * @param page          현재 페이지 번호
+        * @return 페이징 처리를 위한 맵
+        */
+	@Override
+	public Map<String, String> paging(String solting, String searchStatus, String word, int page) {
+		
+		Map<String, String> map = new HashMap<String, String>();
+		
+		map.put("solting", solting);
+		map.put("searchStatus", searchStatus);
+		map.put("word", word);
+		
+		int pageSize = 10; // 조회할 글 개수
+		int startIndex = (page - 1) * pageSize + 1;
+		int endIndex = startIndex + pageSize - 1;
+
+		map.put("startIndex", String.format("%d", startIndex));
+		map.put("endIndex", String.format("%d", endIndex));
+
+		int totalPosts = getTotalCount();
+		int totalPages = (int) Math.ceil((double) totalPosts / pageSize);
+
+		map.put("totalPosts", String.format("%d", totalPosts));
+		map.put("totalPages", String.format("%d", totalPages));
+
+		return map;
+	}
+	
+	/**
+        * 전체 어트랙션 목록을 조회합니다.
+        *
+        * @param map 페이징 및 검색 정보를 담고 있는 맵
+        * @return 전체 어트랙션 목록
+        */
+	@Override
+	public List<AttractionDTO> getAllAttraction(Map<String, String> map) {
+		return dao.getAllAttraction(map);
+	}
+
+	/**
+        * 어트랙션 목록을 조회합니다.
+        *
+        * @return 어트랙션 목록
+        */
+	@Override
+	public List<AttractionDTO> getAttractionList() {
+		return dao.getAttractionList();
+	}
+
+	/**
+        * 어트랙션의 테스트 상태를 업데이트합니다.
+        *
+        * @param map 테스트 상태를 업데이트하기 위한 맵
+        */
+	@Override
+	public void updateAttractionStatus(Map<String, String> map) {
+		dao.updateAttractionStatus(map);
+	}
+
+	/**
+        * 월드컵 최종 우승 어트랙션의 총 개수를 조회합니다.
+        *
+        * @return 최종 우승 어트랙션의 총 개수
+        */
+	@Override
+	public int getAWCFinalWinTotalCount() {
+		return dao.getAWCFinalWinTotalCount();
+	}
+
+	/**
+        * 남은 어트랙션 중에서 랜덤으로 두 개 선택하여 반환합니다.
+        *
+        * @param remainingAttractions 선택 대상이 되는 어트랙션 리스트
+        * @return 랜덤으로 선택된 두 개의 어트랙션 리스트
+        */
+	@Override
+	public List<AttractionDTO> getRandomTwoAttractions(List<AttractionDTO> remainingAttractions) {
+		ArrayList<AttractionDTO> selectedTwoAttractions = new ArrayList<>();
+
+		Random random = new Random();
+
+		// 어트랙션 리스트가 있고, 크기가 1보다 큰 경우
+		if (remainingAttractions != null && remainingAttractions.size() > 1) {
+			int index1 = random.nextInt(remainingAttractions.size());
+			int index2;
+
+			// index1과 다른 index2 선택 (중복 회피)
+			do {
+				index2 = random.nextInt(remainingAttractions.size());
+			} while (index1 == index2);
+
+			// 두 개의 어트랙션을 리스트에 추가
+			selectedTwoAttractions.add(remainingAttractions.get(index1));
+			selectedTwoAttractions.add(remainingAttractions.get(index2));
+		} else if (remainingAttractions != null && remainingAttractions.size() == 1) {
+			// 어트랙션이 하나만 남았을 경우
+			selectedTwoAttractions.add(remainingAttractions.get(0));
+		}
+
+		return selectedTwoAttractions;
+	}
+	
+	/**
+        * 선택되지 않은 어트랙션 목록을 가져옵니다.
+        *
+        * @param selectedAttractions 선택된 어트랙션 목록
+        * @return 선택되지 않은 어트랙션 목록
+        */
+	@Override
+    public List<AttractionDTO> getRemainingAttractions(List<String> selectedAttractions) {
+        List<AttractionDTO> allAttractions = getAttractionList();
+
+        if (selectedAttractions == null) {
+            return allAttractions;
+        }
+
+        return allAttractions.stream()
+                .filter(attraction -> !selectedAttractions.contains(attraction.getAttraction_seq()))
+                .collect(Collectors.toList());
+    }
+
+	 /**
+        * 어트랙션 월드컵 정보를 추가합니다.
+        *
+        * @param dto 월드컵 정보를 담고 있는 어트랙션 DTO
+        * @param seq 어트랙션 일련번호
+        * @return 데이터베이스에 추가된 행 수
+        */
+	@Override
+	public int addAWC(AttractionDTO dto, String seq) {
+
+		dto.setAttraction_seq(seq);
+		
+		return dao.addAWC(dto);
+	}
+
+	/**
+        * 어트랙션 월드컵 승리 결과를 추가합니다.
+        *
+        * @param dto 월드컵 승리 결과 정보를 담고 있는 어트랙션 DTO
+        * @param seq 어트랙션 일련번호
+        * @return 데이터베이스에 추가된 행 수
+        */
+	@Override
+	public int addAWCWin(AttractionDTO dto, String seq) {
+
+		dto.setAttraction_seq(seq);
+		
+		return dao.addAWCWin(dto);
+	}
+
+	/**
+        * 어트랙션 월드컵 최종 우승 결과를 추가합니다.
+        *
+        * @param dto 월드컵 최종 우승 결과 정보를 담고 있는 어트랙션 DTO
+        * @param seq 어트랙션 일련번호
+        * @return 데이터베이스에 추가된 행 수
+        */
+	@Override
+	public int addAWCFinalWin(AttractionDTO dto, String seq) {
+
+		dto.setAttraction_seq(seq);
+		
+		return dao.addAWCFinalWin(dto);
+	}
+	
+	/**
+        * 어트랙션 월드컵 경기 횟수를 업데이트합니다.
+        *
+        * @param attractionSeq 어트랙션 일련번호
+        */
+	@Override
+	public void updateAWCMatchCount(String attractionSeq) {
+		dao.updateAWCMatchCount(attractionSeq);
+	}
+	
+	/**
+        * 어트랙션 월드컵 승리 횟수를 업데이트합니다.
+        *
+        * @param attractionSeq 어트랙션 일련번호
+        */
+	@Override
+	public void updateAWCWinCount(String attractionSeq) {
+		dao.updateAWCWinCount(attractionSeq);
+	}
+	
+	/**
+        * 어트랙션 월드컵 최종 우승 횟수를 업데이트합니다.
+        *
+        * @param attractionSeq 어트랙션 일련번호
+        */
+	@Override
+	public void updateAWCFinalWinCount(String attractionSeq) {
+		dao.updateAWCFinalWinCount(attractionSeq);
+	}
+	
+	/**
+        * 어트랙션명 목록을 조회합니다.
+        *
+        * @return 어트랙션명 목록
+        */
+	@Override
+	public List<AttractionDTO> getAttractionNameList() {
+		return dao.getAttractionNameList();
+	}
+	
+	/**
+        * 상위 3개 어트랙션을 조회합니다.
+        *
+        * @return 상위 3개 어트랙션 목록
+        */
+	@Override
+	public List<AttractionDTO> getTopThreeAttraction() {
+		return dao.getTopThreeAttraction();
+	}
+	
+}
+</c:out></code></pre>
+                <p></p>
               </div>
               
+              <div class="tab-pane" id="tab-6">
+                <h3>user.test.worldcup.attraction.view.jsp</h3>
+                <pre id="code"><code class="language-html"><c:out>&lt;%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%&gt;
+&lt;%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%&gt;
+&lt;%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%&gt;
+
+&lt;!-- 구글 폰트 로드 --&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap" rel="stylesheet"&gt;
+
+&lt;!-- user &gt; test &gt; worldcup &gt; attraction &gt; view.jsp --&gt;
+&lt;style&gt;
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
+#title {
+	font-size: 48px;
+	display: block;
+	color: #fff;
+	font-weight: 700;
+}
+
+#title+p {
+	text-shadow: 0 2px 10px rgba(255, 255, 255, 0.8);
+	padding: 5px 20px;
+	color: #222222;
+	font-size: 17px;
+	background-color: rgba(255, 255, 255, 0.6);
+	display: inline-block;
+	border-radius: 50px;
+}
+
+#pagetitle {
+	margin-top: 70px;
+}
+
+#title {
+	margin-bottom: 20px;
+}
+
+.item {
+	position: relative;
+	width: 25.5%;
+	aspect-ratio: 0.75;
+	padding: 0;
+	box-sizing: border-box;
+	min-width: 500px;
+	border: 1px solid #E1E1E1;
+	margin: 10px 45px 50px 45px;
+	border-radius: 10px;
+	transition: all 0.3s;
+}
+
+.item:hover {
+	cursor: pointer;
+	box-shadow: 12px 12px 17px rgba(0, 0, 0, 0.20);
+}
+
+.item {
+	width: 50%;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: transparent;
+	border-radius: 8px;
+	margin: 10px;
+	padding: 20px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	transition: all 0.35s ease;
+	transform-origin: center bottom;
+	cursor: pointer;
+	font-size: 40px;
+	font-weight: 600;
+	color: #333;
+	position: relative;
+	overflow: hidden;
+}
+
+#result-message {
+	padding-top: 20px;
+	color: white;
+	text-shadow: 0px 1px 5px black;
+}
+
+#worldcup-container {
+	width: 100%;
+	display: flex;
+	padding-bottom: 20px;
+	justify-content: center;
+}
+
+#attinfo {
+	font-size : 18px;
+	text-align: center;
+	color: #444;
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+
+.item div.img-container {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+}
+
+.item&gt;div:nth-child(1) {
+	background-color: transparent;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	border-radius: 10px 10px 0 0;
+}
+
+.item&gt;div:nth-child(2) {
+	display: flex;
+	flex-direction: column;
+	padding: 20px;
+	font-size: 1.3rem;
+	font-weight: bold;
+	border-radius: 10px 10px 10px 10px;
+}
+
+.attraction-container {
+    text-align: center;
+}
+
+.remain-test {
+    width: 140px;
+    padding: 5px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: -20px;
+    color: #fff;
+    font-weight: bold;
+    background: linear-gradient(135deg, #3498db, #8e44ad);
+    border: 1px solid #2980b9;
+    border-radius: 70px;
+    display: inline-block;
+    transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+.test-name {
+	padding: 30px !important;
+    font-size: 40px !important;
+	text-align: center;
+	position: absolute;
+	color: white;
+	text-shadow: 0px 1px 5px black;
+}
+
+.vs {
+    position: absolute;
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 100px;
+    font-style: italic;
+    color: white;
+    transform: translateY(162%);
+    z-index: 1;
+    transition: all 0.3s;
+    letter-spacing: 5px;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.stats-counter {
+	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/dd/resources/files/test/worldcup/attraction/attraction_worldcup_title.png") center center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+/* 모바일 적응형 설정 */
+@media screen and (max-width: 600px) {
+    .item {
+        width: 90%;
+        min-width: auto;
+        height: auto;
+        font-size: 18px;
+    }
+
+    .item&gt;div:nth-child(2) {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    #result-message {
+        font-size: 14px;
+    }
+
+	.test-name {
+		font-size: 18px !important;
+	}
+	
+    #worldcup-container {
+        padding-bottom: 10px;
+    }
+
+    #remaining-attractions-count {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+
+    .vs {
+        font-size: 30px;
+        transform: translateY(245%);
+    }
+}
+&lt;/style&gt;
+
+&lt;!-- Main Start --&gt;
+&lt;section id="stats-counter" class="stats-counter"&gt;
+    &lt;div id="pagetitle" class="container" data-aos="zoom-out"&gt;
+        &lt;div class="gy-4" style="justify-content: center; width: 100%;"&gt;
+            &lt;div class="col-lg-3 col-md-6" style="width: 100%;"&gt;
+                &lt;div class="stats-item text-center w-100 h-100"&gt;
+                    &lt;div id="title"&gt;어트랙션 월드컵&lt;/div&gt;
+                    &lt;p&gt;나에게 딱 맞는 어트랙션을 찾아보세요!&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section id="menu" class="menu"&gt;
+	&lt;div class="container" data-aos="fade-up"&gt;
+		&lt;div class="tab-content" data-aos="fade-up" data-aos-delay="300"&gt;
+			&lt;div class="tab-pane fade active show" id="menu-starters"&gt;
+				&lt;div class="attraction-container"&gt;
+                    &lt;div id="remaining-attractions-count" class="remain-test"&gt;1 / ${testCount - 1}&lt;/div&gt;
+					&lt;div id="result-info"&gt;&lt;/div&gt;
+					&lt;div id="worldcup-container" class="button-container"&gt;
+						&lt;!-- 어트랙션 출력 --&gt;
+						&lt;c:forEach var="attraction" items="${selectedTwoAttractions}" varStatus="loop"&gt;
+						    &lt;div class="item" id="item${loop.index + 1}" onclick="selectAttraction('${attraction.attraction_seq}')"&gt;
+						        &lt;div style="display:none" data-attraction-seq="${attraction.attraction_seq}"&gt;&lt;/div&gt;
+						        &lt;div class="img-container" style="background-image: url('/dd/resources/files/activity/attraction/${attraction.img}');"&gt;&lt;/div&gt;
+						        &lt;div class="test-name"&gt;${attraction.name}&lt;/div&gt;
+						    &lt;/div&gt;
+						&lt;/c:forEach&gt;
+						&lt;div class="vs"&gt;VS&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+&lt;/section&gt;
+
+&lt;script&gt;
+	let selectedTwoAttractions;
+	let remainingAttractions;
+	
+	// CSRF token
+	var csrfHeaderName = "${_csrf.headerName}";
+	var csrfTokenValue = "${_csrf.token}";
+
+	//페이지가 로드될 때 월드컵 세션 초기화
+	$(document).ready(function() {
+	    initializeSession();
+	});
+
+	function initializeSession() {
+		$.ajax({
+			type : 'GET',
+			url : '/dd/user/test/worldcup/attraction/initialization.do',
+			data : {
+				'isNewSession' : true
+			},
+			success : function(data) {
+				//console.log('세션 초기화');
+			},
+			error : function(a, b, c) {
+				console.error(a, b, c);
+			}
+		});
+	}
+
+	function selectAttraction(attractionSeq) {
+		// 첫 번째 어트랙션의 attraction_seq
+		const attractionSeq1 = $('#item1 &gt; div:nth-child(1)').data('attraction-seq');
+
+		// 두 번째 어트랙션의 attraction_seq
+		const attractionSeq2 = $('#item2 &gt; div:nth-child(1)').data('attraction-seq');
+		
+		let winAttractionSeq;
+	    let lostAttractionSeq;
+
+	    if (attractionSeq !== attractionSeq1) {
+	        winAttractionSeq = attractionSeq2;
+	        lostAttractionSeq = attractionSeq1;
+	    } else if (attractionSeq !== attractionSeq2) {
+	        winAttractionSeq = attractionSeq1;
+	        lostAttractionSeq = attractionSeq2;
+	    } else {
+	        console.error('No matching attractionSeq found.');
+	        return;
+	    }
+	    
+		$.ajax({
+			type: 'POST',
+			url: '/dd/user/test/worldcup/attraction/view.do',
+			data: {
+				'winAttractionSeq': winAttractionSeq,
+				'lostAttractionSeq': lostAttractionSeq
+			},
+		    dataType: 'json',
+			success: function(data) {
+				//console.log('선택한 어트랙션:', data.selectedTwoAttractions);
+				//console.log('남은 어트랙션:', data.remainingAttractionSeqs);
+
+				// 전역 변수에 할당
+				selectedTwoAttractions = data.selectedTwoAttractions;
+				remainingAttractions = data.remainingAttractions;
+				
+				// 어트랙션 정보에 따라 화면 갱신
+				if (selectedTwoAttractions.length &gt; 1) {
+					refreshScreen();
+					
+					if (remainingAttractions.length != 2) {
+						$('#remaining-attractions-count').text(${testCount - 1} - (remainingAttractions.length - 2) + ' / ' + ${testCount - 1});
+					} else {
+						$('#remaining-attractions-count').text('결승');
+					}
+					
+				} else {
+					resultScreen(selectedTwoAttractions[0]);
+					$('#remaining-attractions-count').text('');
+					
+					// 최종 우승 어트랙션
+                                        updateAWCFinalWinCount(selectedTwoAttractions[0].attraction_seq);
+				}
+			},
+			beforeSend : function(xhr) {
+				xhr.setRequestHeader(csrfHeaderName, csrfTokenValue);
+			},
+			error : function(a, b, c) {
+				console.error(a, b, c);
+			}
+		});
+	}
+	
+	function refreshScreen() {
+		//console.log('refreshScreen 함수 호출');
+
+		// 모든 어트랙션을 화면에 갱신
+		$('#worldcup-container').empty();
+
+		if (selectedTwoAttractions.length == 2) {
+			for (let i = 0; i &lt; selectedTwoAttractions.length; i++) {
+				const attraction = selectedTwoAttractions[i];
+				const imgUrl = attraction.img ? '/dd/resources/files/activity/attraction/' + attraction.img : 'attraction.png';
+
+				// 동적으로 id 생성
+				const itemId = 'item' + (i + 1);
+
+				const item = $('&lt;div class="item" id="' + itemId + '" onclick="selectAttraction(' + attraction.attraction_seq + ')"&gt;')
+					.append('&lt;div style="display:none" data-attraction-seq=' + attraction.attraction_seq + '&gt;&lt;/div&gt;')
+					.append('&lt;div class="img-container" style="background-image: url(\'' + imgUrl + '\');"&gt;&lt;/div&gt;')
+					.append('&lt;div class="test-name"&gt;' + attraction.name + '&lt;/div&gt;')
+				$('#worldcup-container').append(item);
+
+				$('#worldcup-container').append('&lt;div class="vs"&gt;VS&lt;/div&gt;');
+			}
+		} else {
+			const attraction = selectedTwoAttractions[0];
+			const imgUrl = attraction.img ? '/dd/resources/files/activity/attraction/' + attraction.img : 'attraction.png';
+
+			// 동적으로 id 생성
+			const itemId = 'item3';
+
+			const item = $('&lt;div class="item" id="' + itemId + '" onclick="selectAttraction(' + attraction.attraction_seq + ')"&gt;')
+				.append('&lt;div style="display:none" data-attraction-seq=' + attraction.attraction_seq + '&gt;&lt;/div&gt;')
+				.append('&lt;div class="img-container" style="background-image: url(\'' + imgUrl + '\');"&gt;&lt;/div&gt;')
+				.append('&lt;div class="test-name"&gt;' + attraction.name + '&lt;/div&gt;');
+			$('#worldcup-container').append(item);
+		}
+	}
+
+	function resultScreen(selectedAttraction) {
+		// 어트랙션을 화면에 갱신
+		$('#worldcup-container').empty();
+		$('.attraction-container').css({
+		    'margin-top': '0px',
+		    'text-align': 'center',
+		    'font-weight': 'bold',
+		    'font-size': '30px',
+		    'background-color': '#ecf0f1',
+		    'border-radius': '10px',
+		    'box-shadow': '0 4px 6px rgba(0, 0, 0, 0.1)',
+		    'transition': 'background-color 0.3s ease'
+		});
+		
+		$('.remain-test').remove();
+		
+		const resultContainer = $('&lt;div class="item result-container" id="item3"&gt;');
+		const imgContainer = $('&lt;div class="img-container" style="background-image: url(\'/dd/resources/files/activity/attraction/' + selectedAttraction.img + '\');"&gt;&lt;/div&gt;');
+		const message = $('&lt;p id="result-message"&gt;최고의 어트랙션이죠!&lt;br&gt;[' + selectedAttraction.name + ']&lt;/p&gt;'
+				+ '&lt;p id="attinfo"&gt;클릭시 해당 어트랙션 페이지로 이동합니다.&lt;/p&gt;');
+
+		// 메시지
+		$('#result-info').append(message);
+
+		// 최종 선택 어트랙션
+		resultContainer.append(imgContainer);
+
+		// 클릭 시 어트랙션 상세 페이지로 이동
+		resultContainer.click(function() {
+			window.location.href = '/dd/user/activity/attraction/detail.do?seq=' + selectedAttraction.attraction_seq;
+		});
+
+		// #worldcup-container에 추가
+		$('#worldcup-container').append(resultContainer);
+	}
+
+	function updateAWCFinalWinCount(finalWinAttractionSeq) {
+	    $.ajax({
+	        type: 'POST',
+	        url: '/dd/user/test/worldcup/attraction/final.do',
+	        data: {
+	            'finalWinAttractionSeq': finalWinAttractionSeq
+	        },
+	        success: function(data) {
+	        	// console.log('최종 우승 업데이트 완료: ', data);
+	        },
+	        beforeSend: function(xhr) {
+	            xhr.setRequestHeader(csrfHeaderName, csrfTokenValue);
+	        },
+	        error: function(a, b, c) {
+	            console.error('Error during final update:', a, b, c);
+	        }
+	    });
+	}
+&lt;/script&gt;
+&lt;!-- Main End --&gt;
+</c:out></code></pre>
+                <p></p><br>
+
+                <h3>admin.test.worldcup.attraction.view.jsp</h3>
+                <pre id="code"><code class="language-html"><c:out>&lt;%@page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%&gt;
+&lt;%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%&gt;
+&lt;%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%&gt;
+
+&lt;style&gt;
+#main h1 {
+	font-size: 2rem !important;
+	margin-top: 45px !important;
+	margin-left: 10px;
+}
+
+.d-md-block {
+	margin-right: 15px;
+}
+
+.pagetitle {
+	margin-top: 10px;
+}
+
+.col-12 {
+	margin-top: 15px;
+}
+
+.col-lg-8 {
+	width: 100%;
+}
+
+.card-body {
+	min-height: 600px;
+}
+
+div.header {
+	height: 60px;
+	border-radius: 5px;
+}
+
+#search {
+	margin-bottom: 15px;
+	padding: 7px;
+}
+
+.search-form {
+	width: 100%;
+	margin: 0;
+}
+
+.header .search-form input {
+	border: 0;
+	height: 50px;
+}
+
+.header .search-form input:focus, .header .search-form input:hover {
+	outline: none;
+	border: none;
+	box-shadow: none;
+	transition: none;
+}
+
+.card-body .header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.breadcrumb {
+	margin-right: 15px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+.breadcrumb a {
+	color: #012970;
+}
+
+.breadcrumb a:hover {
+	color: #0d6efd;
+}
+
+.table {
+	text-align: center;
+}
+
+th {
+	background-color: #f2f2f2 !important;
+}
+
+.table th:nth-child(1) { width: 10%; }
+.table th:nth-child(2) { width: 30%; }
+.table th:nth-child(3) { width: 25%; }
+.table th:nth-child(4) { width: 25%; }
+.table th:nth-child(5) { width: 10%; }
+
+.table td i {
+	color: #0d6efd;
+	margin-top: 7px;
+}
+
+.table td a {
+	color: #000;
+}
+
+.table td a:hover {
+	color: #0d6efd;
+}
+
+.pagination {
+	justify-content: center;
+	margin-top: 40px;
+}
+
+.form-check {
+	min-height: 0 !important;
+}
+
+.hidden-seq {
+	display: none;
+}
+
+/* 모달 CSS */
+#modal table.m-desc {
+	width: 100%;
+	font-size: 14px;
+}
+
+#modal table tr &gt; th {
+	width: 120px;
+	text-align: left;
+	font-weight: bold;
+	background: #FFF !important;
+	padding: 10px;
+}
+
+#modal table tr &gt; td {
+	padding: 10px;
+}
+&lt;/style&gt;
+
+&lt;!-- Main Start --&gt;
+&lt;main id="main" class="main"&gt;
+
+	&lt;div class="pagetitle"&gt;
+		&lt;h1&gt;어트랙션 월드컵 관리&lt;/h1&gt;
+	&lt;/div&gt;
+
+	&lt;section class="section"&gt;
+		&lt;div class="row"&gt;
+			&lt;div class="col-lg-8"&gt;
+				&lt;div class="row"&gt;
+					&lt;div class="col-12"&gt;
+
+						&lt;div id="search" class="header"&gt;
+                  			&lt;form method="GET" action="/dd/admin/test/worldcup/attraction/view.do" class="search-form d-flex align-items-center"&gt;
+                    			&lt;input type="text" name="word" id="search-field" placeholder="제목 또는 내용을 입력하세요." autocomplete="off"&gt;
+                    			&lt;button type="submit"&gt;&lt;i class="bi bi-search"&gt;&lt;/i&gt;&lt;/button&gt;
+                  			&lt;/form&gt;
+              			&lt;/div&gt;
+						
+						&lt;!-- 어트랙션 월드컵 상세 모달 --&gt;
+						&lt;div id="modal" class="modal fade show" tabindex="-1" aria-labelledby="exampleModalScrollableTitle" aria-modal="true" role="dialog"&gt;
+						    &lt;div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable"&gt;
+						        &lt;div class="modal-content"&gt;
+						            &lt;div class="modal-header"&gt;
+						                &lt;h5 id="modal-name" class="modal-title"&gt;&lt;/h5&gt;
+						                &lt;button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"&gt;&lt;/button&gt;
+						            &lt;/div&gt;
+					                
+						            &lt;div class="modal-body"&gt;
+						            	&lt;table class="m-desc"&gt;
+						            		&lt;colgroup&gt;
+						            			&lt;col style="width: 100px"&gt;
+						            		&lt;/colgroup&gt;
+						            		&lt;tbody&gt;
+						            			&lt;tr&gt;
+						            				&lt;th&gt;최종우승횟수&lt;/th&gt;
+						            				&lt;td class="m-awc_final_win_count"&gt;&lt;/td&gt;
+						            			&lt;/tr&gt;
+						            			&lt;tr&gt;
+						            				&lt;th&gt;승리횟수&lt;/th&gt;
+						            				&lt;td class="m-awc_win_count"&gt;&lt;/td&gt;
+						            			&lt;/tr&gt;
+						            			&lt;tr&gt;
+						            				&lt;th&gt;1:1 대결수&lt;/th&gt;
+						            				&lt;td class="m-awc_match_count"&gt;&lt;/td&gt;
+						            			&lt;/tr&gt;
+						            		&lt;/tbody&gt;
+						            	&lt;/table&gt;
+						            &lt;/div&gt;
+						        &lt;/div&gt;
+						    &lt;/div&gt;
+						&lt;/div&gt;
+
+						&lt;div class="card"&gt;
+							&lt;div class="card-body"&gt;
+
+								&lt;nav class="d-flex justify-content-end"&gt;
+									&lt;ol class="breadcrumb"&gt;
+										&lt;li class="breadcrumb-item"&gt;&lt;a href="/dd/admin/activity/attraction/view.do"&gt;어트랙션 관리&lt;/a&gt;&lt;/li&gt;
+									&lt;/ol&gt;
+								&lt;/nav&gt;
+
+								&lt;table class="table"&gt;
+									&lt;thead&gt;
+										&lt;tr&gt;
+											&lt;!-- &lt;th&gt;&lt;/th&gt; --&gt;
+											&lt;th&gt;No&lt;/th&gt;
+											&lt;th&gt;이름&lt;/th&gt;
+											&lt;th&gt;우승비율 (우승횟수/게임횟수)&lt;/th&gt;
+											&lt;th&gt;승률 (승리횟수/대결수)&lt;/th&gt;
+											&lt;th&gt;테스트 채택&lt;/th&gt;
+										&lt;/tr&gt;
+									&lt;/thead&gt;
+									&lt;tbody&gt;
+										&lt;c:forEach items="${listAttraction}" var="dto" varStatus="status"&gt;
+											&lt;tr&gt;
+												&lt;!-- &lt;td&gt;&lt;input type="checkbox"&gt;&lt;/td&gt; --&gt;
+												&lt;td&gt;${map.totalPosts - status.index - map.startIndex + 1}&lt;/td&gt;
+												&lt;td&gt;&lt;a onclick="showModal('${dto.attraction_seq}', '${dto.name}', '${dto.awc_final_win_count}', '${dto.awc_win_count}', '${dto.awc_match_count}')"&gt;&lt;c:out value="${fn:substring(dto.name, 0, 22)}${fn:length(dto.name) &gt; 22 ? '...' : ''}" /&gt;&lt;/a&gt;&lt;/td&gt;
+												&lt;td&gt;
+												    &lt;div class="progress" style="height: 20px;"&gt;
+												        &lt;div class="progress-bar" role="progressbar"
+												            style="width: ${dto.awc_final_win_count != 0 ? String.format('%.2f', (dto.awc_final_win_count / (awcFinalWinTotalCount / 5)) * 100) : '0'}%;"
+												            aria-valuenow="${dto.awc_final_win_count != 0 ? String.format('%.2f', (dto.awc_final_win_count / (awcFinalWinTotalCount / 5)) * 100) : '0'}"
+												            aria-valuemin="0" aria-valuemax="100"
+												            data-bs-toggle="tooltip" data-bs-placement="top"
+												            title="${dto.awc_final_win_count}/${awcFinalWinTotalCount}"&gt;
+												            ${dto.awc_final_win_count != 0 ? String.format('%.2f', (dto.awc_final_win_count / awcFinalWinTotalCount) * 100) : '0'}%
+												        &lt;/div&gt;
+												    &lt;/div&gt;
+												&lt;/td&gt;
+
+										        &lt;td&gt;
+												   &lt;div class="progress" style="height: 20px;"&gt;
+													    &lt;div class="progress-bar" role="progressbar"
+													        style="width: ${dto.awc_win_count != 0 && dto.awc_match_count != 0 ? String.format('%.2f', (dto.awc_win_count / dto.awc_match_count) * 100) : '0'}%;"
+													        aria-valuenow="${dto.awc_win_count != 0 && dto.awc_match_count != 0 ? String.format('%.2f', (dto.awc_win_count / dto.awc_match_count) * 100) : '0'}"
+													        aria-valuemin="0" aria-valuemax="100"
+													        data-bs-toggle="tooltip" data-bs-placement="top"
+													        title="${dto.awc_win_count}/${dto.awc_match_count}"&gt;
+													        ${dto.awc_win_count != 0 && dto.awc_match_count != 0 ? String.format('%.2f', (dto.awc_win_count / dto.awc_match_count) * 100) : '0'}%
+													    &lt;/div&gt;
+													&lt;/div&gt;
+												&lt;/td&gt;
+
+												&lt;td&gt;
+													&lt;div class="d-flex justify-content-center"&gt;
+														&lt;div class="form-check form-switch"&gt;
+															&lt;c:choose&gt;
+																&lt;c:when test="${dto.is_test eq 'Y'}"&gt;
+																	&lt;input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" checked&gt;
+																&lt;/c:when&gt;
+																&lt;c:otherwise&gt;
+																	&lt;input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault"&gt;
+																&lt;/c:otherwise&gt;
+															&lt;/c:choose&gt;
+														&lt;/div&gt;
+													&lt;/div&gt;
+												&lt;/td&gt;
+												&lt;td class="hidden-seq"&gt;${dto.attraction_seq}&lt;/td&gt;
+											&lt;/tr&gt;
+										&lt;/c:forEach&gt;
+									&lt;/tbody&gt;
+								&lt;/table&gt;
+
+								&lt;ul class="pagination justify-content-center"&gt;
+									&lt;c:forEach begin="1" end="${map.totalPages}"
+										varStatus="pageStatus"&gt;
+										&lt;c:choose&gt;
+											&lt;c:when test="${pageStatus.index == currentPage}"&gt;
+												&lt;li class="page-item active"&gt;&lt;span class="page-link"&gt;${pageStatus.index}&lt;/span&gt;&lt;/li&gt;
+											&lt;/c:when&gt;
+											&lt;c:otherwise&gt;
+												&lt;li class="page-item"&gt;&lt;a class="page-link"
+													href="/dd/admin/test/worldcup/attraction/view.do?page=${pageStatus.index}"&gt;${pageStatus.index}&lt;/a&gt;&lt;/li&gt;
+											&lt;/c:otherwise&gt;
+										&lt;/c:choose&gt;
+									&lt;/c:forEach&gt;
+								&lt;/ul&gt;
+							&lt;/div&gt;
+						&lt;/div&gt;
+					&lt;/div&gt;
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/section&gt;
+&lt;/main&gt;
+
+&lt;script&gt;
+	// 문서가 완전히 로드 된 뒤에 실행
+	$(document).ready(function() {
+		// 체크박스 클릭 이벤트
+		$(document).on('change', '.form-check-input', function() {
+			// 테스트 채택
+			var isTest = $(this).is(':checked') ? 'Y' : 'N';
+
+			// 선택한 어트랙션 일련번호
+			var attractionSeq = $(this).closest('tr').find('td:nth-child(6)').text();
+			
+			// CSRF token
+			var csrfHeaderName = "${_csrf.headerName}";
+			var csrfTokenValue = "${_csrf.token}";
+
+			// 데이터베이스 업데이트
+			$.ajax({
+				type : 'POST',
+				url : '/dd/admin/test/worldcup/attraction/view.do',
+				data : {
+					attractionSeq : attractionSeq,
+					isTest : isTest
+				},
+				beforeSend : function(xhr) {
+					xhr.setRequestHeader(csrfHeaderName, csrfTokenValue);
+				},
+				/*
+				success: function(response) {
+					// console.log(response); // 응답 처리
+				},
+				 */
+				error : function(a, b, c) {
+					console.error(a, b, c);
+				}
+			});
+		});
+	});
+
+	// 검색
+	&lt;c:if test="${map.searchStatus == 'y'}"&gt;
+		$('#search-field').val('${map.word}');
+	&lt;/c:if&gt;
+	
+	$(document).keydown(function(event) {
+	    if (event.key === 'F5') {
+			location.href='/dd/admin/test/worldcup/attraction/view.do';
+	    }
+	});
+
+	// 어트랙션 월드컵 상세 모달
+	function showModal(seq, name, awc_final_win_count, awc_win_count, awc_match_count) {
+	    
+		$('#modal-name').text(name);
+
+	    $('.m-awc_final_win_count').text(awc_final_win_count);
+	    $('.m-awc_win_count').text(awc_win_count);
+	    $('.m-awc_match_count').text(awc_match_count);
+	    
+	    $('#modal').modal('show');
+	}
+&lt;/script&gt;
+&lt;!-- Main End --&gt;</c:out></code></pre>
+                <p></p>
+              </div>
+              
+              <div class="tab-pane" id="tab-7">
+                <h3>ChatController</h3>
+                <pre id="code"><code class="language-java"><c:out>package com.project.dd.server.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+/**
+ * 오픈채팅 관련 요청을 처리하는 Controller 클래스
+ * 
+ * @author 이승원
+ */
+
+@Controller
+public class ChatController {
+
+	/**
+	 * 닉네임을 적어 채팅방에 들어갈 수 있는 페이지를 보여주는 메서드
+	 *
+	 * @param model Model 객체
+	 * @return 오픈채팅 view
+	 */
+	@GetMapping(value = "/user/chat/view.do")
+	public String view(Model model) {
+
+		return "user/chat/view";
+	}
+
+	/**
+	 * 실제 채팅을 하는 창을 보여주는 메서드
+	 *
+	 * @param model Model 객체
+	 * @return 채팅 창 view
+	 */
+	@GetMapping(value = "/user/chat/chat.do")
+	public String chat(Model model) {
+
+		return "user/chat/chat";
+	}
+
+}</c:out></code></pre>
+                <p></p>
+              </div>
+              
+              <div class="tab-pane" id="tab-8">
+                <h3>Message</h3>
+                <pre id="code"><code class="language-java"><c:out>package com.project.dd.server.domain;
+
+public class Message {
+
+	private String code; // 상태코드
+	private String sender; // 보내는 사람
+	private String receiver; // 받는 사람
+	private String content; // 내용
+	private String regdate; // 날짜
+
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public String getSender() {
+		return sender;
+	}
+
+	public void setSender(String sender) {
+		this.sender = sender;
+	}
+
+	public String getReceiver() {
+		return receiver;
+	}
+
+	public void setReceiver(String receiver) {
+		this.receiver = receiver;
+	}
+
+	public String getContent() {
+		return content;
+	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
+
+	public String getRegdate() {
+		return regdate;
+	}
+
+	public void setRegdate(String regdate) {
+		this.regdate = regdate;
+	}
+
+	@Override
+	public String toString() {
+		return "Message [code=" + code + ", sender=" + sender + ", receiver=" + receiver + ", content=" + content
+				+ ", regdate=" + regdate + "]";
+	}
+}</c:out></code></pre>
+                <p></p>
+              </div>
+              
+              <div class="tab-pane" id="tab-9">
+                <h3>ChatServer</h3>
+                <pre id="code"><code class="language-java"><c:out>package com.project.dd.server;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+//import javax.inject.Inject;
+import javax.websocket.OnMessage;
+import javax.websocket.OnOpen;
+import javax.websocket.Session;
+import javax.websocket.server.ServerEndpoint;
+//import javax.websocket.server.ServerEndpointConfig;
+import org.springframework.stereotype.Component;
+//import org.springframework.web.socket.server.standard.SpringConfigurator;
+
+import com.google.gson.Gson;
+import com.project.dd.server.domain.Message;
+	
+/**
+ * 채팅의 서버 역할을 하는 클래스
+ * 
+ * @author 이승원
+ */
+
+@ServerEndpoint(value = "/chatserver.do") /* , configurator = com.project.dd.server.ServerEndpointConfig.class */
+public class ChatServer {
+
+	// 현재 채팅 서버에 접속 중인 클라이언트 목록
+	// @Inject
+	private static List<Session> sessionList = new ArrayList<Session>();
+
+	// 클라이언트 접속
+	@OnOpen
+	public void handleOpen(Session session) {
+
+		System.out.println("클라이언트가 접속했습니다.");
+
+		sessionList.add(session); // 현재 접속자의 정보를 배열에 추가
+
+		// 현재 대화방에 누가 있는지?
+		checkSessionList();
+
+		// 대화방에 혹시라도 연결이 끊긴 사람이 있으면 제거
+		clearSessionList();
+	}
+
+	// 클라이언트로부터 메시지 전달
+	@OnMessage
+	public void handleMessage(String msg, Session session) {
+
+		System.out.println(msg);
+
+		// JSON 형식의 문자열 -> 자바 클래스 객체로 변환
+		Gson gson = new Gson();
+
+		Message message = gson.fromJson(msg, Message.class);
+
+		if (message.getCode().equals("1")) {
+
+			for (Session s : sessionList) {
+
+				// 모든 접속자 중에서 방금 메시지를 보낸 세션을 제외하고 검색
+				if (s != session) {
+					// 본인 이외의 세션(소켓)에게 현재 접속자를 알리는 메시지 전달
+					try {
+						s.getBasicRemote().sendText(msg);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+
+				}
+			}
+		} else if (message.getCode().equals("2")) {
+
+			// 기존 접속자가 대화방을 나갔습니다.
+			sessionList.remove(session);
+
+			for (Session s : sessionList) {
+				try {
+					// '누군가가 나갔습니다.'라는 메시지를 남아있는 모든 사람에게 전달
+					s.getBasicRemote().sendText(msg);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		} else if (message.getCode().equals("3")) {
+
+			// 대화 메시지
+			// - 보낸 사람 빼고 나머지 사람에게 전달
+			for (Session s : sessionList) {
+				if (s != session) { // 방금 메세지 보낸 사람 빼고 나머지 사람들을 찾아서 메세지 전달하기
+					try {
+						s.getBasicRemote().sendText(msg);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			}
+
+		} else if (message.getCode().equals("4")) {
+
+			// 대화 메시지
+			// - 보낸 사람 빼고 나머지 사람에게 전달
+			for (Session s : sessionList) {
+				if (s != session) { // 방금 메세지 보낸 사람 빼고 나머지 사람들을 찾아서 메세지 전달하기
+					try {
+						s.getBasicRemote().sendText(msg);
+					} catch (Exception e) {
+						e.printStackTrace();
+					}
+				}
+			}
+		}
+	}
+
+	// 어떤 접속자들(세션들)이 접속해 있는지 확인하는 메서드
+	private void checkSessionList() {
+		System.out.println("Session List");
+		for (Session session : sessionList) {
+			System.out.println();
+			System.out.println(session.getId());
+		}
+		System.out.println();
+	}
+
+	private void clearSessionList() {
+
+		// List 계열의 컬렉션은 향상된 for문 내에서 요소 추가/삭제 하는 행동이 불가능하다.
+		// 따라서 해당 업무를 위해서는 다음의 방법이 있다.
+		// 1. 일반 for문 사용
+		// 2. Iterator 사용
+
+		Iterator<Session> iter = sessionList.iterator();
+
+		while (iter.hasNext()) {
+
+			if (!(iter.next()).isOpen()) { // 혹시 연결이 끊어진 세션이 있을 경우
+				iter.remove(); // 리스트에서 제거
+			}
+		}
+	}
+}</c:out></code></pre>
+                <p></p>
+              </div>
+
+              <div class="tab-pane" id="tab-10">
+                <h3>user.chat.chat.jsp</h3>
+                <pre id="code"><code class="language-html"><c:out>&lt;%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%&gt;
+&lt;%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %&gt;
+
+&lt;style&gt;
+html, body {
+	padding: 0 !important;
+	margin: 0 !important;
+	background-color: #FFF !important; 
+	display: block;
+	overflow: hidden;
+}
+
+body &gt; div {
+	margin: 0; 
+	padding: 0; 
+}
+
+#main {
+	width: 400px;
+	height: 510px;
+	margin: 3px;
+	display: grid;
+	grid-template-rows: repeat(12, 1fr);
+}
+
+#header &gt; h2 {		
+	margin: 0px;
+	margin-bottom: 10px;
+	padding: 5px;
+}
+
+#list {
+	border: 1px solid var(--border-color);
+	box-sizing: content-box;
+	padding: .5rem;
+	grid-row-start: 2;
+	grid-row-end: 12;
+	font-size: 14px;
+	overflow: auto;
+}
+
+#msg {
+	margin-top: 3px;
+}
+
+#list .item {
+	font-size: 14px;
+	margin: 15px 0;
+}
+
+#list .item &gt; div:first-child {
+	display: flex;
+}
+
+#list .item.me &gt; div:first-child {
+	justify-content: flex-end;
+}
+
+#list .item.other &gt; div:first-child {
+	justify-content: flex-end;
+	flex-direction: row-reverse;
+}
+
+#list .item &gt; div:first-child &gt; div:first-child {
+	font-size: 10px;
+	color: #777;
+	margin: 3px 5px;
+}
+
+#list .item &gt; div:first-child &gt; div:nth-child(2) {
+	border: 1px solid var(--border-color);
+	display: inline-block;
+	min-width: 100px;
+	max-width: 250px;
+	text-align: left;
+	padding: 3px 7px;
+}
+
+#list .state.item &gt; div:first-child &gt; div:nth-child(2) {
+	background-color: #EEE;
+}
+
+#list .item &gt; div:last-child {
+	font-size: 10px;
+	color: #777;
+	margin-top: 5px;
+}
+
+#list .me {
+	text-align: right;
+}
+
+#list .other {
+	text-align: left;
+}
+
+#list .msg.me.item &gt; div:first-child &gt; div:nth-child(2) {
+	background-color: rgba(255, 99, 71, .2);
+}
+
+#list .msg.other.item &gt; div:first-child &gt; div:nth-child(2) {
+	background-color: rgba(100, 149, 237, .2);
+}
+
+#list .msg img {
+	width: 150px;
+}
+
+span {
+	color : #ce1212;
+}
+&lt;/style&gt;
+
+&lt;main&gt;
+&lt;div id="main"&gt;
+	&lt;div id="header"&gt;&lt;h2&gt;&lt;span&gt;.&lt;/span&gt;D_D&lt;span&gt;.&lt;/span&gt; &lt;small&gt;Isaac&lt;/small&gt;&lt;/h2&gt;&lt;/div&gt;
+	&lt;div id="list"&gt;&lt;/div&gt;
+	&lt;input type="text" id="msg" placeholder="대화 내용을 입력하세요."&gt;
+&lt;/div&gt;
+&lt;/main&gt;
+
+&lt;script src="https://code.jquery.com/jquery-1.12.4.js"&gt;&lt;/script&gt;
+&lt;script&gt;
+
+	/*
+		메시지 규칙
+		- code: 상태코드
+			- 1: 새로운 유저가 들어옴
+			- 2: 기존 유저가 나감
+			- 3: 메시지 전달
+		- sender: 보내는 유저명
+		- receiver: 받는 유저명
+		- content: 대화 내용
+		- regdate: 날짜/시간
+	*/
+
+	let name;
+	let ws;
+	const url = 'ws://43.200.60.152:8080/dd/chatserver.do';
+	/* cmd의 ipconfig 명령어로 나오는 ip주소를 url에 적어야 다른 컴퓨터에서 이 주소를 ip를 입력한 주소를 통해 들어올 수 있다. */
+	
+	function connect(name) {
+		
+		window.name = name;
+		$('#header small').text(name);
+		
+		//연결하기 &gt; 소켓 생성
+		ws = new WebSocket(url);
+		
+		//연결 후 작업
+		ws.onopen = function(evt) {
+			log('서버 연결 성공');
+			
+			//메시지 규칙
+			//ws.send('1|Isaac'); //상태코드(1): 본인대화명
+			//ws.send('2|1|2|점심 뭐먹어?'); //상태코드(2): 서로간에 주고받는 대화 &gt; 상태코드|보내는사람|받는사람|대화내용
+			//ws.send('3|Isaac'); //상태코드(3): 대화방을 나가는 사람
+			
+			let message = {
+					code: '1',
+					sender: window.name,
+					receiver: '',
+					content: '',
+					regdate: new Date().toLocaleString()
+			};
+			
+			ws.send(JSON.stringify(message));
+			print('', '대화방에 참여했습니다.', 'me', 'state', message.regdate);
+			
+			$('#msg').focus();
+		};
+		
+		//서버에서 클라이언트에게 전달한 메시지
+		ws.onmessage = function(evt) {
+			log('메시지 수신');
+			
+			//console.log(evt.data);
+			
+			let message = JSON.parse(evt.data);
+			//console.log(message);
+			
+			if (message.code == '1') {
+				print('',`[\${message.sender}]님이 들어왔습니다.`, 'other', 'state', message.regdate);
+			} else if (message.code == '2') {
+				print('',`[\${message.sender}]님이 나갔습니다.`, 'other', 'state', message.regdate);
+			} else if (message.code == '3') { //남이 나한테 보낸것을 화면에 출력하기
+				print(message.sender, message.content, 'other', 'msg', message.regdate);
+			} else if (message.code == '4') { //남이 나한테 보낸것을 화면에 출력하기
+				printEmoticon(message.sender, message.content, 'other', 'msg', message.regdate);
+			}
+		}
+	}//connect
+	
+	function log(msg) {
+		console.log(`[\${new Date().toLocaleTimeString()}] \${msg}`);
+	}
+	
+	//대화창 출력
+	function print(name, msg, side, state, time) {
+		
+		let temp = `
+		
+		&lt;div class="item \${state} \${side}"&gt;
+			&lt;div&gt;
+				&lt;div&gt;\${name}&lt;/div&gt;
+				&lt;div&gt;\${msg}&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div&gt;\${time}&lt;/div&gt;
+		&lt;/div&gt;
+		
+		`;
+		
+		$('#list').append(temp);
+		
+		//새로운 내용 추가하고 스크롤을 바닥으로 내림
+		scrollList();
+	}
+	
+	//이모티콘 출력
+	function printEmoticon(name, msg, side, state, time) {
+		
+		let temp = `
+		
+		&lt;div class="item \${state} \${side}"&gt;
+			&lt;div&gt;
+				&lt;div&gt;\${name}&lt;/div&gt;
+				&lt;div style="background-color: #FFF; border: 0;"&gt;&lt;img src="/dd/resources/files/emoticon\${msg}.png"&gt;&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div&gt;\${time}&lt;/div&gt;
+		&lt;/div&gt;
+		
+		`;
+		
+		$('#list').append(temp);
+		
+		//이모티콘이 추가된 후 스크롤을 바닥으로 내림
+		setTimeout(scrollList, 100);
+	}
+	
+	//창이 닫히기 바로 직전 발생
+	$(window).on('beforeunload', function() {
+		disconnect();
+	});
+	
+	function disconnect() {
+		
+		//대화방에서 나가면 다른 사람에게 알리기
+		let message = {
+				code: '2',
+				sender: window.name,
+				receiver: '',
+				content: '',
+				regdate: new Date().toLocaleString()
+		};
+		
+		ws.send(JSON.stringify(message));
+	}
+	
+	$('#msg').keydown(function(evt) {
+		
+		if (evt.keyCode == 13) {
+			
+			//입력한 대화 내용을 서버로 전달
+			//ws.send('전달 내용'); 서버가 내용을 구분할 수 있도록 object 틀에 맞춰서 전달
+			let message = {
+					code: '3',
+					sender: window.name,
+					receiver: '',
+					content: $('#msg').val(),
+					regdate: new Date().toLocaleString()
+			};
+			
+			//일반대화 및 이모티콘을 구분하여 서버로 전달하는 과정
+			if ($('#msg').val().startsWith('/')) {
+				//대화(X) &gt; 이모티콘(O)
+				message.code = '4';
+				//alert(message.content);
+			}
+			
+			//객체를 보낼수는 없으므로 주고 받기 쉬운 JSON 형태의 format으로 변경하여 전달
+			ws.send(JSON.stringify(message));
+			
+			//다시 대화를 입력해야하니까 초기화 시키고 focus 잡아주기
+			$('#msg').val('').focus();
+			
+			if (message.code == '3') {
+				print(window.name, message.content, 'me', 'msg', message.regdate);
+			} else if (message.code == '4') {
+				printEmoticon(window.name, message.content, 'me', 'msg', message.regdate);
+			}
+		}
+	});
+	
+	function scrollList() {
+		$('#list').scrollTop($('#list').outerHeight() + 300);
+		//큰 값을 주면 움직이긴 하나, 대화의 길이가 길어지면 해당 값 이후로는 스크롤바가 움직이지 않으므로 절대값이 아닌 상대값을 주며, 대화창의 높이를 가져온다.
+	}
+&lt;/script&gt;</c:out></code></pre>
+                <p></p>
+              </div>
+
+              <div class="tab-pane" id="tab-11">
+                <h3>HikariCPTest</h3>
+                <pre id="code"><code class="language-java"><c:out>package com.test.java.db;
+
+import static org.junit.Assert.assertNotNull;
+
+import java.util.ArrayList;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.project.dd.TestMapper;
+import com.project.dd.login.domain.LoginDTO;
+
+/**
+ * HikariCP 라이브러리를 이용해 JDBC 커넥션 풀이 관리되는지 Test하는 클래스 입니다.
+ * 
+ * @author 이승원
+ */
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration({ "file:src/main/webapp/WEB-INF/spring/root-context.xml",
+		"file:src/main/webapp/WEB-INF/spring/security-context.xml" })
+public class HikariCPTest {
+
+	@Autowired
+	private PasswordEncoder encoder;
+
+	@Autowired
+	private TestMapper mapper;
+
+	/**
+	 * 데이터베이스에서 사용자 목록을 가져와 각 사용자의 비밀번호를 암호화하여 업데이트하는 테스트를 수행하는 메서드 입니다.
+	 */
+	@Test
+	public void testUpdatePw() {
+		assertNotNull(mapper);
+
+		ArrayList<LoginDTO> list = mapper.select();
+
+		int count = mapper.count();
+
+		for (LoginDTO dto : list) {
+			String pw = encoder.encode(dto.getPw());
+			String seq = dto.getUser_seq();
+
+			int result = mapper.update(seq, pw);
+
+			if (result == 1) {
+				System.out.println("변경");
+			} else {
+				System.out.println("변경 안됨");
+			}
+		}
+	}
+	
+}</c:out></code></pre>
+                <p></p><br>
+
+                <h3>JDBCTest</h3>
+                <pre id="code"><code class="language-java"><c:out>package com.test.java.db;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import org.junit.Test;
+
+/**
+ * JDBC 연결 테스트를 위한 JUnit 테스트 클래스 입니다.
+ * 	
+ * @author 이승원
+ */
+public class JDBCTest {
+
+	/**
+	 * 데이터베이스 연결을 테스트하는 메서드 입니다.
+	 */
+	@Test
+	public void testConnection() {
+
+		try {
+
+			// 오라클 드라이버 로딩
+			Class.forName("oracle.jdbc.driver.OracleDriver");
+
+			Connection conn = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe", "dd", "java1234");
+
+			assertNotNull(conn); // DB 연결 성공 시 True
+
+			assertEquals("DB 연결", false, conn.isClosed()); // 기대값이 같은지를 검증하여 conn.isClose()가 false와 같을 경우 성공
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}</c:out></code></pre>
+                <p></p>
+              </div>
+
+			  <div class="tab-pane" id="tab-12">
+                <h3>프로젝트 측면</h3>
+                <p>Spring 프로젝트를 통해 Controller, Mapper, Service 등의 각 영역의 역할과 의존성을 주입하는 과정에 대해 이해할 수 있었습니다. 또한, 프로젝트를 진행하면서 팀원들과 자주 회의를 진행했습니다. 부분적인 내용이라도 팀원들과 공유하였고, 이를 통해 사전에 오류를 방지하면서 팀 프로젝트에서 소통의 중요성을 알 수 있었습니다.</p><br>
+
+				<h3>개인적인 측면</h3>
+                <p>언제나 제가 상상하던 걸 실제로 만들 수 있게 되면 좋겠다고 생각했습니다. 프로그램을 사용할 때면 어떻게 기능이 구현되는지에 대한 궁금증이 있었고, 복잡한 코드의 의미를 알고 싶었습니다. 이번 Spring 프로젝트는 최종 프로젝트인 만큼 Front-End, Back-End 구축에 있어서 이전까지 학습한 다양한 기술을 적극적으로 활용했습니다.</p><p>Socket 통신을 구현함으로써 실시간 채팅 기능을 추가하고, Elasticsearch를 활용하여 검색 기능을 강화하는 과정을 통해 기술에 대한 이해도를 높일 수 있었습니다. Spring 프로젝트 경험은 개발자로서의 성장뿐만 아니라, 직접 기획한 프로젝트를 성공적으로 구현함으로써 자신감을 얻을 수 있는 기회였다고 생각합니다.</p><br>
+
+				<h3>코드에 대한 피드백</h3>
+                <p>짧은 기간 내에 프로젝트를 완성하기 위해서 팀원들 각자 맡은 파트의 기능 구현에 집중했습니다. 그러다 보니 서로의 코드에 대한 피드백을 하지 못했던 게 아쉽게 느껴졌습니다.</p><p>프로젝트에서 중복 기능을 구현하는 시간을 줄이기 위해 검색, 모달 기능의 경우 코드를 공유했습니다. 그런데 팀원들과 코드에 대한 자세한 목적이나 설명 없이 기능 구현만 할 수 있도록 코드를 공유했습니다. 프로젝트 중간에 코드 리뷰를 했다면 코드 품질을 향상시키고 프로젝트의 완성도를 높일 수 있었을 것이라고 생각합니다.</p><br>
+
+				<h3>코드 충돌 문제</h3>
+                <p>프로젝트를 진행하면서 코드를 통합할 때 코드가 충돌하여 문제가 발생하는 경우가 있었습니다. 유닛 테스트, 통합 테스트 등을 수행하여 코드의 안정성을 높일 수 있도록 개선하면 좋겠다는 생각이 들었습니다.</p>
+              </div>
+
             </div>
           </div>
         </div>

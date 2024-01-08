@@ -128,10 +128,22 @@
                   <img src="assets/img/portfolio/portfolio-8/14_코스 월드컵.png" alt="코스 월드컵">
                 </div>
                 <div class="swiper-slide">
+                  <img src="assets/img/portfolio/portfolio-8/14_2_코스 추가.png" alt="코스 추가">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/portfolio-8/14_3_코스 삭제.png" alt="코스 삭제">
+                </div>
+                <div class="swiper-slide">
                   <img src="assets/img/portfolio/portfolio-8/15_MBTI별 추천.png" alt="MBTI별 추천">
                 </div>
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/portfolio-8/16_MBTI별 추천.png" alt="MBTI별 추천 결과">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/portfolio-8/16_2_MBTI별 추천 추가.png" alt="MBTI별 추천 추가">
+                </div>
+                <div class="swiper-slide">
+                  <img src="assets/img/portfolio/portfolio-8/16_3_MBTI별 추천 수정.png" alt="MBTI별 추천 수정">
                 </div>
                 <div class="swiper-slide">
                   <img src="assets/img/portfolio/portfolio-8/17_검색.png" alt="검색">
@@ -162,30 +174,30 @@
               <h3>프로젝트 개요</h3>
               <ul>
                 <li>
-                  <strong>구현목표</strong>
+                  <strong>구현 목표</strong>
                   <div class="text-column">
-                    놀이공원을 방문하는 회원들을 위한 추천, 검색 등의 여러가지 기능을 제공하여 사이트 이용자의 편의성과 흥미를 높였습니다.
+                    놀이공원을 방문하는 회원들을 위한 추천, 검색 등의 여러가지 기능을 제공하여 사이트 이용자의 편의성과 흥미를 높이도록 한다.
                   </div>
                 </li>
                 <li>
-                  <strong>활동내용</strong>
+                  <strong>활동 내용</strong>
                   <div class="text-column">
                     <ul>
                       <li>1. 로그인, 로그아웃, 회원가입, 회원가입 환영, 아이디 찾기, 비밀번호 변경 구현</li>
                       <li>2. 코스 추가/삭제, MBTI별 추천 리스트 및 상세보기, MBTI별 추천 추가/수정/삭제, 추천, 어트랙션 월드컵, 코스 월드컵 구현</li>
                       <li>3. 검색 기능 구현</li>
-                      <li>4. 다음 주소 Open API 적용</li>
+                      <li>4. Daum Address API 적용</li>
                     </ul>
                   </div>
                 </li>
                 <table class="detail-table">
                   <tr>
-                    <th><li><strong>카테고리</strong></li></th>
+                    <th><li><strong>Category</strong></li></th>
                     <td>Servlet/JSP 프로젝트</td>
                   </tr>
                   <tr>
-                    <th><li><strong>기간</strong></li></th>
-                    <td>2023.10.30 ~ 2023.11.17</td>
+                    <th><li><strong>Period</strong></li></th>
+                    <td>2023.10.30.~2023.11.17.</td>
                   </tr>
                   <tr>
                     <th><li><strong>GitHub</strong></li></th>
@@ -1986,7 +1998,7 @@ td &gt; div &gt; input {
 		
 		document.addEventListener("DOMContentLoaded", function () {
 			
-			const acceptReqButton = document.getElementById("acceptreq");
+		    const acceptReqButton = document.getElementById("acceptreq");
 	
 		    function updateButtonStatus() {
 		        const isAllValid = isValid.every((value) =&gt; value);
@@ -2003,7 +2015,7 @@ td &gt; div &gt; input {
 		    /* 이름 유효성 검사 */
 		    const nameField = document.getElementById("name");
 		    const nameErrorDiv = document.getElementById("name-error");
-	        const nameRegex = /^[가-힣]{2,6}$/; // 2글자에서 6글자의 한글 이름만 허용
+		    const nameRegex = /^[가-힣]{2,6}$/; // 2글자에서 6글자의 한글 이름만 허용
 	
 		    nameField.addEventListener("input", function () {
 		    	isValid[0] = nameRegex.test(nameField.value);
@@ -2021,10 +2033,10 @@ td &gt; div &gt; input {
 		        updateButtonStatus();
 		    });
 	        
-	        /* 연락처 유효성 검사 */
+		    /* 연락처 유효성 검사 */
 		    const telField = document.getElementById("tel");
 		    const telErrorDiv = document.getElementById("tel-error");
-	        const telRegex = /^010-[0-9]{4}-[0-9]{4}$/; // 010-XXXX-XXXX 형식의 전화번호
+		    const telRegex = /^010-[0-9]{4}-[0-9]{4}$/; // 010-XXXX-XXXX 형식의 전화번호
 	
 		    telField.addEventListener("input", function () {
 		    	isValid[1] = telRegex.test(telField.value);
@@ -3107,9 +3119,9 @@ public class MBTIDel extends HttpServlet {
 	 * @throws IOException
 	 */
 	@Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         
-		String mbti_seq = req.getParameter("mbti_seq"); // 삭제할 MBTI별 추천 정보 번호
+        String mbti_seq = req.getParameter("mbti_seq"); // 삭제할 MBTI별 추천 정보 번호
 
         TestDAO dao = new TestDAO();
         
@@ -3136,14 +3148,14 @@ public class MBTIDel extends HttpServlet {
 public class MBTIDTO {
 
 	private String mbti_seq; // MBTI 일련번호
-    private String result; // MBTI 결과
-    private String mbti; // MBTI 유형
-    private String course_seq; // 코스 일련번호
-    private String course_name; // 코스 이름
-    private String course_img; // 코스 이미지 경로
-    private String attraction_seq; // 어트랙션 일련번호
-    private String attraction_name; // 어트랙션 이름
-    private String attraction_img; // 어트랙션 이미지 경로
+	private String result; // MBTI 결과
+	private String mbti; // MBTI 유형
+	private String course_seq; // 코스 일련번호
+	private String course_name; // 코스 이름
+	private String course_img; // 코스 이미지 경로
+	private String attraction_seq; // 어트랙션 일련번호
+	private String attraction_name; // 어트랙션 이름
+	private String attraction_img; // 어트랙션 이미지 경로
 	
 	public String getMbti_seq() {
 		return mbti_seq;
@@ -5915,10 +5927,9 @@ FROM vwSearchInfo;</c:out></code></pre>
     </div>
   </footer>
   <!-- End Footer -->
-
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
+  
+  <a class="back-to-top d-flex align-items-center justify-content-center" onclick="window.open('https://drive.google.com/file/d/1nUq1220iw-NEFN4Jc5XeWRpEZdYg3g5M/view?usp=sharing', '_blank')"><i class="fa-solid fa-file-pdf"></i></a>
+  
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
