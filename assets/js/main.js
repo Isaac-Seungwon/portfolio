@@ -585,7 +585,8 @@ const words = [
   { text: "Selenium", size: 40, color: "white", opacity: 1, tags: ["프레임워크", "Selenium"] },
   { text: "SDL", size: 40, color: "white", opacity: 1, tags: ["라이브러리", "SDL"] },
   { text: "STS", size: 50, color: "white", opacity: 1, tags: ["도구", "STS"] },
-  { text: "Elasticsearch", size: 40, color: "white", opacity: 1, tags: ["라이브러리", "Elasticsearch"] }
+  { text: "Elasticsearch", size: 40, color: "white", opacity: 1, tags: ["라이브러리", "Elasticsearch"] },
+  { text: "WSL", size: 40, color: "white", opacity: 1, tags: ["도구", "WSL"] }
 ];
 
 const colorByTag = {
