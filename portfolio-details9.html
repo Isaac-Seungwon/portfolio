@@ -603,7 +603,7 @@ public class MenuRecommend {
      * @param select 선택된 계절 (여름, 겨울, 기타)
      */
     private static void rndSeasonList(String select) {
-        List<Menu> seasonList = new ArrayList<>();
+        List&lt;Menu&gt; seasonList = new ArrayList&lt;&gt;();
 
         for (Menu seasonMenu : MenuData.list) {
             if (select.equals(String.valueOf(seasonMenu.getSeasonNo()))) {
@@ -612,7 +612,7 @@ public class MenuRecommend {
         }
 
         while (true) {
-            List<Menu> rndSeasonList = new ArrayList<>();
+            List&lt;Menu&gt; rndSeasonList = new ArrayList&lt;&gt;();
 
             Random random = new Random();
             int i = 0;
@@ -680,7 +680,7 @@ public class MenuRecommend {
             result = "0";
         }
 
-        List<Menu> categoryList = new ArrayList<>();
+        List&lt;Menu&gt; categoryList = new ArrayList&lt;&gt;();
 
         for (Menu categoryMenu : MenuData.list) {
             if (result.equals(String.valueOf(categoryMenu.getCategoryNo()))) {
@@ -691,7 +691,7 @@ public class MenuRecommend {
         Random random = new Random();
 
         while (true) {
-            List<Menu> rndCategoryMenuList = new ArrayList<>();
+            List&lt;Menu&gt; rndCategoryMenuList = new ArrayList&lt;&gt;();
 
             int i = 0;
 
@@ -806,10 +806,10 @@ public class MenuSort {
 
     static Scanner scan;
     static private int currentIndex;
-    static private ArrayList<Menu> list;
+    static private ArrayList&lt;Menu&gt; list;
 
     static {
-        list = new ArrayList<Menu>();
+        list = new ArrayList&lt;Menu&gt;();
         scan = new Scanner(System.in);
     }
 
@@ -1059,7 +1059,7 @@ public class MenuSort {
      * @param list 출력할 메뉴 리스트
      * @param endIndex 표시할 메뉴의 끝 인덱스
      */
-    private void sortResult(ArrayList<Menu> list, int endIndex) {
+    private void sortResult(ArrayList&lt;Menu&gt; list, int endIndex) {
 
         for (int i = currentIndex; i < endIndex; i++) {
 
@@ -1094,7 +1094,7 @@ public class MenuSort {
      * @param endIndex 표시할 메뉴의 끝 인덱스
      * @return false 반환
      */
-    private boolean choiceMenu(ArrayList<Menu> list, int endIndex) {
+    private boolean choiceMenu(ArrayList&lt;Menu&gt; list, int endIndex) {
 
         while (true) {
             Main.printLine();
@@ -1430,8 +1430,8 @@ public class MyStoreList {
 						
 						// 사용자가 선택한 번호와 리스트 번호와 일치하면 해당 추천 메뉴 기록 삭제
 						if (count == choice) {
-                            iterator.remove();
-                            MenuChooseData.save();
+							iterator.remove();
+							MenuChooseData.save();
 							System.out.print("선택한 메뉴 기록을 삭제했습니다.\n");
 							scan.nextLine();
 							
