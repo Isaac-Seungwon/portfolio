@@ -309,9 +309,9 @@ public class Join {
 	static Scanner scan = new Scanner(System.in);
 	
 	/**
-     * 회원 가입을 진행하는 메서드
-     * ID, 비밀번호, 이름, 전화번호, 생년월일을 입력받아 회원 리스트에 회원 데이터를 추가한다.
-     */
+        * 회원 가입을 진행하는 메서드
+        * ID, 비밀번호, 이름, 전화번호, 생년월일을 입력받아 회원 리스트에 회원 데이터를 추가한다.
+        */
 	public static void join() {
 		Main.printMenu("회원 가입");
 		System.out.println("회원 가입을 진행합니다.");
@@ -329,11 +329,11 @@ public class Join {
 	}
 	
 	/**
-     * 아이디를 입력받는 메서드.
-     * 4자 ~ 16자의 영문 대소문자, 숫자를 포함하여 입력한다.
-     * 
-     * @return 아이디
-     */
+        * 아이디를 입력받는 메서드.
+        * 4자 ~ 16자의 영문 대소문자, 숫자를 포함하여 입력한다.
+        * 
+        * @return 아이디
+        */
 	private static String inputId() {
 		Main.printMenu("아이디 입력");
 		System.out.println("4자 ~ 16자의 영문 대소문자, 숫자를 포함하여 입력하세요.");
@@ -357,11 +357,11 @@ public class Join {
 	}
 
 	/**
-     * 비밀번호를 입력받는 메서드
-     * 9자 ~ 14자의 영문 대소문자, 숫자, 특수문자(!, #, ^, &, *)를 포함하여 입력한다.
-     * 
-     * @return 비밀번호
-     */
+        * 비밀번호를 입력받는 메서드
+        * 9자 ~ 14자의 영문 대소문자, 숫자, 특수문자(!, #, ^, &, *)를 포함하여 입력한다.
+        * 
+        * @return 비밀번호
+        */
 	private static String inputPw() {
 		Main.printMenu("비밀번호 입력");
 		System.out.println("9자 ~ 14자의 영문 대소문자, 숫자, 특수문자(!, #, ^, &, *)를 포함하여 입력하세요.");
@@ -379,11 +379,11 @@ public class Join {
 	}
 
 	/**
-     * 이름을 입력받는 메서드
-     * 2자 ~ 4자의 한글 이름을 입력한다.
-     * 
-     * @return 이름
-     */
+        * 이름을 입력받는 메서드
+        * 2자 ~ 4자의 한글 이름을 입력한다.
+        * 
+        * @return 이름
+        */
 	private static String inputName() {
 		Main.printMenu("이름 입력");
 		System.out.println("2자 ~ 4자의 한글 이름을 입력하세요.");
@@ -399,12 +399,12 @@ public class Join {
 	}
 
 	/**
-     * 전화번호를 입력받는 메서드
-     * 11자의 숫자로 전화번호를 입력한다.
-     * 
-     * @return 전화번호
-     */
-    private static String inputTel() {
+        * 전화번호를 입력받는 메서드
+        * 11자의 숫자로 전화번호를 입력한다.
+        * 
+        * @return 전화번호
+        */
+        private static String inputTel() {
 		Main.printMenu("전화번호 입력");
 		System.out.println("11자의 숫자로 전화번호를 입력하세요.");
 		System.out.print("전화번호 입력: ");
@@ -418,13 +418,13 @@ public class Join {
 		return tel;
 	}
     
-    /**
-     * 생년월일을 입력받는 메서드
-     * 6자의 숫자로 생년월일을 입력한다.
-     * 
-     * @return 생년월일
-     */
-    private static String inputBirth() {
+        /**
+        * 생년월일을 입력받는 메서드
+        * 6자의 숫자로 생년월일을 입력한다.
+        * 
+        * @return 생년월일
+        */
+        private static String inputBirth() {
 		Main.printMenu("생년월일 입력");
 		System.out.println("6자의 숫자로 생년월일을 입력하세요.");
 		System.out.print("생년월일 입력: ");
@@ -438,32 +438,32 @@ public class Join {
 		return birth;
 	}
 	
-    /**
-     * 아이디의 유효성을 검사하는 메서드
-     * 
-     * @param id 아이디
-     * @return 유효한 아이디면 true, 그렇지 않으면 false
-     */
+        /**
+        * 아이디의 유효성을 검사하는 메서드
+        * 
+        * @param id 아이디
+        * @return 유효한 아이디면 true, 그렇지 않으면 false
+        */
 	public static boolean isValidId(String id) {
 		return id.matches("^[a-zA-Z0-9]{4,16}$");
 	}
 	
 	/**
-	 * 비밀번호의 유효성을 검사하는 메서드
-	 * 
-	 * @param pw 비밀번호
-	 * @return 유효한 비밀번호면 true, 그렇지 않으면 false
-	 */
+        * 비밀번호의 유효성을 검사하는 메서드
+        * 
+        * @param pw 비밀번호
+        * @return 유효한 비밀번호면 true, 그렇지 않으면 false
+        */
 	public static boolean isValidPw(String pw) {
 		return pw.matches("^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[!#^&*])[a-zA-Z\\d!#^&*]{9,14}$");
 	}
 	
 	/**
-	 * 이름의 유효성을 검사하는 메서드
-	 * 
-	 * @param name 이름
-	 * @return 유효한 이름이면 true, 그렇지 않으면 false
-	 */
+        * 이름의 유효성을 검사하는 메서드
+        * 
+        * @param name 이름
+        * @return 유효한 이름이면 true, 그렇지 않으면 false
+        */
 	public static boolean isValidName(String name) {
 	    return name.matches("^[가-힣]{2,4}$");
 	}
@@ -1165,8 +1165,8 @@ public class MenuRate {
 	private static int currentIndex = 0; // 현재 리뷰 인덱스 (1~20)
 
 	/**
-     * 매장 평가를 20개씩 조회하는 메서드
-     */
+        * 매장 평가를 20개씩 조회하는 메서드
+        */
 	public static void viewStoreReview() {
 
 		while (true) {
@@ -1214,11 +1214,11 @@ public class MenuRate {
 	}
 
 	/**
-     * 다음 리뷰 보기, 이전 보기를 선택하는 메서드
-     *
-     * @param endIndex 표시할 리뷰의 끝 인덱스
-     * @return false 반환
-     */
+        * 다음 리뷰 보기, 이전 보기를 선택하는 메서드
+        *
+        * @param endIndex 표시할 리뷰의 끝 인덱스
+        * @return false 반환
+        */
 	private static boolean choiceStoreReview(int endIndex) {
 		while (true) {
 			Main.printLine();
@@ -1366,11 +1366,11 @@ public class MyStoreList {
 	}
 
 	/**
-     * 회원의 추천 메뉴 기록을 조회하는 메서드
-     * 
-     * @param member 로그인 회원
-     */
-	private static void viewMyMenuRecord(Member member) {
+        * 회원의 추천 메뉴 기록을 조회하는 메서드
+        * 
+        * @param member 로그인 회원
+        */
+        private static void viewMyMenuRecord(Member member) {
 		int count = 1;
 		
 		for (MenuChoose menuChoose : MenuChooseData.list) {
@@ -1408,8 +1408,8 @@ public class MyStoreList {
 	}
 
 	/**
-     * 회원의 추천 메뉴 기록을 삭제하는 메서드
-     */
+        * 회원의 추천 메뉴 기록을 삭제하는 메서드
+        */
 	private static void deleteVisitedStoreRecord() {
 
 		System.out.print("삭제할 번호 입력: ");
@@ -1517,8 +1517,8 @@ public class MyRate {
 	static Scanner scan = new Scanner(System.in);
 
 	/**
-     * 나의 매장 평가 기능을 선택하는 메서드
-     */
+        * 나의 매장 평가 기능을 선택하는 메서드
+        */
 	public static void viewUserRate() {
 
 		while (true) {
@@ -1553,8 +1553,8 @@ public class MyRate {
 	}
 
 	/**
-     * 나의 매장 평가를 조회하는 메서드
-     */
+        * 나의 매장 평가를 조회하는 메서드
+        */
 	private static void viewMyStoreReview() {
 		int count = 0;
 		int endIndex = 0;
@@ -1610,8 +1610,8 @@ public class MyRate {
 	}
 
 	/**
-     * 나의 매장 평가를 추가하는 메서드
-     */
+        * 나의 매장 평가를 추가하는 메서드
+        */
 	private static void addReview() {
 		System.out.printf("1 ~ %d의 매장 번호를 입력하세요.\n", StoreData.list.size());
 		System.out.print("매장 번호 입력: ");
@@ -1640,8 +1640,8 @@ public class MyRate {
 	}
 
 	/**
-     * 나의 매장 평가를 수정하는 메서드
-     */
+        * 나의 매장 평가를 수정하는 메서드
+        */
 	private static void editReview() {
 		System.out.print("수정할 리뷰 번호 입력: ");
 		String reviewNo = scan.nextLine().trim();
@@ -1671,8 +1671,8 @@ public class MyRate {
 	}
 
 	/**
-     * 나의 매장 평가를 삭제하는 메서드
-     */
+        * 나의 매장 평가를 삭제하는 메서드
+        */
 	private static void deleteReview() {
 		System.out.print("삭제할 리뷰 번호 입력: ");
 		String reviewNo = scan.nextLine().trim();
@@ -1788,7 +1788,7 @@ public class ChangeInfo {
 		}
 
 		Login.user.setId(newId);
-        MemberData.save();
+            MemberData.save();
 		System.out.println("아이디를 수정했습니다.");
 	}
 
@@ -1808,7 +1808,7 @@ public class ChangeInfo {
 		}
 
 		Login.user.setPwd(newPw);
-        MemberData.save();
+            MemberData.save();
 		System.out.println("비밀번호를 수정했습니다.");
 	}
 
@@ -1828,7 +1828,7 @@ public class ChangeInfo {
 	    }
 
 	    Login.user.setName(newName);
-        MemberData.save();
+            MemberData.save();
 	    System.out.println("이름을 수정했습니다.");
 	}
 
@@ -1848,7 +1848,7 @@ public class ChangeInfo {
 	    }
 
 	    Login.user.setTel(newTel);
-        MemberData.save();
+            MemberData.save();
 	    System.out.println("전화번호를 수정했습니다.");
 	}
 
@@ -1868,7 +1868,7 @@ public class ChangeInfo {
 	    }
 
 	    Login.user.setBirth(newBirthdate);
-        MemberData.save();
+            MemberData.save();
 	    System.out.println("생년월일을 수정했습니다.");
 	}
 }
