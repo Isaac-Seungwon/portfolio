@@ -419,7 +419,6 @@ Parking_Crackdown_2022_df</c:out></code></pre>
 
               <div class="tab-pane" id="tab-4">
                 <h3>위도 경도 변환</h3>
-                <p><i class="fa-regular fa-lemon"></i> '단속장소' 컬럼의 주소 정보를 이용하여 해당 장소의 위도와 경도를 구하는 함수를 정의하고, 이를 데이터프레임에 적용하여 '위도' 및 '경도' 컬럼을 추가하는 작업을 수행한다.</p>
                 <pre id="code"><code class="language-python"><c:out># 경도 반환 함수
 def geocoding_lon(address):
     try:
@@ -442,12 +441,12 @@ Parking_Crackdown_2022_df['경도'] = Parking_Crackdown_2022_df['단속장소'].
 Parking_Crackdown_2022_df</c:out></code></pre>
                 <p><i class="fa-solid fa-lemon"></i> <b>경도 반환 함수 (geocoding_lon)</b>: 입력된 주소에 대한 geopy 라이브러리의 geocode 함수를 이용하여 해당 주소의 위치 정보를 받아온다. 위치 정보에서 경도 (longitude)를 반환하며, 주소가 잘못되거나 위치 정보를 얻을 수 없는 경우에는 0을 반환한다.</p>
                 <p><i class="fa-solid fa-lemon"></i> <b>위도 반환 함수 (geocoding_lat)</b>: 입력된 주소에 대한 geopy 라이브러리의 geocode 함수를 이용하여 해당 주소의 위치 정보를 받아온다. 위치 정보에서 위도 (latitude)를 반환하며, 주소가 잘못되거나 위치 정보를 얻을 수 없는 경우에는 0을 반환한다.</p>
+                <p><i class="fa-regular fa-lemon"></i> '단속장소' 컬럼의 주소 정보를 이용하여 해당 장소의 위도와 경도를 구하는 함수를 정의하고, 이를 데이터프레임에 적용하여 '위도' 및 '경도' 컬럼을 추가하는 작업을 수행한다.</p>
                 <p><i class="fa-regular fa-lemon"></i> 데이터프레임에 위도와 경도 추가하여 '단속장소' 컬럼의 각 행에 대해 위도와 경도를 구하는 함수를 적용한다. 그리고 '위도' 및 '경도' 컬럼을 새로 추가하고, 각 행에 대해 위도와 경도를 계산하여 저장한다.</p>
               </div>
               
               <div class="tab-pane" id="tab-5">
                 <h3>Geocoding 함수</h3>
-                <p><i class="fa-regular fa-lemon"></i> Folium 라이브러리를 사용하여 지도를 생성하고, 해당 지도에 마커 및 클러스터를 추가하는 작업을 수행한다.</p>
                 <pre id="code"><code class="language-python"><c:out>def geocoding(address):
     geolocoder = Nominatim(user_agent = 'South Korea', timeout = None)
     geo = geolocoder.geocode(address)
@@ -462,7 +461,8 @@ print(crd['lat'])
 print(crd['lng'])
                 </c:out></code></pre>
                 <p><i class="fa-solid fa-lemon"></i> <b>Nominatim</b>: 입력된 주소의 위도(lat)와 경도(lng)를 반환하는 함수이다.</p>
-                <p><i class="fa-regular fa-lemon"></i> 예시 주소fh "서울 광진구 구의사거리"에 대한 위도와 경도를 출력한다.</p><br>
+                <p><i class="fa-regular fa-lemon"></i> 예시 주소fh "서울 광진구 구의사거리"에 대한 위도와 경도를 출력한다.</p>
+                <p><i class="fa-regular fa-lemon"></i> Folium 라이브러리를 사용하여 지도를 생성하고, 해당 지도에 마커 및 클러스터를 추가하는 작업을 수행한다.</p><br>
 
                 <h3>주차 위반내용에 따른 지도에 마커 추가</h3>
                 <pre id="code"><code class="language-python">map4 = folium.Map(location = [37.552, 127.085], zoom_start = 14)
