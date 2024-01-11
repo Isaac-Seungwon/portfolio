@@ -200,18 +200,24 @@
               <li class="nav-item">
                 <a class="nav-link active show" data-bs-toggle="tab" data-bs-target="#tab-1">
                   <h4>게임 스테이지 기획</h4>
-                  <p>game_stage.png</p>
+                  <p>Game Stage Design</p>
                 </a>
               </li>
               
-              <!--               
               <li class="nav-item mt-2">
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-2">
-                  <h4>기능2</h4>
-                  <p>기능2 요약</p>
+                  <h4>충돌함수</h4>
+                  <p>checkCollision</p>
                 </a>
               </li>
-
+             
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
+                  <h4>스테이지 저장 및 불러오기</h4>
+                  <p>사용자 누적 스테이지 불러오기, 사용자 누적 스테이지 저장</p>
+                </a>
+              </li>
+ <!--               
               <li class="nav-item mt-2">
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-3">
                   <h4>기능3</h4>
@@ -234,32 +240,70 @@
             <div class="tab-content">
 
               <div class="tab-pane active show" id="tab-1">
-                <h3>Game Stage Info</h3>
+                <h3>Game Stage Design</h3>
                 <img src="assets/img/portfolio/portfolio-11/game stage.png" alt="game stage" class="img-fluid">
                 <p><i class="fa-regular fa-lemon"></i> 스테이지는 총 20개가 있으며, 모든 스테이지를 클리어하면 엔딩이 나타난다.</p>
-                <p><i class="fa-regular fa-lemon"></i> 스테이지마다 벽, 가시, 열쇠, 자물쇠를 활용하여 플레이어가 한정된 공간에서 다양한 체험을 할 수 있도록 했다.</p>
+                <p><i class="fa-regular fa-lemon"></i> 스테이지마다 벽, 가시, 열쇠, 자물쇠를 활용하여 플레이어가 한정된 공간에서 다양한 체험을 할 수 있도록 한다.</p>
               </div>
 
-              <!-- 
               <div class="tab-pane" id="tab-2">
-                <h3>기능2</h3>
-                <pre id="code"><code class="language-java"><c:out>public class Main {
-    public static void main(String[] args) {
-        System. out.println("Hello World" );
-    }
+                <h3>checkCollision</h3>
+                <pre id="code"><code class="language-c"><c:out>int checkCollision(SDL_Rect *a, SDL_Rect *b){
+	int t = 0, result = 0;
+
+	if ((a->x <= b->x && b->x <= a->x + a->w) || (a->x <= b->x + b->w && b->x + b->w <= a->x + a->w) || (b->x <= a->x && a->x <= b->x + b->w) || (b->x <= a->x + a->w && a->x + a->w <= b->x + b->w)) t++;
+	if ((a->y <= b->y && b->y <= a->y + a->h) || (a->y <= b->y + b->h && b->y + b->h <= a->y + a->h) || (b->y <= a->y && a->y <= b->y + b->h) || (b->y <= a->y + a->h && a->y + a->h <= b->y + b->h)) t++;
+	if (t == 2) result = 1;
+
+	return result;
 }</c:out></code></pre>
+                <p></p>
               </div>
 
               <div class="tab-pane" id="tab-3">
-                <h3>기능3</h3>
-                <pre id="code"><code class="language-java"><c:out>public class Main {
-    public static void main(String[] args) {
-        System. out.println("Hello World" );
-    }
+                <h3>사용자 누적 스테이지 불러오기</h3>
+                <pre id="code"><code class="language-c"><c:out>//사용자 누적 스테이지 불러오기
+int loadstage()
+{
+	int v;
+
+	//파일을 읽기 바이너리 모드로 불러옴
+	FILE *file = fopen("stage.txt", "rb");
+
+	if(file == NULL)
+	{
+		return 0;
+	}
+	fread((void*)&v, sizeof(int), 1, file);
+	v ^= 0xA361Ba3d; //암호 해독 0xA295fa3d
+
+	fclose(file);
+
+	return v;
 }</c:out></code></pre>
-                <p>기능3 설명</p>
+              <p></p><br>
+              
+              <h3>사용자 누적 스테이지 저장</h3>
+              <pre id="code"><code class="language-c"><c:out>//사용자 누적 스테이지 저장
+void savestage(int score)
+{
+	//파일을 쓰기 바이너리 모드로 불러움
+	FILE *file = fopen("stage.txt", "wb");
+
+	if(file == NULL)
+	{
+		return;
+	}
+
+	score^=0xA361Ba3d; //스코어 암호화
+	fwrite((void*)&score, sizeof(int), 1, file);
+
+	fclose(file);
+}</c:out></code></pre>
+            <p></p>
               </div>
 
+              <!-- 
               <div class="tab-pane" id="tab-4">
                 <h3>기능4</h3>
                 <pre id="code"><code class="language-java"><c:out>public class Main {
