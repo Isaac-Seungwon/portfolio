@@ -373,11 +373,11 @@ const updateWavePosition = () => {
   const moonPosition = moon.getBoundingClientRect();
 
   // 파동의 위치
-  waveSun.style.top = `${sunPosition.top - 400}px`;
+  waveSun.style.top = `${sunPosition.top - 350}px`;
   waveSun.style.left = `${sunPosition.left - 400}px`;
 
-  waveMoon.style.top = `${moonPosition.top - 360}px`;
-  waveMoon.style.left = `${moonPosition.left - 360}px`;
+  waveMoon.style.top = `${moonPosition.top - 340}px`;
+  waveMoon.style.left = `${moonPosition.left - 365}px`;
 };
 
 // 페이지 스크롤 시 애니메이션 업데이트
