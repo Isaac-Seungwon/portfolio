@@ -318,14 +318,14 @@ public class Join {
 		System.out.println("ID, 비밀번호, 이름, 전화번호, 생년월일 정보를 입력합니다.");
 		
 		String id = inputId();
-        String pw = inputPw();
-        String name = inputName();
-        String tel = inputTel();
-        String birth = inputBirth();
+		String pw = inputPw();
+		String name = inputName();
+		String tel = inputTel();
+		String birth = inputBirth();
 		
-        MemberData.addMember(name, id, pw, tel, birth);
-        MemberData.save();
-        System.out.println(name + " 회원님, 회원 가입을 축하드립니다!");
+		MemberData.addMember(name, id, pw, tel, birth);
+		MemberData.save();
+		System.out.println(name + " 회원님, 회원 가입을 축하드립니다!");
 	}
 	
 	/**
