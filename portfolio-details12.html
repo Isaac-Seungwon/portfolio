@@ -724,7 +724,7 @@ public class AdminWorldCupAttractionController {
 	public String updateAttractionStatus(@RequestParam String attractionSeq, @RequestParam String isTest, Model model) {
 	    //System.out.println("seq:" + attractionSeq + " check:" + isTest);
 	    
-		// 선택한 어트랙션의 테스트 진행 여부 업데이트
+	    // 선택한 어트랙션의 테스트 진행 여부 업데이트
 	    Map<String, String> map = new HashMap<>();
 	    map.put("isTest", isTest);
 	    map.put("attractionSeq", attractionSeq);
