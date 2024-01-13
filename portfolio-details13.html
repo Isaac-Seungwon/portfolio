@@ -229,12 +229,26 @@
                 </a>
               </li>
 
-              <!-- <li class="nav-item mt-2">
-                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
-                  <h4>기능4</h4>
-                  <p>기능4 요약</p>
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-6">
+                  <h4>포트폴리오 페이지</h4>
+                  <p>HTML, CSS, JavaScript</p>
                 </a>
-              </li> -->
+              </li>
+
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-4">
+                  <h4>나이 계산</h4>
+                  <p>HTML, JavaScript</p>
+                </a>
+              </li>
+
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-5">
+                  <h4>링크 말풍선</h4>
+                  <p>HTML, JavaScript</p>
+                </a>
+              </li>
 
             </ul>
           </div>
@@ -923,6 +937,597 @@ handleScroll();</c:out></code></pre>
                 <p></p>
               </div>
 
+              <div class="tab-pane" id="tab-4">
+                <h3>HTML</h3>
+                <pre id="code"><code class="language-html"><c:out>&lt;div class="col-lg-6"&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;i class="bi bi-chevron-right"&gt;&lt;/i&gt; &lt;strong&gt;생년월일&lt;/strong&gt;2000.02.03 (&lt;span id="age"&gt;&lt;/span&gt;세)
+    &lt;/li&gt;
+    &lt;li&gt;&lt;i class="bi bi-chevron-right"&gt;&lt;/i&gt; &lt;strong&gt;연락처&lt;/strong&gt; &lt;span&gt;010-5213-0157&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;i class="bi bi-chevron-right"&gt;&lt;/i&gt; &lt;strong&gt;이메일&lt;/strong&gt; &lt;span&gt;zhzkdkrak@naver.com&lt;/span&gt;
+    &lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;</c:out></code></pre>
+                <p></p><br></pre>
+                
+                <h3>JavaScript</h3>
+                <pre id="code"><code class="language-javascript"><c:out>/**
+ * 나이 계산
+ */
+function calculateAge() {
+  const birthDate = new Date('2000-02-03'); // 생년월일
+  const currentDate = new Date(); // 현재 날짜
+  const ageInMilliseconds = currentDate - birthDate; // 밀리초 단위로 나이 차 계산
+  const millisecondsPerYear = 3.15576e10; // 1년의 평균 밀리초
+  const age = Math.floor(ageInMilliseconds / millisecondsPerYear); // 나이 계산
+
+  return age;
+}
+
+// 나이 표시
+const ageElement = document.getElementById('age');
+if (ageElement) {
+  const age = calculateAge();
+  ageElement.textContent = age.toString();
+}</c:out></code></pre>
+                <p></p>
+              </div>
+
+              <div class="tab-pane" id="tab-5">
+                <h3>HTML</h3>
+                <pre id="code"><code class="language-html"><c:out>&lt;li onmousemove="showTooltip(event, 'tooltip1')" onmouseout="hideTooltip('tooltip1')"&gt;
+  &lt;a href="https://magazine.hankyung.com/business/article/202102226965b" target="_blank"&gt;
+    게임 개발 동아리 Games 연구(창업) 동아리장
+  &lt;/a&gt;
+  &lt;div class="arrow_box" id="tooltip1"&gt;[하이틴 잡앤조이 1618] 게임? 저희는 직접 만들어서 해요! 게임 개발의 매력 속으로 Go Go~! (매거진한경)
+  &lt;/div&gt;
+&lt;/li&gt;</c:out></code></pre>
+                <p></p><br>
+
+                <h3>JavaScript</h3>
+                <pre id="code"><code class="language-javascript"><c:out>/*
+ * 링크 말풍선
+*/
+function showTooltip(event, tooltipId) {
+  const tooltip = document.getElementById(tooltipId);
+  tooltip.style.display = 'block';
+  tooltip.style.left = `${event.clientX + 10}px`;
+  tooltip.style.top = `${event.clientY + 10}px`;
+}
+
+function hideTooltip(tooltipId) {
+  const tooltip = document.getElementById(tooltipId);
+  tooltip.style.display = 'none';
+}</c:out></code></pre>
+                <p></p>
+              </div>
+
+              <div class="tab-pane" id="tab-6">
+                <h3>HTML</h3>
+                <pre id="code"><code class="language-html"><c:out>&lt;div class="col-lg-4 col-md-6 portfolio-item filter-web" data-portfolio-number="12"&gt;
+  &lt;div class="portfolio-img"&gt;&lt;img src="assets/img/portfolio/portfolio-12/dd-land/dd-land 21.png" class="img-fluid" alt=""&gt;&lt;/div&gt;
+  &lt;div class="portfolio-info"&gt;
+    &lt;h4&gt;놀이동산 [DD-Land]&lt;/h4&gt;
+    &lt;div class="portfolio-description"&gt;
+      &lt;p&gt;기존의 DD-Studio 프로젝트를 Spring으로 구현하여 기능을 발전시킨 놀이동산 웹 사이트 프로젝트입니다.&lt;/p&gt;
+      &lt;table class="detail-table"&gt;
+        &lt;tr&gt;
+          &lt;th&gt;&lt;li&gt;&lt;strong&gt;Category&lt;/strong&gt;&lt;/li&gt;&lt;/th&gt;
+          &lt;td&gt;Spring 프로젝트&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th&gt;&lt;li&gt;&lt;strong&gt;Platform&lt;/strong&gt;&lt;/li&gt;&lt;/th&gt;
+          &lt;td&gt;&lt;high&gt;Windows 11&lt;/high&gt; &lt;high&gt;Mac OS&lt;/high&gt; &lt;high&gt;WSL&lt;/high&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th&gt;&lt;li&gt;&lt;strong&gt;Front-End&lt;/strong&gt;&lt;/li&gt;&lt;/th&gt;
+          &lt;td&gt;&lt;high&gt;HTML&lt;/high&gt; &lt;high&gt;CSS&lt;/high&gt; &lt;high&gt;JavaScript&lt;/high&gt; &lt;high&gt;jQuery&lt;/high&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th&gt;&lt;li&gt;&lt;strong&gt;Back-End&lt;/strong&gt;&lt;/li&gt;&lt;/th&gt;
+          &lt;td&gt;&lt;high&gt;Java&lt;/high&gt; &lt;high&gt;JSP&lt;/high&gt; &lt;high&gt;JSTL&lt;/high&gt; &lt;high&gt;Apache Tomcat&lt;/high&gt; &lt;high&gt;MyBatis&lt;/high&gt; &lt;high&gt;HikariCP&lt;/high&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th&gt;&lt;li&gt;&lt;strong&gt;Database&lt;/strong&gt;&lt;/li&gt;&lt;/th&gt;
+          &lt;td&gt;&lt;high&gt;Oracle Database 11g&lt;/high&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th&gt;&lt;li&gt;&lt;strong&gt;Deployment&lt;/strong&gt;&lt;/li&gt;&lt;/th&gt;
+          &lt;td&gt;&lt;high&gt;AWS (EC2)&lt;/high&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th&gt;&lt;li&gt;&lt;strong&gt;Tool&lt;/strong&gt;&lt;/li&gt;&lt;/th&gt;
+          &lt;td&gt;&lt;high&gt;STS-3&lt;/high&gt; &lt;high&gt;SQL Developer&lt;/high&gt; &lt;high&gt;DBeaver&lt;/high&gt; &lt;high&gt;Git&lt;/high&gt; &lt;high&gt;eXERD&lt;/high&gt; &lt;high&gt;Draw.io&lt;/high&gt; &lt;high&gt;Sourcetree&lt;/high&gt; &lt;high&gt;Google Drive&lt;/high&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th&gt;&lt;li&gt;&lt;strong&gt;Skill&lt;/strong&gt;&lt;/li&gt;&lt;/th&gt;
+          &lt;td&gt;&lt;high&gt;Spring MVC Pattern&lt;/high&gt; &lt;high&gt;Spring Security&lt;/high&gt; &lt;high&gt;Socket&lt;/high&gt; &lt;high&gt;Restful API&lt;/high&gt; &lt;high&gt;Tiles&lt;/high&gt; &lt;high&gt;Ajax&lt;/high&gt; &lt;high&gt;Elasticsearch&lt;/high&gt; &lt;high&gt;RegEx&lt;/high&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th&gt;&lt;li&gt;&lt;strong&gt;API&lt;/strong&gt;&lt;/li&gt;&lt;/th&gt;
+          &lt;td&gt;&lt;high&gt;Kakao 지도 API&lt;/high&gt; &lt;high&gt;Daum 주소 API&lt;/high&gt;&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+          &lt;th&gt;&lt;li&gt;&lt;strong&gt;Period&lt;/strong&gt;&lt;/li&gt;&lt;/th&gt;
+          &lt;td&gt;2023.12.18.~2023.12.27.&lt;/td&gt;
+        &lt;/tr&gt;
+      &lt;/table&gt;
+    &lt;/div&gt;
+    &lt;a href="assets/img/portfolio/portfolio-12/dd-land/dd-land 21.png" data-gallery="portfolioGallery"
+      class="portfolio-lightbox preview-link" title="놀이동산 [DD-Land]"&gt;&lt;i class="fa-solid fa-expand"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a href="portfolio-details12.html" class="details-link" title="More Details"&gt;&lt;i class="fa-solid fa-up-right-from-square"&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</c:out></code></pre>
+                <p></p><br>
+                
+                <h3>CSS</h3>
+                <pre id="code"><code class="language-css"><c:out>/*--------------------------------------------------------------
+# My Portfolio
+--------------------------------------------------------------*/
+.portfolio #portfolio-flters {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.portfolio #portfolio-flters li {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 10px 10px 10px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1;
+  padding: 7px 18px 11px 17px;
+  text-transform: uppercase;
+  color: #444444;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #f4f4f4;
+  border-radius: 2px;
+}
+
+.portfolio .portfolio-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+  color: #4A70B5;
+  border-color: #4A70B5;
+  cursor: pointer;
+}
+
+.portfolio .portfolio-item {
+  margin: 0px 10px 30px 10px;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.portfolio .portfolio-item {
+  overflow: hidden;
+}
+
+.portfolio .portfolio-item .portfolio-img img {
+  transition: all 0.5s ease-in-out;
+}
+
+.portfolio .portfolio-item .portfolio-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio .portfolio-item .portfolio-info {
+  background: rgba(252, 252, 252, 0);
+  transition: all ease-in-out 0.1s;
+  padding: 15px 0 0 0;
+  text-align: center;
+}
+
+.portfolio .portfolio-item:hover .portfolio-info {
+  background: rgb(250, 250, 250);
+}
+
+.portfolio .portfolio-item .portfolio-info h4 {
+  font-size: 20px;
+  color: #333;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 0px;
+}
+
+.portfolio .portfolio-item .portfolio-info p {
+  color: #333;
+  margin: 10px 0 10px 0;
+  font-size: 18px;
+}
+
+.fa-expand {
+  font-size: 22px;
+}
+
+.fa-up-right-from-square {
+  font-size: 21px;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link,
+.portfolio .portfolio-item .portfolio-info .details-link {
+  display: inline-flex;
+  font-size: 24px;
+  color: #dcdcdc;
+  transition: 0.3s;
+}
+
+.portfolio .portfolio-item .portfolio-info .details-link {
+  margin-left: 17px;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link:hover,
+.portfolio .portfolio-item .portfolio-info .details-link:hover {
+  transform: scale(1.2);
+  color: #4284FF;
+}
+
+.portfolio-button {
+  margin-top: -10px;
+}
+
+/* 
+.portfolio .portfolio-item .portfolio-info .preview-link:hover {
+  rotate: 30deg;
+}
+
+.portfolio .portfolio-item .portfolio-info .details-link:hover {
+  rotate: 30deg;
+}
+*/
+
+.portfolio .portfolio-item .portfolio-info .details-link {
+  right: 10px;
+}
+
+.portfolio .portfolio-item:hover .portfolio-info {
+  opacity: 0.9;
+}
+
+.portfolio-description {
+  text-align: center;
+  margin: -5px 0px 20px 0px;
+}
+
+.portfolio-description p {
+  font-size: 14px;
+  color: #333;
+}
+
+.portfolio-description::before {
+  display: block;
+  content: '';
+  width: 98%;
+  height: 1px;
+  text-align: center;
+  margin: 15px 0px 10px 0px;
+  opacity: 0.3;
+  background-color: #d1d0d0; /* e5e5e5 */
+}
+
+.portfolio .col-lg-4 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.portfolio .col-lg-4.portfolio-item {
+  border: 2px solid transparent;
+  transition: border 0.3s, cursor 0.3s;
+  cursor: pointer;
+}
+
+.portfolio .col-lg-4.portfolio-item:hover {
+  border: 2px solid #4A70B5;
+}
+
+#portfolio .col-lg-4 {
+  width: 47%;
+  /* width: 100%; */
+  /* max-width: 400px; */
+}
+
+@media (max-width: 576px) {
+  .portfolio .col-lg-4.portfolio-item {
+    cursor: default;
+  }
+
+  .portfolio .col-lg-4.portfolio-item:hover {
+    border: 2px solid transparent;
+  }
+}
+
+@media (max-width: 1200px) {
+  #portfolio .col-lg-4 {
+    width: 100%;
+  }
+}
+
+div.portfolio-info > div > table > tbody > tr:nth-child(1) > th {
+  width: 25%;
+}
+
+/*--------------------------------------------------------------
+# Portfolio Details
+--------------------------------------------------------------*/
+.portfolio-details {
+  padding-top: 40px;
+  padding-right: 0;
+}
+
+.portfolio-details .portfolio-details-slider img {
+  width: 100%;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #4A70B5;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #4A70B5;
+}
+
+.portfolio-details .portfolio-info {
+  padding: 30px;
+  padding-bottom: 1px;
+  box-shadow: 0px 0 30px rgba(59, 67, 74, 0.08);
+}
+
+.portfolio-details .portfolio-info h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+
+.portfolio-details .portfolio-info ul {
+  list-style: none;
+  padding: 0;
+  font-size: 18px;
+}
+
+.portfolio-details .portfolio-info ul li+li {
+  margin-top: 10px;
+}
+
+.portfolio-details .portfolio-description {
+  padding-top: 30px;
+}
+
+.portfolio-details .portfolio-description h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-description p {
+  padding: 0;
+}
+
+.portfolio-details-content h2 {
+  color: rgb(1, 25, 54);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.portfolio-details-content h2 #sub-title {
+  color: #5186e7;
+  font-size: 29px;
+  letter-spacing: 1px;
+  /* text-decoration: underline; */
+}
+
+@media (min-width: 300px) and (max-width: 1024px) {
+  .material-symbols-outlined {
+    opacity: .9;
+    vertical-align: middle;
+    padding-right: 5px;
+  }
+
+  .portfolio-details-content h2 {
+    margin-top: 20px;
+  }
+}
+
+/* 랩탑 화면 (화면 너비 1025px - 1600px) */
+@media (min-width: 769px) and (max-width: 1600px) {
+  .material-symbols-outlined {
+    opacity: .9;
+    vertical-align: top;
+    padding-top: 10px;
+    padding-right: 5px;
+  }
+}
+
+.portfolio-info ul li strong {
+  display: inline-block;
+  width: 100px;
+  font-weight: bold;
+  /* margin-right: 5px; */
+  margin-top: 10px;
+}
+
+.portfolio-info ul li:first-child strong {
+  margin-top: 0;
+}
+
+.portfolio-info ul li strong::before {
+  content: "•";
+  margin-right: 5px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #4A70B5;
+  cursor: pointer;
+  z-index: 2;
+  opacity: 0.7;
+  transition: all 0.5s;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  opacity: 1;
+}
+
+.swiper-button-prev:hover {
+  left: 15px;
+}
+
+.swiper-button-next:hover {
+  right: 15px;
+}
+
+.swiper-button-prev {
+  left: 20px;
+}
+
+.swiper-button-next {
+  right: 20px;
+}</c:out></code></pre>
+                <p></p><br>
+                
+                <h3>JavaScript</h3>
+                <pre id="code"><code class="language-javascript"><c:out>/*
+ * portfolio detail 이동
+*/
+document.addEventListener('DOMContentLoaded', function () {
+  const portfolioItems = document.querySelectorAll('.portfolio .col-lg-4.portfolio-item');
+
+  portfolioItems.forEach((item) => {
+    if (window.innerWidth >= 576) {
+      item.addEventListener('click', function (event) {
+        // 기본 링크 동작 방지
+        event.preventDefault();
+
+        // 클릭한 포트폴리오 아이템에서 포트폴리오 번호 추출
+        const portfolioNumber = item.getAttribute('data-portfolio-number');
+
+        // 포트폴리오 번호를 사용하여 포트폴리오 상세 페이지 URL 생성
+        const portfolioDetailURL = `portfolio-details${portfolioNumber}.html`;
+
+        // URL로 이동
+        window.location.href = portfolioDetailURL;
+      });
+    }
+
+    // bx-plus 아이콘 클릭 이벤트 리스너를 추가
+    const plusIcons = item.querySelectorAll('.portfolio-info .preview-link');
+    plusIcons.forEach((icon) => {
+      icon.addEventListener('click', function (event) {
+        // 상위로 버블링 방지
+        event.stopPropagation();
+      });
+    });
+  });
+});
+
+/**
+ * 반응형 디자인
+ */
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+  // 모바일 기기
+  //console.log("현재 기기: 모바일");
+
+  var prevButton = document.querySelector('.swiper-button-prev');
+  var nextButton = document.querySelector('.swiper-button-next');
+
+  if (prevButton && nextButton) {
+    prevButton.style.display = 'none';
+    nextButton.style.display = 'none';
+  }
+
+} else {
+  // 데스크탑 기기
+  //console.log("현재 기기: 데스크탑");
+  window.addEventListener("resize", resizeWordCloud);
+}
+
+/**
+ * Porfolio isotope and filter
+ */
+window.addEventListener('load', () => {
+  let portfolioContainer = select('.portfolio-container');
+  if (portfolioContainer) {
+    let portfolioIsotope = new Isotope(portfolioContainer, {
+      itemSelector: '.portfolio-item',
+      layoutMode: 'masonry', // Masonry 레이아웃 모드 적용
+      masonry: {
+        columnWidth: '.portfolio-item',
+        horizontalOrder: false,
+        gutter: 25 // 간격 설정
+      }
+    });
+
+    let portfolioFilters = select('#portfolio-flters li', true);
+
+    on('click', '#portfolio-flters li', function (e) {
+      e.preventDefault();
+      portfolioFilters.forEach(function (el) {
+        el.classList.remove('filter-active');
+      });
+      this.classList.add('filter-active');
+
+      portfolioIsotope.arrange({
+        filter: this.getAttribute('data-filter')
+      });
+    }, true);
+  }
+});
+
+/**
+ * Initiate portfolio lightbox 
+ */
+const portfolioLightbox = GLightbox({
+  selector: '.portfolio-lightbox'
+});
+
+/**
+ * Portfolio details slider
+ */
+new Swiper('.portfolio-details-slider', {
+  speed: 400,
+  loop: true,
+  autoplay: {
+    delay: 10000,
+    disableOnInteraction: false
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+});</c:out></code></pre>
+                <p></p>
+              </div>
+              
               <!-- <div class="tab-pane" id="tab-4">
                 <h3>HTML</h3>
                 <pre id="code"><code class="language-html"><c:out>public class Main {

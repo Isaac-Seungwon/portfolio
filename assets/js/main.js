@@ -262,7 +262,9 @@
 
 })()
 
-// portfolio detail
+/*
+ * portfolio detail 이동
+*/
 document.addEventListener('DOMContentLoaded', function () {
   const portfolioItems = document.querySelectorAll('.portfolio .col-lg-4.portfolio-item');
 
