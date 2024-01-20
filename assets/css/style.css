@@ -1860,11 +1860,6 @@ div.portfolio-info > div > table > tbody > tr:nth-child(1) > th {
   margin-right: 5px;
 }
 
-.portfolio-info ul li circle-activity::before {
-  content: "•";
-  margin-right: 5px;
-}
-
 .swiper-button-prev,
 .swiper-button-next {
   position: absolute;
