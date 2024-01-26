@@ -653,7 +653,7 @@ function resizeWordCloud() {
       .style("font-family", "'SBAggroB', 'Impact'")
       .style("fill", "transparent")
       .style("stroke", "white")
-      .style("stroke-width", "0.2px")
+      .style("stroke-width", "0.5px")
       .style("opacity", function (d) { return d.opacity; })
       .attr("text-anchor", "middle")
       .attr("transform", function (d) {
