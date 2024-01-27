@@ -590,6 +590,7 @@ const words = [
   { text: "Restful API", size: 45, color: "white", opacity: 1, tags: ["라이브러리", "Restful API"] },
   { text: "Elasticsearch", size: 40, color: "white", opacity: 1, tags: ["라이브러리", "Elasticsearch"] },
   { text: "WSL", size: 40, color: "white", opacity: 1, tags: ["도구", "WSL"] },
+  { text: "Figma", size: 45, color: "white", opacity: 1, tags: ["도구", "Figma"] },
 ];
 
 const colorByTag = {
