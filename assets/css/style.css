@@ -1340,30 +1340,30 @@ li:hover .arrow_box {
   border-radius: 50%;
   width: 70px;
   height: 70px;
-  opacity: 0;
+  opacity: 10;
   z-index: -1;
 }
 
 .services .icon-box:hover::before {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(10);
-  transition: all 0.7s ease-in-out;
+  transform: translate(-50%, -50%) scale(4);
+  transition: all 0.5s ease-in-out;
 }
 
 .services .icon-box:hover::after {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(13);
-  transition: all 1.5s ease-in-out;
+  transform: translate(-50%, -50%) scale(4.24);
+  transition: all 1s ease-in-out;
 }
 
 .services .icon-box::before {
-  background: rgba(116, 157, 255, 0.7);
-  box-shadow: 0 0 3px 2px rgba(116, 157, 255, 0.7);
+  background: rgba(116, 157, 255, 0.08);
+  box-shadow: 0 0 6px 6px rgba(116, 157, 255, 0.08);
 }
 
 .services .icon-box::after {
   background: #ffffff;
-  box-shadow: 0 0 2px 2px #ffffff;
+  box-shadow: 0 0 8px 8px #ffffff;
 }
 
 /* 
