@@ -1357,8 +1357,8 @@ li:hover .arrow_box {
 }
 
 .services .icon-box::before {
-  background: rgba(116, 157, 255, 0.08);
-  box-shadow: 0 0 6px 6px rgba(116, 157, 255, 0.08);
+  background: rgba(116, 157, 255, 0.075);
+  box-shadow: 0 0 6px 6px rgba(116, 157, 255, 0.075);
 }
 
 .services .icon-box::after {
