@@ -482,7 +482,7 @@ p {
 }
 
 .back-to-top:hover {
-  box-shadow:  0px 0px 10px rgba(0, 0, 0, 0.20);
+  box-shadow:  0px 0px 10px rgba(0, 0, 0.1, 0.1);
 }
 
 .back-to-top.active {
@@ -2545,8 +2545,4 @@ div.portfolio-info > div > table > tbody > tr:nth-child(1) > th {
   line-height: 50px; 
   margin: 0 auto;
   transition: all 0.4s;
-}
-
-#pdf-document:hover {
-  box-shadow: 0 3px 20px 0 rgba(68, 88, 144, 0.25);
 }
