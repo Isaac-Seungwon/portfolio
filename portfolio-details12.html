@@ -48,7 +48,7 @@
 		  <li><a class="nav-link scrollto" href="index.html#space">Home</a></li>
 		  <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
 		  <li><a class="nav-link scrollto" href="index.html#resume">Resume</a></li>
-		  <li><a class="nav-link scrollto" href="index.html#services">Archives</a></li>
+		  <li><a class="nav-link scrollto" href="index.html#archives">Archives</a></li>
 		  <li><a class="nav-link scrollto active" href="index.html#portfolio">Portfolio</a></li>
 		  <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
 		</ul>
@@ -595,8 +595,8 @@
 
               <li class="nav-item mt-2">
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-5">
-                  <h4>어트랙션 월드컵 Service</h4>
-                  <p>WorldCupAttractionService, WorldCupAttractionServiceImpl</p>
+                  <h4>어트랙션 월드컵 archive</h4>
+                  <p>WorldCupAttractionarchive, WorldCupAttractionarchiveImpl</p>
                 </a>
               </li>
 
@@ -670,7 +670,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.project.dd.test.worldcup.attraction.service.WorldCupAttractionService;
+import com.project.dd.test.worldcup.attraction.archive.WorldCupAttractionarchive;
 
 /**
  * 관리자가 월드컵 어트랙션 정보를 관리하는 컨트롤러 입니다.
@@ -685,7 +685,7 @@ import com.project.dd.test.worldcup.attraction.service.WorldCupAttractionService
 public class AdminWorldCupAttractionController {
 
 	@Autowired
-	private WorldCupAttractionService awcService;
+	private WorldCupAttractionarchive awcarchive;
 
 	/**
         * 월드컵 어트랙션 목록을 조회하여 페이징된 결과를 화면에 전달합니다.
@@ -702,13 +702,13 @@ public class AdminWorldCupAttractionController {
 		String searchStatus = (word == null || word.equals("")) ? "n" : "y";
 
 		// 페이징 정보를 담은 Map 생성
-		Map<String, String> map = awcService.paging(solting, searchStatus, word, page);
+		Map<String, String> map = awcarchive.paging(solting, searchStatus, word, page);
 
 		// 화면에 전달할 데이터 설정
 		model.addAttribute("currentPage", page);
 		model.addAttribute("map", map);
-		model.addAttribute("listAttraction", awcService.getAllAttraction(map));
-		model.addAttribute("awcFinalWinTotalCount", awcService.getAWCFinalWinTotalCount());
+		model.addAttribute("listAttraction", awcarchive.getAllAttraction(map));
+		model.addAttribute("awcFinalWinTotalCount", awcarchive.getAWCFinalWinTotalCount());
 
 		return "admin/test/worldcup/attraction/view";
 	}
@@ -729,7 +729,7 @@ public class AdminWorldCupAttractionController {
 	    Map<String, String> map = new HashMap<>();
 	    map.put("isTest", isTest);
 	    map.put("attractionSeq", attractionSeq);
-	    awcService.updateAttractionStatus(map);
+	    awcarchive.updateAttractionStatus(map);
 	    
 	    // 월드컵 어트랙션 목록 조회 화면으로 리다이렉트
 	    return "redirect:/admin/test/worldcup/attraction/view.do"; 
@@ -760,7 +760,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.project.dd.activity.attraction.domain.AttractionDTO;
-import com.project.dd.test.worldcup.attraction.service.WorldCupAttractionService;
+import com.project.dd.test.worldcup.attraction.archive.WorldCupAttractionarchive;
 
 /**
  * 사용자가 참여하는 월드컵 어트랙션 테스트를 관리하는 컨트롤러 입니다.
@@ -777,7 +777,7 @@ import com.project.dd.test.worldcup.attraction.service.WorldCupAttractionService
 public class UserWorldCupAttractionController {
 
 	@Autowired
-	private WorldCupAttractionService awcService;
+	private WorldCupAttractionarchive awcarchive;
 
 	/**
         * 월드컵 어트랙션 목록 조회 화면을 표시하고 테스트를 진행합니다.
@@ -790,16 +790,16 @@ public class UserWorldCupAttractionController {
 	public String view(Model model, HttpSession session) {
 
 		// 어트랙션 리스트 가져오기
-		List<AttractionDTO> attractionList = awcService.getAttractionList();
+		List<AttractionDTO> attractionList = awcarchive.getAttractionList();
 
 		// 선택하지 않은 어트랙션 리스트 생성
 		List<AttractionDTO> remainingAttractions = new ArrayList<>(attractionList);
 
 		// 선택하지 않은 어트랙션 중에서 랜덤으로 두 개 선택
-		List<AttractionDTO> selectedTwoAttractions = awcService.getRandomTwoAttractions(remainingAttractions);
+		List<AttractionDTO> selectedTwoAttractions = awcarchive.getRandomTwoAttractions(remainingAttractions);
 
 		model.addAttribute("selectedTwoAttractions", selectedTwoAttractions);
-		model.addAttribute("testCount", awcService.getTestCount());
+		model.addAttribute("testCount", awcarchive.getTestCount());
 		
 		return "user/test/worldcup/attraction/view";
 	}
@@ -834,9 +834,9 @@ public class UserWorldCupAttractionController {
 			@RequestParam String lostAttractionSeq, Model model, HttpSession session) {
 
 		// 테스트 결과 업데이트
-		awcService.updateAWCMatchCount(winAttractionSeq);
-		awcService.updateAWCWinCount(winAttractionSeq);
-		awcService.updateAWCMatchCount(lostAttractionSeq);
+		awcarchive.updateAWCMatchCount(winAttractionSeq);
+		awcarchive.updateAWCWinCount(winAttractionSeq);
+		awcarchive.updateAWCMatchCount(lostAttractionSeq);
 
 		// 세션에서 선택한 어트랙션 리스트 가져오기
 		@SuppressWarnings("unchecked") // 제네릭 경고 무시
@@ -849,8 +849,8 @@ public class UserWorldCupAttractionController {
 		}
 
 		// 새로운 어트랙션 선택
-		List<AttractionDTO> remainingAttractions = awcService.getRemainingAttractions(selectedAttractions);
-		List<AttractionDTO> selectedTwoAttractions = awcService.getRandomTwoAttractions(remainingAttractions);
+		List<AttractionDTO> remainingAttractions = awcarchive.getRemainingAttractions(selectedAttractions);
+		List<AttractionDTO> selectedTwoAttractions = awcarchive.getRandomTwoAttractions(remainingAttractions);
 
 		// 응답 데이터 설정
 		Map<String, Object> responseData = new HashMap<>();
@@ -871,7 +871,7 @@ public class UserWorldCupAttractionController {
 	@PostMapping("/final.do")
 	public ResponseEntity<String> finalUpdate(@RequestParam String finalWinAttractionSeq) {
 		// 최종 우승 어트랙션 업데이트
-		awcService.updateAWCFinalWinCount(finalWinAttractionSeq);
+		awcarchive.updateAWCFinalWinCount(finalWinAttractionSeq);
 
 		// HTTP status OK 응답
 		return new ResponseEntity<>("Final Win update completed", HttpStatus.OK);
@@ -1306,15 +1306,15 @@ public class WorldCupAttractionDAOImpl implements WorldCupAttractionDAO {
               </div>
 
               <div class="tab-pane" id="tab-5">
-                <h3>WorldCupAttractionService</h3>
-                <pre id="code"><code class="language-java"><c:out>package com.project.dd.test.worldcup.attraction.service;
+                <h3>WorldCupAttractionarchive</h3>
+                <pre id="code"><code class="language-java"><c:out>package com.project.dd.test.worldcup.attraction.archive;
 
 import java.util.List;
 import java.util.Map;
 
 import com.project.dd.activity.attraction.domain.AttractionDTO;
 
-public interface WorldCupAttractionService {
+public interface WorldCupAttractionarchive {
 
 	int getTotalCount();
 	
@@ -1354,8 +1354,8 @@ public interface WorldCupAttractionService {
 </c:out></code></pre>
                 <p></p><br>
 
-                <h3>WorldCupAttractionServiceImpl</h3>
-                <pre id="code"><code class="language-java"><c:out>package com.project.dd.test.worldcup.attraction.service;
+                <h3>WorldCupAttractionarchiveImpl</h3>
+                <pre id="code"><code class="language-java"><c:out>package com.project.dd.test.worldcup.attraction.archive;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -1366,7 +1366,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.archive;
 
 import com.project.dd.activity.attraction.domain.AttractionDTO;
 import com.project.dd.test.worldcup.attraction.repository.WorldCupAttractionDAO;
@@ -1389,9 +1389,9 @@ import com.project.dd.test.worldcup.attraction.repository.WorldCupAttractionDAO;
  * 
  * @author 이승원
  */
-@Service
+@archive
 @Primary
-public class WorldCupAttractionServiceImpl implements WorldCupAttractionService {
+public class WorldCupAttractionarchiveImpl implements WorldCupAttractionarchive {
 
 	@Autowired
 	private WorldCupAttractionDAO dao;
@@ -3098,7 +3098,7 @@ public class JDBCTest {
 
 			  <div class="tab-pane" id="tab-12">
                 <h3>프로젝트 측면</h3>
-                <p>Spring 프로젝트를 통해 Controller, Mapper, Service 등의 각 영역의 역할과 의존성을 주입하는 과정에 대해 이해할 수 있었습니다. 또한, 프로젝트를 진행하면서 팀원들과 자주 회의를 진행했습니다. 부분적인 내용이라도 팀원들과 공유하였고, 이를 통해 사전에 오류를 방지하면서 팀 프로젝트에서 소통의 중요성을 알 수 있었습니다.</p><br>
+                <p>Spring 프로젝트를 통해 Controller, Mapper, archive 등의 각 영역의 역할과 의존성을 주입하는 과정에 대해 이해할 수 있었습니다. 또한, 프로젝트를 진행하면서 팀원들과 자주 회의를 진행했습니다. 부분적인 내용이라도 팀원들과 공유하였고, 이를 통해 사전에 오류를 방지하면서 팀 프로젝트에서 소통의 중요성을 알 수 있었습니다.</p><br>
 
 				<h3>개인적인 측면</h3>
                 <p>언제나 제가 상상하던 걸 실제로 만들 수 있게 되면 좋겠다고 생각했습니다. 프로그램을 사용할 때면 어떻게 기능이 구현되는지에 대한 궁금증이 있었고, 복잡한 코드의 의미를 알고 싶었습니다. 이번 Spring 프로젝트는 최종 프로젝트인 만큼 Front-End, Back-End 구축에 있어서 이전까지 학습한 다양한 기술을 적극적으로 활용했습니다.</p><p>Socket 통신을 구현함으로써 실시간 채팅 기능을 추가하고, Elasticsearch를 활용하여 검색 기능을 강화하는 과정을 통해 기술에 대한 이해도를 높일 수 있었습니다. Spring 프로젝트 경험은 개발자로서의 성장뿐만 아니라, 직접 기획한 프로젝트를 성공적으로 구현함으로써 자신감을 얻을 수 있는 시간이었다고 생각합니다.</p><br>

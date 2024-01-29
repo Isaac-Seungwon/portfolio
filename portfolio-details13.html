@@ -48,7 +48,7 @@
         <li><a class="nav-link scrollto" href="index.html#space">Home</a></li>
         <li><a class="nav-link scrollto" href="index.html#about">About</a></li>
         <li><a class="nav-link scrollto" href="index.html#resume">Resume</a></li>
-        <li><a class="nav-link scrollto" href="index.html#services">Archives</a></li>
+        <li><a class="nav-link scrollto" href="index.html#archives">Archives</a></li>
         <li><a class="nav-link scrollto active" href="index.html#portfolio">Portfolio</a></li>
         <li><a class="nav-link scrollto" href="index.html#contact">Contact</a></li>
       </ul>
@@ -248,6 +248,13 @@
                 <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-5">
                   <h4>링크 말풍선</h4>
                   <p>HTML, JavaScript</p>
+                </a>
+              </li>
+
+              <li class="nav-item mt-2">
+                <a class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-7">
+                  <h4>아카이브 효과</h4>
+                  <p>HTML, CSS</p>
                 </a>
               </li>
 
@@ -1529,31 +1536,283 @@ new Swiper('.portfolio-details-slider', {
                 <p></p>
               </div>
               
-              <!-- <div class="tab-pane" id="tab-4">
+              <div class="tab-pane" id="tab-7">
                 <h3>HTML</h3>
-                <pre id="code"><code class="language-html"><c:out>public class Main {
-    public static void main(String[] args) {
-        System. out.println("Hello World" );
-    }
-}</c:out></code></pre>
+                <pre id="code"><code class="language-html"><c:out>&lt;!-- ======= My Archives Section ======= --&gt;
+&lt;section id="archives" class="archives"&gt;
+  &lt;div class="container"&gt;
+
+    &lt;div class="section-title"&gt;
+      &lt;h2&gt;My Archives&lt;/h2&gt;
+    &lt;/div&gt;
+
+    &lt;div class="row"&gt;
+      &lt;!-- GitHub --&gt;
+      &lt;div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"&gt;
+        &lt;a href="https://github.com/Isaac-Seungwon" target="_blank" class="icon-box"&gt;
+          &lt;div class="icon"&gt;&lt;i class="fa-brands fa-github" style="font-size: 40px; margin-top: -3px;"&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;h4 class="title"&gt;GitHub&lt;/h4&gt;
+          &lt;p class="description"&gt;&lt;b&gt;소스 코드 저장소&lt;/b&gt;&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;프로젝트 및 프로그램 저장&lt;/li&gt;
+            &lt;li&gt;코딩 연습용 소스코드&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Tistory Blog --&gt;
+      &lt;div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"&gt;
+        &lt;a href="https://isaac-christian.tistory.com/" target="_blank" class="icon-box"&gt;
+          &lt;div class="icon"&gt;&lt;i class="fa-solid fa-book-bookmark"&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;h4 class="title"&gt;Tistory Blog&lt;/h4&gt;
+          &lt;p class="description"&gt;&lt;b&gt;블로그&lt;/b&gt;&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;학업 기록 및 정보 공유 블로그&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+
+      &lt;!-- Baekjoon Online Judge --&gt;
+      &lt;div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"&gt;
+        &lt;a href="https://www.acmicpc.net/user/isaac_christian" target="_blank" class="icon-box"&gt;
+          &lt;div class="icon"&gt;&lt;i class="fa-solid fa-laptop-code"&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;h4 class="title"&gt;Baekjoon Online Judge&lt;/h4&gt;
+          &lt;p class="description"&gt;&lt;b&gt;코딩 스터디&lt;/b&gt;&lt;/p&gt;
+          &lt;ul&gt;
+            &lt;li&gt;문제 해결 능력을 키우기 위한 알고리즘 공부&lt;/li&gt;
+          &lt;/ul&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;&lt;!-- End My archives Section --&gt;</c:out></code></pre>
                 <p></p><br>
                 
                 <h3>CSS</h3>
-                <pre id="code"><code class="language-css"><c:out>public class Main {
-    public static void main(String[] args) {
-        System. out.println("Hello World" );
-    }
-}</c:out></code></pre>
-                <p></p><br>
-                
-                <h3>JavaScript</h3>
-                <pre id="code"><code class="language-javascript"><c:out>public class Main {
-    public static void main(String[] args) {
-        System. out.println("Hello World" );
-    }
+                <pre id="code"><code class="language-css"><c:out>/*--------------------------------------------------------------
+# My Services
+--------------------------------------------------------------*/
+.services .icon-box {
+  padding: 30px;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  text-align: center;
+  border: 2px solid #fff;
+}
+
+.services {
+  height: 100%;
+}
+
+.icon-box {
+  height: 310px;
+}
+
+.services .icon-box:hover {
+  border-color: #4A70B5;
+  box-shadow: 0 5px 20px 0 rgba(68, 88, 144, 0.1);
+  z-index: 100;
+}
+
+.services .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.services .icon {
+  margin: 0 auto 20px auto;
+  padding-top: 17px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  background: #dfe7f1;
+}
+
+/* style="width: 68px; padding-top: 14px;" */
+/* style="padding-top: 17px;" */
+/* style="width: 68px; padding-top: 14px;" */
+
+@media (min-width: 976px) and (max-width: 1300px) {
+  .icon-box {
+    height: 370px;
+  }
+}
+
+.services .icon i {
+  font-size: 35px;
+  padding: 1px;
+  line-height: 1;
+  color: #4A70B5;
+  transition: all 0.3s ease;
+}
+
+/*
+.services .title {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+*/
+
+.services .icon-box::before,
+.services .icon-box::after {
+  content: '';
+  position: absolute;
+  top: 22%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  opacity: 10;
+  z-index: -1;
+}
+
+.services .icon-box:hover::before {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(4);
+  transition: all 0.5s ease-in-out;
+}
+
+.services .icon-box:hover::after {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(4.24);
+  transition: all 1s ease-in-out;
+}
+
+.services .icon-box::before {
+  background: rgba(116, 157, 255, 0.075);
+  box-shadow: 0 0 6px 6px rgba(116, 157, 255, 0.075);
+}
+
+.services .icon-box::after {
+  background: #ffffff;
+  box-shadow: 0 0 8px 8px #ffffff;
+}
+
+/* 
+.services .icon-box:hover * {
+  color: #fff;
+}
+
+.services .icon-box:hover .icon {
+  background: rgba(1, 25, 54, 0.8);
+}
+*/
+
+.services .title {
+  font-weight: 700;
+  /* margin-bottom: 10px; */
+  font-size: 20px;
+  border-radius: 1px;
+  /* padding-bottom: 3px; */
+  border-bottom: 2px solid transparent;
+  position: relative;
+}
+
+.services .title:after {
+  content: "";
+  position: absolute;
+  font-size: 10px;
+  /* width: 13px; */
+  /* height: 1px; */
+  /* background-color: rgb(209, 208, 208); */
+  /* bottom: -6px; */
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 
+.services .title:after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: #fff; 
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%) scaleY(0);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(114, 146, 205, 0.8), 0 0 5px rgba(255, 255, 255, 0.9);
+  opacity: 0;
+  transition: transform 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+}
+
+.services .icon-box:hover .title:after {
+  transform: translateX(-50%) scaleY(1);
+  opacity: 1;
+}
+*/
+
+/*
+.services .title:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #7292cd;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.services .icon-box:hover .title:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+*/
+
+/*
+.services .icon-box:hover .icon i {
+  color: cornflowerblue;
+}
+*/
+
+.services .title a {
+  color: #111;
+  transition: 0.3s;
+}
+
+.services .description {
+  max-width: 300px;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 0;
+  align-content: center;
+  color: #111;
+}
+
+.services ul {
+  padding: 10px;
+  margin-bottom: 0;
+  color: var(--bs-body-color);
+  text-align: left;
+}
+
+.services .description b {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.services .icon-box:hover .title a {
+  color: #4A70B5;
 }</c:out></code></pre>
                 <p></p>
-              </div> -->
+              </div>
               
             </div>
           </div>
