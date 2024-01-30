@@ -1354,10 +1354,6 @@ li:hover .arrow_box {
   background: #dfe7f1;
 }
 
-/* style="width: 68px; padding-top: 14px;" */
-/* style="padding-top: 17px;" */
-/* style="width: 68px; padding-top: 14px;" */
-
 @media (min-width: 976px) and (max-width: 1300px) {
   .icon-box {
     height: 370px;
@@ -1371,14 +1367,6 @@ li:hover .arrow_box {
   color: #4A70B5;
   transition: all 0.3s ease;
 }
-
-/*
-.archives .title {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 20px;
-}
-*/
 
 .archives .icon-box::before,
 .archives .icon-box::after {
@@ -1416,16 +1404,6 @@ li:hover .arrow_box {
   box-shadow: 0 0 8px 8px #ffffff;
 }
 
-/* 
-.archives .icon-box:hover * {
-  color: #fff;
-}
-
-.archives .icon-box:hover .icon {
-  background: rgba(1, 25, 54, 0.8);
-}
-*/
-
 .archives .title {
   font-weight: 700;
   /* margin-bottom: 10px; */
@@ -1440,16 +1418,20 @@ li:hover .arrow_box {
   content: "";
   position: absolute;
   font-size: 10px;
-  /* width: 13px; */
-  /* height: 1px; */
-  /* background-color: rgb(209, 208, 208); */
-  /* bottom: -6px; */
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 /* 
+.archives .icon-box:hover * {
+  color: #fff;
+}
+
+.archives .icon-box:hover .icon {
+  background: rgba(1, 25, 54, 0.8);
+}
+
 .archives .title:after {
   content: "";
   position: absolute;
@@ -1489,9 +1471,7 @@ li:hover .arrow_box {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-*/
 
-/*
 .archives .icon-box:hover .icon i {
   color: cornflowerblue;
 }

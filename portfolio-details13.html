@@ -1585,14 +1585,15 @@ new Swiper('.portfolio-details-slider', {
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/section&gt;&lt;!-- End My archives Section --&gt;</c:out></code></pre>
+&lt;/section&gt;
+&lt;!-- End My Archives Section --&gt;</c:out></code></pre>
                 <p></p><br>
                 
                 <h3>CSS</h3>
                 <pre id="code"><code class="language-css"><c:out>/*--------------------------------------------------------------
-# My Services
+# My Archives
 --------------------------------------------------------------*/
-.services .icon-box {
+.archives .icon-box {
   padding: 30px;
   width: 100%;
   position: relative;
@@ -1602,13 +1603,12 @@ new Swiper('.portfolio-details-slider', {
   transition: all 0.3s ease-in-out;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   align-items: center;
   text-align: center;
   border: 2px solid #fff;
 }
 
-.services {
+.archives {
   height: 100%;
 }
 
@@ -1616,19 +1616,19 @@ new Swiper('.portfolio-details-slider', {
   height: 310px;
 }
 
-.services .icon-box:hover {
+.archives .icon-box:hover {
   border-color: #4A70B5;
   box-shadow: 0 5px 20px 0 rgba(68, 88, 144, 0.1);
   z-index: 100;
 }
 
-.services .row {
+.archives .row {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.services .icon {
+.archives .icon {
   margin: 0 auto 20px auto;
   padding-top: 17px;
   display: inline-block;
@@ -1639,17 +1639,13 @@ new Swiper('.portfolio-details-slider', {
   background: #dfe7f1;
 }
 
-/* style="width: 68px; padding-top: 14px;" */
-/* style="padding-top: 17px;" */
-/* style="width: 68px; padding-top: 14px;" */
-
 @media (min-width: 976px) and (max-width: 1300px) {
   .icon-box {
     height: 370px;
   }
 }
 
-.services .icon i {
+.archives .icon i {
   font-size: 35px;
   padding: 1px;
   line-height: 1;
@@ -1657,16 +1653,8 @@ new Swiper('.portfolio-details-slider', {
   transition: all 0.3s ease;
 }
 
-/*
-.services .title {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 20px;
-}
-*/
-
-.services .icon-box::before,
-.services .icon-box::after {
+.archives .icon-box::before,
+.archives .icon-box::after {
   content: '';
   position: absolute;
   top: 22%;
@@ -1679,63 +1667,55 @@ new Swiper('.portfolio-details-slider', {
   z-index: -1;
 }
 
-.services .icon-box:hover::before {
+.archives .icon-box:hover::before {
   opacity: 1;
   transform: translate(-50%, -50%) scale(4);
   transition: all 0.5s ease-in-out;
 }
 
-.services .icon-box:hover::after {
+.archives .icon-box:hover::after {
   opacity: 1;
   transform: translate(-50%, -50%) scale(4.24);
   transition: all 1s ease-in-out;
 }
 
-.services .icon-box::before {
+.archives .icon-box::before {
   background: rgba(116, 157, 255, 0.075);
   box-shadow: 0 0 6px 6px rgba(116, 157, 255, 0.075);
 }
 
-.services .icon-box::after {
+.archives .icon-box::after {
   background: #ffffff;
   box-shadow: 0 0 8px 8px #ffffff;
 }
 
-/* 
-.services .icon-box:hover * {
-  color: #fff;
-}
-
-.services .icon-box:hover .icon {
-  background: rgba(1, 25, 54, 0.8);
-}
-*/
-
-.services .title {
+.archives .title {
   font-weight: 700;
-  /* margin-bottom: 10px; */
   font-size: 20px;
   border-radius: 1px;
-  /* padding-bottom: 3px; */
   border-bottom: 2px solid transparent;
   position: relative;
 }
 
-.services .title:after {
+.archives .title:after {
   content: "";
   position: absolute;
   font-size: 10px;
-  /* width: 13px; */
-  /* height: 1px; */
-  /* background-color: rgb(209, 208, 208); */
-  /* bottom: -6px; */
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
 }
 
 /* 
-.services .title:after {
+.archives .icon-box:hover * {
+  color: #fff;
+}
+
+.archives .icon-box:hover .icon {
+  background: rgba(1, 25, 54, 0.8);
+}
+
+.archives .title:after {
   content: "";
   position: absolute;
   width: 5px;
@@ -1750,14 +1730,14 @@ new Swiper('.portfolio-details-slider', {
   transition: transform 0.3s ease, height 0.3s ease, opacity 0.3s ease;
 }
 
-.services .icon-box:hover .title:after {
+.archives .icon-box:hover .title:after {
   transform: translateX(-50%) scaleY(1);
   opacity: 1;
 }
 */
 
 /*
-.services .title:after {
+.archives .title:after {
   content: "";
   position: absolute;
   width: 100%;
@@ -1770,24 +1750,22 @@ new Swiper('.portfolio-details-slider', {
   transition: transform 0.3s ease;
 }
 
-.services .icon-box:hover .title:after {
+.archives .icon-box:hover .title:after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
-*/
 
-/*
-.services .icon-box:hover .icon i {
+.archives .icon-box:hover .icon i {
   color: cornflowerblue;
 }
 */
 
-.services .title a {
+.archives .title a {
   color: #111;
   transition: 0.3s;
 }
 
-.services .description {
+.archives .description {
   max-width: 300px;
   font-size: 18px;
   line-height: 28px;
@@ -1796,19 +1774,19 @@ new Swiper('.portfolio-details-slider', {
   color: #111;
 }
 
-.services ul {
+.archives ul {
   padding: 10px;
   margin-bottom: 0;
   color: var(--bs-body-color);
   text-align: left;
 }
 
-.services .description b {
+.archives .description b {
   display: inline-block;
   margin-bottom: 10px;
 }
 
-.services .icon-box:hover .title a {
+.archives .icon-box:hover .title a {
   color: #4A70B5;
 }</c:out></code></pre>
                 <p></p>
