@@ -1451,16 +1451,16 @@ public class MyStoreList {
 											Main.printLine();
 											System.out.print("삭제한 메뉴에 대한 매장 리뷰를 작성한 기록이 있습니다.\n");
 											System.out.print("해당 리뷰도 함께 삭제하시겠습니까? (y/n): ");
-					                        String deleteChoice = scan.nextLine().trim();
-					                        
-					                        if (deleteChoice.equals("y")) {
+											String deleteChoice = scan.nextLine().trim();
+											
+											if (deleteChoice.equals("y")) {
 												if (store.getNo().equals(review.getStoreNo())) {
 													MyRate.deleteReview(review.getNo());
 												}
-					                        } else {
-					                            System.out.println("해당 리뷰를 유지합니다.");
-					                        }
-					                        break;
+											} else {
+											    System.out.println("해당 리뷰를 유지합니다.");
+											}
+											break;
 										}
 									}
 								}
