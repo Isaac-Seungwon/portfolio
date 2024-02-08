@@ -591,6 +591,7 @@ const words = [
   { text: "Elasticsearch", size: 40, color: "white", opacity: 1, tags: ["라이브러리", "Elasticsearch"] },
   { text: "WSL", size: 40, color: "white", opacity: 1, tags: ["도구", "WSL"] },
   { text: "Figma", size: 45, color: "white", opacity: 1, tags: ["도구", "Figma"] },
+  { text: "Streamlit", size: 45, color: "white", opacity: 1, tags: ["라이브러리", "Streamlit"] },
   { text: "React", size: 45, color: "white", opacity: 1, tags: ["라이브러리", "React"] },
   { text: "Node.js", size: 40, color: "white", opacity: 1, tags: ["도구", "Node.js"] }
 ];
