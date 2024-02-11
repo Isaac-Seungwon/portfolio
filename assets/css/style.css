@@ -248,6 +248,15 @@ term {
   cursor: default;
 }
 
+/* 가로 화면 크기가 1920px 미만인 경우 가운데 정렬 */
+@media (min-width: 1920px) {
+  .moon-text {
+    top: 110%;
+    left: -100%;
+    transform: translateX(-50%);
+  }
+}
+
 @keyframes fadeInText {
   from {
     opacity: 0;
