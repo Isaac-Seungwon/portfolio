@@ -998,11 +998,11 @@ public class Register extends HttpServlet {
 		try {
 			// 회원 정보
 			String email = req.getParameter("email");
-	        String pw = req.getParameter("pw");
-	        String name = req.getParameter("name");
-	        String birth = req.getParameter("birth");
-	        String tel = req.getParameter("tel");
-	        String address;
+			String pw = req.getParameter("pw");
+			String name = req.getParameter("name");
+			String birth = req.getParameter("birth");
+			String tel = req.getParameter("tel");
+			String address;
 	        
 	        // 주소 처리
 	        if (req.getParameter("post-code").trim().isEmpty()) {
@@ -1021,7 +1021,7 @@ public class Register extends HttpServlet {
 			dto.setName(name);
 			dto.setBirth(birth);
 			dto.setTel(tel);
-	        dto.setAddress(address);
+			dto.setAddress(address);
 			
 			UserDAO dao = new UserDAO();
 
@@ -1293,7 +1293,7 @@ td &gt; div &gt; input {
 			
 			const joinButton = document.getElementById("join");
 	
-		    function updateButtonStatus() {
+			function updateButtonStatus() {
 		        const isAllValid = isValid.every((value) =&gt; value);
 	
 		        if (isAllValid) {
@@ -1305,14 +1305,14 @@ td &gt; div &gt; input {
 		        }
 		    }
 		    
-	        /* 이메일 유효성 검사 */
+		    /* 이메일 유효성 검사 */
 		    const emailField = document.getElementById("email");
 		    const emailErrorDiv = document.getElementById("email-error");
 		    const emailRegex = /^[a-z0-9._%+-]{1,20}\@[a-z0-9.-]{1,8}\.[a-z]{1,5}$/;
 
-			const duplicateCheck = document.getElementById("duplicate-check");
+		    const duplicateCheck = document.getElementById("duplicate-check");
 	        
-		    emailField.addEventListener("input", function () {
+			emailField.addEventListener("input", function () {
 		    	isValid[0] = emailRegex.test(emailField.value);
 		    	isValid[1] = false;
 		    	
@@ -1340,7 +1340,7 @@ td &gt; div &gt; input {
 		    const passwordErrorDiv = document.getElementById("pw-error");
 		    const passwordConfirmField = document.getElementById("pwok");
 		    const passwordConfirmErrorDiv = document.getElementById("pw-confirm-error");
-	        const passwordRegex = /^(?=.*[0-9])(?=.*[A-Za-z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/
+		    const passwordRegex = /^(?=.*[0-9])(?=.*[A-Za-z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/
 	        
 		    passwordField.addEventListener("input", function () {
 		    	isValid[2] = passwordRegex.test(passwordField.value);
@@ -1383,7 +1383,7 @@ td &gt; div &gt; input {
 		    /* 이름 유효성 검사 */
 		    const nameField = document.getElementById("name");
 		    const nameErrorDiv = document.getElementById("name-error");
-	        const nameRegex = /^[가-힣]{2,6}$/; // 2글자에서 6글자의 한글 이름만 허용
+		    const nameRegex = /^[가-힣]{2,6}$/; // 2글자에서 6글자의 한글 이름만 허용
 	
 		    nameField.addEventListener("input", function () {
 		    	isValid[4] = nameRegex.test(nameField.value);
@@ -1399,7 +1399,7 @@ td &gt; div &gt; input {
 		        updateButtonStatus();
 		    });
 	        
-	        /* 생년월일 유효성 검사 */
+		    /* 생년월일 유효성 검사 */
 		    const birthField = document.getElementById("birth");
 		    const birthErrorDiv = document.getElementById("birth-error");
 		    const birthRegex = /^(19|20)\d\d-[0-1]\d-[0-3]\d$/; // YYYY-MM-DD 형식
@@ -1418,10 +1418,10 @@ td &gt; div &gt; input {
 		        updateButtonStatus();
 		    });
 		    
-	        /* 연락처 유효성 검사 */
+		    /* 연락처 유효성 검사 */
 		    const telField = document.getElementById("tel");
 		    const telErrorDiv = document.getElementById("tel-error");
-	        const telRegex = /^010-[0-9]{4}-[0-9]{4}$/; // 010-XXXX-XXXX 형식의 전화번호
+		    const telRegex = /^010-[0-9]{4}-[0-9]{4}$/; // 010-XXXX-XXXX 형식의 전화번호
 	
 		    telField.addEventListener("input", function () {
 		    	isValid[6] = telRegex.test(telField.value);
@@ -2442,7 +2442,7 @@ td &gt; div &gt; input {
 		        }
 		    }
 		    
-	        /* 이메일 유효성 검사 */
+		    /* 이메일 유효성 검사 */
 		    const emailField = document.getElementById("email");
 		    const emailErrorDiv = document.getElementById("email-error");
 		    const emailRegex = /^[a-z0-9._%+-]{1,20}\@[a-z0-9.-]{1,8}\.[a-z]{1,5}$/;
@@ -2466,10 +2466,10 @@ td &gt; div &gt; input {
 		        updateChangeButtonStatus();
 		    });
 	        
-	        /* 연락처 유효성 검사 */
+		    /* 연락처 유효성 검사 */
 		    const telField = document.getElementById("tel");
 		    const telErrorDiv = document.getElementById("tel-error");
-	        const telRegex = /^010-[0-9]{4}-[0-9]{4}$/; // 010-XXXX-XXXX 형식의 전화번호
+		    const telRegex = /^010-[0-9]{4}-[0-9]{4}$/; // 010-XXXX-XXXX 형식의 전화번호
 	
 		    telField.addEventListener("input", function () {
 		    	isValid[1] = telRegex.test(telField.value);
@@ -2495,7 +2495,7 @@ td &gt; div &gt; input {
 		    const passwordErrorDiv = document.getElementById("pw-error");
 		    const passwordConfirmField = document.getElementById("pwok");
 		    const passwordConfirmErrorDiv = document.getElementById("pw-confirm-error");
-	        const passwordRegex = /^(?=.*[0-9])(?=.*[A-Za-z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/
+		    const passwordRegex = /^(?=.*[0-9])(?=.*[A-Za-z])(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/
 	        
 		    passwordField.addEventListener("input", function () {
 		    	isPasswordValid[0] = passwordRegex.test(passwordField.value);
@@ -4359,11 +4359,11 @@ public class TestDAO {
 	}
 
 	/**
-     * 코스 추가
-     *
-     * @param dto 추가할 코스 정보를 담은 CourseDTO 객체
-     * @return 데이터베이스에 추가된 행의 수
-     */
+	* 코스 추가
+	*
+	* @param dto 추가할 코스 정보를 담은 CourseDTO 객체
+	* @return 데이터베이스에 추가된 행의 수
+	*/
 	public int courseAdd(CourseDTO dto) {
 
 		try {
@@ -4385,10 +4385,10 @@ public class TestDAO {
 	}
 
 	/**
-     * 코스 목록 조회
-     *
-     * @return 코스 목록을 담은 ArrayList 객체
-     */
+	* 코스 목록 조회
+	*
+	* @return 코스 목록을 담은 ArrayList 객체
+	*/
 	public ArrayList&lt;CourseDTO&gt; listCourse() {
 
 		try {
@@ -4422,11 +4422,11 @@ public class TestDAO {
 	}
 
 	/**
-     * 코스 삭제
-     *
-     * @param courseSeq 삭제할 코스의 일련번호
-     * @return 데이터베이스에 삭제된 행의 수
-     */
+	* 코스 삭제
+	*
+	* @param courseSeq 삭제할 코스의 일련번호
+	* @return 데이터베이스에 삭제된 행의 수
+	*/
 	public int deleteCourse(String courseSeq) {
 		try {
 			// tblMBTI에서 레코드 삭제
@@ -4451,11 +4451,11 @@ public class TestDAO {
 	}
 
 	/**
-     * MBTI 상세 정보 조회
-     *
-     * @param mbti 조회할 MBTI
-     * @return 조회된 MBTI 정보를 담은 MBTIDTO 객체
-     */
+	* MBTI 상세 정보 조회
+	*
+	* @param mbti 조회할 MBTI
+	* @return 조회된 MBTI 정보를 담은 MBTIDTO 객체
+	*/
 	public MBTIDTO get(String mbti) {
 		try {
 			String sql = "select * from vwMBTIDetail where mbti = ?";
@@ -4487,10 +4487,10 @@ public class TestDAO {
 	}
 
 	/**
-     * MBTI 목록 조회
-     *
-     * @return MBTI 목록을 담은 ArrayList 객체
-     */
+	* MBTI 목록 조회
+	*
+	* @return MBTI 목록을 담은 ArrayList 객체
+	*/
 	public ArrayList&lt;MBTIDTO&gt; listMBTI() {
 
 		try {
@@ -4526,10 +4526,10 @@ public class TestDAO {
 	}
 
 	/**
-     * 어트랙션 목록 조회
-     *
-     * @return 어트랙션 목록을 담은 ArrayList 객체
-     */
+	* 어트랙션 목록 조회
+	*
+	* @return 어트랙션 목록을 담은 ArrayList 객체
+	*/
 	public ArrayList&lt;AttractionDTO&gt; listAttraction() {
 
 		try {
@@ -4562,11 +4562,11 @@ public class TestDAO {
 	}
 
 	/**
-     * MBTI별 추천 추가
-     *
-     * @param dto MBTI 정보를 담은 MBTIDTO 객체
-     * @return 데이터베이스에 추가된 행의 수
-     */
+	* MBTI별 추천 추가
+	*
+	* @param dto MBTI 정보를 담은 MBTIDTO 객체
+	* @return 데이터베이스에 추가된 행의 수
+	*/
 	public int mbtiAdd(MBTIDTO dto) {
 		try {
 			String sql = "INSERT INTO tblMBTI (mbti_seq, result, mbti, course_seq, attraction_seq) VALUES (seqtblMBTI.nextVal, ?, ?, ?, ?)";
@@ -4589,10 +4589,10 @@ public class TestDAO {
 	}
 
 	/**
-     * MBTI 전체 조회 (관련 정보 포함)
-     *
-     * @return MBTI 목록을 담은 ArrayList 객체
-     */
+	* MBTI 전체 조회 (관련 정보 포함)
+	*
+	* @return MBTI 목록을 담은 ArrayList 객체
+	*/
 	public ArrayList&lt;MBTIDTO&gt; getAllMBTI() {
 		ArrayList&lt;MBTIDTO&gt; mbtiList = new ArrayList&lt;&gt;();
 
@@ -4623,11 +4623,11 @@ public class TestDAO {
 	}
 
 	/**
-     * MBTI 삭제
-     *
-     * @param mbti_seq 삭제할 MBTI의 일련번호
-     * @return 데이터베이스에 삭제된 행의 수
-     */
+	* MBTI 삭제
+	*
+	* @param mbti_seq 삭제할 MBTI의 일련번호
+	* @return 데이터베이스에 삭제된 행의 수
+	*/
 	public int MBTIDel(String mbti_seq) {
 
 		try {
@@ -4648,10 +4648,10 @@ public class TestDAO {
 	}
 
 	/**
-     * 어트랙션 목록 조회
-     *
-     * @return 어트랙션 목록을 담은 ArrayList 객체
-     */
+	* 어트랙션 목록 조회
+	*
+	* @return 어트랙션 목록을 담은 ArrayList 객체
+	*/
 	public ArrayList&lt;AttractionDTO&gt; getAttractionList() {
 		
 		ArrayList&lt;AttractionDTO&gt; list = new ArrayList&lt;AttractionDTO&gt;();
@@ -4680,10 +4680,10 @@ public class TestDAO {
 	}
 
 	/**
-     * 코스 목록 조회
-     *
-     * @return 코스 목록을 담은 ArrayList 객체
-     */
+	* 코스 목록 조회
+	*
+	* @return 코스 목록을 담은 ArrayList 객체
+	*/
 	public ArrayList&lt;CourseDTO&gt; getCourseList() {
 		
 		ArrayList&lt;CourseDTO&gt; list = new ArrayList&lt;CourseDTO&gt;();
@@ -5214,29 +5214,29 @@ public class SearchHashtag extends HttpServlet {
 public class SearchDTO {
 	
 	private String attractionName; // 어트랙션 이름
-    private String mbtiResult; // MBTI 결과
-    private String mbtiMbti; // MBTI 유형
-    private String courseName; // 코스 이름
-    private String hashtagName; // 해시태그 이름
-    private String restaurantName; // 음식점 이름
-    private String restaurantMenu; // 음식점 대표 메뉴
-    private String categoryName; // 카테고리 이름
-    private String shopName; // 상점 이름
-    private String shopInfo; // 상점 정보
-    private String itemName; // 상품 이름
-    private String itemInfo; // 상품 정보
-    private String convenientName; // 편의시설 이름
-    private String festivalName; // 페스티벌 이름
-    private String festivalInfo; // 페스티벌정보
-    private String theaterName; // 영화관 이름
-    private String movieName; // 영화 이름
-    private String noticeSubject; // 공지사항 제목
-    private String noticeContent; // 공지사항 내용
-    private String benefitName; // 혜택 이름
-    private String benefitType; // 혜택 유형
-    private String faqCategory; // FAQ 카테고리
-    private String faqQuestion; // FAQ 질문
-    private String faqAnswer; // FAQ 답변
+	private String mbtiResult; // MBTI 결과
+	private String mbtiMbti; // MBTI 유형
+	private String courseName; // 코스 이름
+	private String hashtagName; // 해시태그 이름
+	private String restaurantName; // 음식점 이름
+	private String restaurantMenu; // 음식점 대표 메뉴
+	private String categoryName; // 카테고리 이름
+	private String shopName; // 상점 이름
+	private String shopInfo; // 상점 정보
+	private String itemName; // 상품 이름
+	private String itemInfo; // 상품 정보
+	private String convenientName; // 편의시설 이름
+	private String festivalName; // 페스티벌 이름
+	private String festivalInfo; // 페스티벌정보
+	private String theaterName; // 영화관 이름
+	private String movieName; // 영화 이름
+	private String noticeSubject; // 공지사항 제목
+	private String noticeContent; // 공지사항 내용
+	private String benefitName; // 혜택 이름
+	private String benefitType; // 혜택 유형
+	private String faqCategory; // FAQ 카테고리
+	private String faqQuestion; // FAQ 질문
+	private String faqAnswer; // FAQ 답변
 
 	public String getAttractionName() {
 		return (attractionName != null) ? attractionName : " ";
@@ -5586,8 +5586,8 @@ public class SearchDTO {
 	&lt;%@include file="/WEB-INF/views/inc/footer.jsp"%&gt;
 	
 	&lt;script&gt;
-		/*
-		// 페이지 로드 시 해시태그를 랜덤으로 추가
+	/*
+	    // 페이지 로드 시 해시태그를 랜덤으로 추가
 	    function addRandomHashtags(hashtagList) {
 	        $('#hashtag-container').empty();
 	

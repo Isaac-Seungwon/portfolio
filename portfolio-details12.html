@@ -1100,13 +1100,13 @@ public class WorldCupAttractionRankDTO {
 		        w.awc_win_count as win_count,
 		        fw.awc_final_win_count as final_win_count,
 		        case
-				    when w.awc_match_count = 0 then 0
-				    else (w.awc_win_count / w.awc_match_count)
-				end as win_rate,
-				case
-				    when total_final_win_count = 0 then 0
-				    else (fw.awc_final_win_count / total_final_win_count)
-				end as final_win_rate,
+				when w.awc_match_count = 0 then 0
+				else (w.awc_win_count / w.awc_match_count)
+		        end as win_rate,
+		        case
+				when total_final_win_count = 0 then 0
+				else (fw.awc_final_win_count / total_final_win_count)
+		        end as final_win_rate,
 		        rownum as rnum
 		    from vwAttractionList al
 		        join tblAWC awc on awc.attraction_seq = al.attraction_seq
