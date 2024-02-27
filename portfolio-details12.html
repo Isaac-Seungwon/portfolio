@@ -1058,7 +1058,7 @@ public class WorldCupAttractionRankDTO {
 	&lt;!-- 어트랙션 경기 횟수 업데이트 쿼리 --&gt;
 	&lt;update id="updateAWCMatchCount" parameterType="String"&gt;
 	    update
-			tblAWCWin
+		tblAWCWin
 		set awc_match_count = awc_match_count + 1
 		where attraction_seq = #{attractionSeq}
 	&lt;/update&gt;
@@ -1066,7 +1066,7 @@ public class WorldCupAttractionRankDTO {
 	&lt;!-- 어트랙션 승리 횟수 업데이트 쿼리 --&gt;
 	&lt;update id="updateAWCWinCount" parameterType="String"&gt;
 	    update
-			tblAWCWin
+		tblAWCWin
 		set awc_win_count = awc_win_count + 1
 		where attraction_seq = #{attractionSeq}
 	&lt;/update&gt;
@@ -1074,7 +1074,7 @@ public class WorldCupAttractionRankDTO {
 	&lt;!-- 어트랙션 최종 우승 횟수 업데이트 쿼리 --&gt;
 	&lt;update id="updateAWCFinalWinCount" parameterType="String"&gt;
 	    update
-			tblAWCFinalWin
+		tblAWCFinalWin
 		set awc_final_win_count = awc_final_win_count + 1
 		where attraction_seq = #{attractionSeq}
 	&lt;/update&gt;
