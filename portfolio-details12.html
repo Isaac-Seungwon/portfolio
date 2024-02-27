@@ -1091,7 +1091,7 @@ public class WorldCupAttractionRankDTO {
 		    to_char(t.win_rate * 100, '999.99') as win_rate_per,
 		    to_char(t.final_win_rate * 100, '999.99') as final_win_rate_per
 		from (
-			select
+		    select
 		        al.attraction_seq,
 		        al.name,
 		        al.info,
