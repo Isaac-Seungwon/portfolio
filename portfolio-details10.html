@@ -633,7 +633,7 @@ END procLectureSchedule;
 --특정 교사의 강의 스케줄 출력 프로시저 호출
 DECLARE
     vLectureScheduleCursor SYS_REFCURSOR;
-	vTeacherNum tblTeacher.teacherNum%TYPE := <교사번호>; --1 (체제투)
+    vTeacherNum tblTeacher.teacherNum%TYPE := <교사번호>; --1 (체제투)
     vRow vwLectureSchedule%ROWTYPE;
 BEGIN
     procLectureSchedule(vTeacherNum, vLectureScheduleCursor); --procLectureSchedule 호출
@@ -655,7 +655,7 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE('과목기간(끝 년월일): ' || vRow.subjectEndDate);
         DBMS_OUTPUT.PUT_LINE('교재명: ' || vROw.textBookName);
         DBMS_OUTPUT.PUT_LINE('교육생 등록 인원: ' || vRow.register);
-		DBMS_OUTPUT.PUT_LINE('──────────────────────────────────────────────────────────────');
+        DBMS_OUTPUT.PUT_LINE('──────────────────────────────────────────────────────────────');
     END LOOP;
     CLOSE vLectureScheduleCursor;
 EXCEPTION
@@ -671,12 +671,12 @@ CREATE OR REPLACE PROCEDURE procStudentCourseStatus (
 )
 IS
 BEGIN
-	OPEN pCourseCursor FOR
+    OPEN pCourseCursor FOR
     SELECT
     	*
     FROM vwStudentCourseStatus
     WHERE courseNum = pCourseNum
-	ORDER BY courseName, interviewerName;
+    ORDER BY courseName, interviewerName;
 EXCEPTION
     WHEN OTHERS THEN
         DBMS_OUTPUT.PUT_LINE('생성에 실패했습니다.');
@@ -685,7 +685,7 @@ END procStudentCourseStatus;
 --교육중인 과정에 등록된 교육생의 정보 출력 프로시저 호출
 DECLARE
     vCourseCursor SYS_REFCURSOR;
-	vCourseNum tblCourse.courseNum%TYPE := <과정번호>; --1 (AWS를 활용한 클라우드 자바 웹기반 풀스텍 개발자 과정)
+    vCourseNum tblCourse.courseNum%TYPE := <과정번호>; --1 (AWS를 활용한 클라우드 자바 웹기반 풀스텍 개발자 과정)
     vRow vwStudentCourseStatus%ROWTYPE;
 BEGIN
     procStudentCourseStatus(vCourseNum, vCourseCursor); --procStudentCourseStatus 호출
@@ -700,7 +700,7 @@ BEGIN
         DBMS_OUTPUT.PUT_LINE('전화번호: ' || vRow.interviewerTel);
         DBMS_OUTPUT.PUT_LINE('등록일: ' || vRow.registrationDate);
         DBMS_OUTPUT.PUT_LINE('수료여부: ' || vRow.completionStatus);
-		DBMS_OUTPUT.PUT_LINE('──────────────────────────────────────────────────────────────');
+        DBMS_OUTPUT.PUT_LINE('──────────────────────────────────────────────────────────────');
     END LOOP;
     CLOSE vCourseCursor;
 EXCEPTION
@@ -829,8 +829,8 @@ END procGetAssignmentList;
 --특정 과정의 교육생 과제 제출 명단 프로시저 호출
 DECLARE
     vAssignmentCursor SYS_REFCURSOR; --cursor
-	vCourseDetailNum tblCourseDetail.courseDetailNum%TYPE := <과정상세번호>; --1
-	vRow vwAssignmentSubmitStudentList%ROWTYPE;
+    vCourseDetailNum tblCourseDetail.courseDetailNum%TYPE := <과정상세번호>; --1
+    vRow vwAssignmentSubmitStudentList%ROWTYPE;
 BEGIN
     procGetAssignmentList(vCourseDetailNum, vAssignmentCursor); --procGetAssignmentList 호출
 
@@ -871,11 +871,11 @@ END procUpdateAssignmentTeacher;
 
 --수정 프로시저 실행
 DECLARE
-	vAssignmentNum VARCHAR2(30) := <과제번호>; --1
+    vAssignmentNum VARCHAR2(30) := <과제번호>; --1
     vSubjectDetailNum VARCHAR2(30) := <과목상세번호>; --1
     vAssignmentContent VARCHAR2(2048) := <과제내용>; --'자바과제 4풀이'
 BEGIN
-	procUpdateAssignmentTeacher(vAssignmentNum, vSubjectDetailNum, vAssignmentContent);
+    procUpdateAssignmentTeacher(vAssignmentNum, vSubjectDetailNum, vAssignmentContent);
 EXCEPTION
     WHEN OTHERS THEN
         DBMS_OUTPUT.PUT_LINE('갱신에 실패했습니다.');
@@ -923,7 +923,7 @@ END procInsertAssignmentStudent;
 
 --입력 프로시저 실행
 DECLARE
-	vAssignmentNum VARCHAR2(30) := <과제번호>; --1
+    vAssignmentNum VARCHAR2(30) := <과제번호>; --1
     vStudentNum VARCHAR2(30) := <교육생번호>; --1
     vAssignmentExplain VARCHAR2(2048) := <과제풀이>; --'자바과제 4풀이'
 BEGIN
@@ -993,7 +993,7 @@ END procReadAssignmentStudent;
 
 --학생 본인과 동일한 과정을 수강하는 학생의 과제 명단 프로시저 호출
 DECLARE
-	vStudentNum tblStudent.studentNum%TYPE := <교육생번호>; --1
+    vStudentNum tblStudent.studentNum%TYPE := <교육생번호>; --1
     vSubjectName tblSubject.subjectName%TYPE := <과목명>; --'CSS'
     vAssignmentCursor SYS_REFCURSOR;
     vCourseName tblCourse.courseName%TYPE;
@@ -1049,12 +1049,12 @@ END procUpdateAssignmentStudent;
 
 --수정 프로시저 실행
 DECLARE
-	vAssignmentSubmitNum VARCHAR(30) := <과제제출번호>; --1
-	vAssignmentNum VARCHAR2(30) := <과제번호>; --1
+    vAssignmentSubmitNum VARCHAR(30) := <과제제출번호>; --1
+    vAssignmentNum VARCHAR2(30) := <과제번호>; --1
     vStudentNum VARCHAR2(30) := <교육생번호>; --1
     vAssignmentExplain VARCHAR2(2048) := <과제풀이>; --'자바과제 4풀이'
 BEGIN
-	procUpdateAssignmentStudent(vAssignmentNum, vStudentNum, vAssignmentExplain);
+    procUpdateAssignmentStudent(vAssignmentNum, vStudentNum, vAssignmentExplain);
 EXCEPTION
     WHEN OTHERS THEN
         DBMS_OUTPUT.PUT_LINE('갱신에 실패했습니다.');
@@ -1105,10 +1105,10 @@ FROM tblInterviewer i
 CREATE OR REPLACE VIEW vwCompletionStatus
 AS
 SELECT
-    s.studentNum AS studentNum,
-    vs.studentName AS studentName,
-    cd.courseDetailNum AS courseDetailNum,
-    cs.courseNum AS courseNum,
+   s.studentNum AS studentNum,
+   vs.studentName AS studentName,
+   cd.courseDetailNum AS courseDetailNum,
+   cs.courseNum AS courseNum,
    cs.courseName AS courseName,
    TO_CHAR(cd.courseStartDate,'YYYY-MM-DD') AS courseStartDate,
    TO_CHAR(cd.courseEndDate,'YYYY-MM-DD') AS courseEndDate,
@@ -1235,7 +1235,7 @@ SELECT * FROM vwStudentCourseStatus;</c:out></code></pre><br>
 CREATE OR REPLACE VIEW vwStudentSupply
 AS
 SELECT
-	  o.courseNum,
+    o.courseNum,
     o.courseName,
     i.interviewerName,
     i.interviewerTel,
